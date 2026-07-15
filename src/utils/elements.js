@@ -44,6 +44,8 @@ export const download_btn = document.getElementById("download-btn");
 export const capture = document.getElementById("capture");
 export const headline_year = document.getElementById("headline-year");
 export const skip_link = document.getElementById("skip-link");
+export const ftb_upload = document.getElementById("upload-btn");
+export const meta_tab = document.getElementById("meta-tab")
 export const SIDEBAR_OPEN_KEY = "nisra:data-explorer:sidebarOpen";
 /**
  * Re-reads query string on call

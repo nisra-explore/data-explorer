@@ -6,6 +6,7 @@ import { sharePage } from "./utils/sharePage.js";
 import { initCookieConsent } from "./utils/cookies.js";
 import { refreshRoute } from "./utils/refreshRoute.js";
 import "./utils/skipToMainContent.js";
+import "./utils/ftb/ftbUpload.js";
 
 let searchIndex = [];
 

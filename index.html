@@ -152,6 +152,32 @@
 
               <div id="other-vars" class="vstack gap-3"></div>
               </div>
+              
+              <div class="card border-top border-0 rounded-0">
+                <div class="card-header">
+                  <i class="bi bi-upload"></i>
+                  Upload Dataset
+                </div>
+                
+              <div class="card-body">
+                <p class="small text-muted">
+                  Upload a NISRA Flexible Table Builder JSON export.
+                </p>
+                
+              <input
+                  type="file"
+                  id="ftb-upload"
+                  class="form-control"
+                  accept=".json"
+              >
+              
+              <button
+                  class="btn btn-primary w-100 mt-2"
+                  id="upload-btn">
+                  Load Dataset
+              </button>
+            </div>
+          </div>
 
               <div class="pt-3"></div>
               <!-- Done button: mobile only -->
