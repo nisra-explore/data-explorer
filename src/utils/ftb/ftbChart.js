@@ -6,15 +6,24 @@ export function renderFTBChart(result) {
 
     const rows = result.rows;
 
+    const geographyDimension = result.dimensions[0].variable.name;
+
+    const filterDimension = result.dimensions[result.dimensions.length - 1];
+
+    const filterVariable = filterDimension.variable.name;
+
+    const selectedCategory = filterDimension.categories[0].label;
+
     const totals = {};
 
     rows.forEach(row => {
 
-        if (!totals[row.PARLCON24]) {
-            totals[row.PARLCON24] = 0;
+        if (row[filterVariable] !== selectedCategory) {
+            return;
         }
 
-        totals[row.PARLCON24] += row.value;
+        const geography = row[geographyDimension];
+        totals[geography] = (totals[geography] || 0) + row.value;
 
     });
     
@@ -24,10 +33,9 @@ export function renderFTBChart(result) {
 
     if (chart_title) {
         const dims = result.dimensions
-                .filter(d => d.variable.name !== "PARLCON24")
+                .slice(1)
                 .map(d => d.variable.label);
-        
-        chart_title.textContent =`${dims[0]} by ${dims[1]}`;
+        chart_title.textContent = dims.join(" by ");
     }
     
     function toTitleCase(str) {
@@ -59,7 +67,7 @@ export function renderFTBChart(result) {
         data: {
             labels,
             datasets: [{
-                label: result.datasetName,
+                label: selectedCategory,
                 data: values,
                 backgroundColor: "#00205b",
                 borderColor: "#00205b",

@@ -37,10 +37,12 @@ export function renderFTBTable(result) {
 
     table.innerHTML = "";
 
+    const dimensionNames = result.dimensions.map(d => d.variable.name);
+
     const headers = [
-        "Constituency",
-        "Accommodation",
-        "Renewable Energy",
+        ...result.dimensions.map(
+            d => d.variable.label
+        ),
         "Value"
     ];
 
@@ -57,12 +59,23 @@ export function renderFTBTable(result) {
     const tbody = document.createElement("tbody");
 
     rows.forEach(row => {
+    
+        const dimensionCells = dimensionNames.map((name, index) => {
+
+        const value = row[name];
+
+        return `<td>${
+            index === 0
+                ? toTitleCase(String(value))
+                : value
+        }</td>`;
+
+    })
+    .join("");
 
         tbody.innerHTML += `
             <tr>
-                <td>${toTitleCase(row.PARLCON24)}</td>
-                <td>${row.ACCOMMODATION_TYPE}</td>
-                <td>${row.RENEWABLE_ENERGY}</td>
+                ${dimensionCells}
                 <td>${row.value.toLocaleString()}</td>
             </tr>
         `;
