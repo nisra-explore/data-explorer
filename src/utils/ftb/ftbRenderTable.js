@@ -1,4 +1,5 @@
-import { additional_tables, table_title, dp_link, meta_tab } from "../elements.js";
+import { additional_tables, table_title } from "../elements.js";
+import { renderFTBChart } from "./ftbChart.js";
 
 export function renderFTBTable(result) {
 
@@ -13,19 +14,15 @@ export function renderFTBTable(result) {
     const ftb_title = document.querySelectorAll("#tables-title")[1];
 
     if (ftb_title) {
-        const dims = result.dimensions
-                .filter(d => d.variable.name !== "PARLCON24")
-                .map(d => d.variable.label);
-        
-        ftb_title.textContent =`${dims[0]} by ${dims[1]}`;
-    }
 
-    if (dp_link) {
-        dp_link.style.display = "none";
-    }
+        const geographyLabel = result.dimensions[0].variable.label;
+        const otherDimensions = result.dimensions.slice(1);
+        const measureLabel = otherDimensions[otherDimensions.length - 1].variable.label;
+        const breakdownLabels = otherDimensions.slice(0, -1).map(d => d.variable.label.split("-")[0].trim()).join(" and ");
 
-    if (meta_tab) {
-        meta_tab.style.display = "none";
+        const titleText = `${measureLabel} by ${geographyLabel} and ${breakdownLabels}`;
+
+        ftb_title.textContent = titleText;
     }
 
     function toTitleCase(str) {

@@ -1,8 +1,32 @@
-import { chart_title, chart_updated, breadcrumb } from "../elements.js";
+import { chart_title, table_title, headline, chart_subtitle, breadcrumb, chart_updated, dp_link, meta_tab } from "../elements.js";
 
 let ftbChart = null;
 
 export function renderFTBChart(result) {
+
+    if (headline) {
+        headline.style.display = "none";
+    }
+
+    if (chart_subtitle) {
+        chart_subtitle.style.display = "none";
+    }
+
+    if (breadcrumb) {
+        breadcrumb.style.display = "none";
+    }
+
+    if (chart_updated) {
+        chart_updated.style.display = "none";
+    }
+
+    if (dp_link) {
+        dp_link.style.display = "none";
+    }
+
+    if (meta_tab) {
+        meta_tab.style.display = "none";
+    }
 
     const rows = result.rows;
 
@@ -26,20 +50,21 @@ export function renderFTBChart(result) {
         totals[geography] = (totals[geography] || 0) + row.value;
 
     });
-    
-    if (chart_updated) {
-        chart_updated.style.display = "none";
-    }
 
-    if (breadcrumb) {
-        breadcrumb.style.display = "none";
-    }
+    const geographyLabel = result.dimensions[0].variable.label;
+
+    const otherDimensions = result.dimensions.slice(1);
+
+    const measureLabel = otherDimensions[otherDimensions.length - 1].variable.label;
+
+    const titleText = `${measureLabel} by ${geographyLabel}`;
 
     if (chart_title) {
-        const dims = result.dimensions
-                .slice(1)
-                .map(d => d.variable.label);
-        chart_title.textContent = dims.join(" by ");
+        chart_title.textContent = titleText;
+    }
+
+    if (table_title) {
+        table_title.textContent = titleText;
     }
     
     function toTitleCase(str) {
