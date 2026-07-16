@@ -1,4 +1,4 @@
-import { chart_title, chart_updated } from "../elements.js";
+import { chart_title, chart_updated, breadcrumb } from "../elements.js";
 
 let ftbChart = null;
 
@@ -29,6 +29,10 @@ export function renderFTBChart(result) {
     
     if (chart_updated) {
         chart_updated.style.display = "none";
+    }
+
+    if (breadcrumb) {
+        breadcrumb.style.display = "none";
     }
 
     if (chart_title) {
