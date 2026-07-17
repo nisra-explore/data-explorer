@@ -135,6 +135,8 @@ export async function renderFTBMap(result) {
         maxZoom: 12,
         attributionControl: false
     });
+    
+    ftbMap.dragPan.disable();
  
     ftbMap.addControl(
         new maplibregl.NavigationControl({
