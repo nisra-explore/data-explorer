@@ -2,7 +2,7 @@ import { map_title, map_updated, map_subtitle} from "../elements.js";
 import { loadShapes } from "../loadShapes.js";
 import { getColour } from "../getColour.js";
 import { titleCase } from "../titleCase.js";
-import { GEOG_PROPS } from "../../config/config.js";
+import { GEOG_PROPS, palette } from "../../config/config.js";
 import { getFTBTotals } from "./ftbChart.js";
  
 export let ftbMap = null;
@@ -40,10 +40,87 @@ export async function renderFTBMap(result) {
     const range = max - min || 1;
  
     const mapContainer = document.getElementById("map-container");
- 
-    mapContainer.innerHTML = `
-        <div id="map" class="map"></div>
-    `;
+
+    mapContainer.innerHTML = "";
+
+    const mapDiv = document.createElement("div");
+    mapDiv.id = "map";
+    mapDiv.className = "map";
+
+    mapContainer.appendChild(mapDiv);
+
+    const range_min = Math.floor(min);
+    const range_max = Math.ceil(max);
+
+    let min_value;
+    let max_value;
+
+    let legend_div = document.getElementById("map-legend");
+
+    if (!legend_div) {
+        
+        legend_div = document.createElement("div");
+        legend_div.id = "map-legend";
+        legend_div.classList.add(
+            "map-legend",
+            "align-self-center",
+            "col-6"
+        );
+
+        const legend_row_1 = document.createElement("div");
+        legend_row_1.classList.add("row");
+        legend_row_1.style.display = "flex";
+        legend_row_1.style.justifyContent = "space-between";
+        legend_row_1.style.alignItems = "center";
+
+        min_value = document.createElement("div");
+        min_value.id = "legend-min";
+        min_value.classList.add("legend-min");
+
+        legend_row_1.appendChild(min_value);
+
+        max_value = document.createElement("div");
+        max_value.id = "legend-max";
+        max_value.classList.add("legend-max");
+
+        legend_row_1.appendChild(max_value);
+
+        legend_div.appendChild(legend_row_1);
+
+        const legend_row_2 = document.createElement("div");
+        legend_row_2.classList.add("row");
+
+        palette.forEach((colour, i) => {
+
+            const colour_block = document.createElement("div");
+
+            colour_block.style.backgroundColor = colour;
+            colour_block.style.opacity = "0.8";
+            colour_block.classList.add("colour-block");
+
+            if (i === palette.length - 1) {
+                colour_block.style.borderRight = "1px #555555 solid";
+            }
+
+            legend_row_2.appendChild(colour_block);
+
+        });
+
+        legend_div.appendChild(legend_row_2);
+
+        mapContainer.insertBefore(legend_div, mapDiv);
+    
+    } else {
+        
+        min_value = document.getElementById("legend-min");
+        max_value = document.getElementById("legend-max");
+
+        mapContainer.insertBefore(legend_div, mapDiv);
+
+    }
+
+    min_value.textContent = range_min.toLocaleString("en-GB");
+    max_value.textContent = range_max.toLocaleString("en-GB");
 
     if (ftbMap) {
     ftbMap.remove();
