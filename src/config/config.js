@@ -95,6 +95,10 @@ export const GEOG_PROPS= {
   },
   EQUALGROUPS: {
     label: "Equality Groups"
+  },
+  PARLCON24: {
+    url:"public/map/PARLCON24.geo.json",
+    code_var: "PARLCON24"
   }
 
 }

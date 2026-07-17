@@ -2,31 +2,7 @@ import { chart_title, table_title, headline, chart_subtitle, breadcrumb, chart_u
 
 let ftbChart = null;
 
-export function renderFTBChart(result) {
-
-    if (headline) {
-        headline.style.display = "none";
-    }
-
-    if (chart_subtitle) {
-        chart_subtitle.style.display = "none";
-    }
-
-    if (breadcrumb) {
-        breadcrumb.style.display = "none";
-    }
-
-    if (chart_updated) {
-        chart_updated.style.display = "none";
-    }
-
-    if (dp_link) {
-        dp_link.style.display = "none";
-    }
-
-    if (meta_tab) {
-        meta_tab.style.display = "none";
-    }
+export function getFTBTotals(result) {
 
     const rows = result.rows;
 
@@ -50,6 +26,33 @@ export function renderFTBChart(result) {
         totals[geography] = (totals[geography] || 0) + row.value;
 
     });
+
+    return totals;
+}
+
+export function renderFTBChart(result) {
+
+    const totals = getFTBTotals(result);
+
+    if (chart_updated) {
+        chart_updated.style.display = "none";
+    }
+
+    if (chart_subtitle) {
+        chart_subtitle.style.display = "none";
+    }
+
+    if (breadcrumb) {
+        breadcrumb.style.display = "none";
+    }
+
+    if (headline) {
+        headline.style.display = "none";
+    }
+
+    if (meta_tab) {
+        meta_tab.style.display = "none";
+    }
 
     const geographyLabel = result.dimensions[0].variable.label;
 
@@ -96,7 +99,8 @@ export function renderFTBChart(result) {
         data: {
             labels,
             datasets: [{
-                label: selectedCategory,
+                label:
+                    result.dimensions[result.dimensions.length - 1].categories[0].label,
                 data: values,
                 backgroundColor: "#00205b",
                 borderColor: "#00205b",

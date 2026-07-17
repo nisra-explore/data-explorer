@@ -1,5 +1,6 @@
 import { renderFTBTable } from "./ftbRenderTable.js";
 import { renderFTBChart } from "./ftbChart.js";
+import { renderFTBMap } from "./ftbMap.js";
 
 function buildRows(dimensions, values) {
 
@@ -54,6 +55,7 @@ export function parseFTB(json) {
 
     renderFTBTable(result);
     renderFTBChart(result);
+    renderFTBMap(result);
 
     return result;
 }
