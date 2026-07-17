@@ -1,4 +1,4 @@
-import { map_title, map_updated, map_subtitle} from "../elements.js";
+import { map_title, map_updated, map_subtitle, map_card, chart_card } from "../elements.js";
 import { loadShapes } from "../loadShapes.js";
 import { getColour } from "../getColour.js";
 import { titleCase } from "../titleCase.js";
@@ -8,6 +8,16 @@ import { getFTBTotals } from "./ftbChart.js";
 export let ftbMap = null;
  
 export async function renderFTBMap(result) {
+    
+    if (map_card) {
+        map_card.classList.remove("d-none");
+        map_card.classList.add("col-xl-6");
+    }
+
+    if (chart_card) {
+        chart_card.classList.remove("col-xl-12");
+        chart_card.classList.add("col-xl-6");
+    }
  
     const rows = result.rows;
  
