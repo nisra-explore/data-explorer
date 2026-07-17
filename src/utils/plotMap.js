@@ -15,10 +15,14 @@ import { buildTables } from "./buildTables.js";
 import { addOtherMenus, id_vars, other_selections, other_headline,
          other_vars, subtitle_text } from "./addOtherMenus.js";
 import { dataPortalPreview } from "./dataPortalPreview.js";
+import { resetFTBView } from "./ftb/ftbReset.js";
 
 export let map;
 
-export async function plotMap (tables, geog_type) {   
+export async function plotMap (tables, geog_type) { 
+    
+    resetFTBView();
+    console.log("Resetting FTB view");
 
     const search = getSearch();
 
