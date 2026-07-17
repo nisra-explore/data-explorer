@@ -23,7 +23,8 @@ export function getFTBTotals(result) {
         }
 
         const geography = row[geographyDimension];
-        totals[geography] = (totals[geography] || 0) + row.value;
+        const key = geography.toLowerCase().trim();
+        totals[key] = (totals[key] || 0) + row.value;
 
     });
 

@@ -98,7 +98,15 @@ export const GEOG_PROPS= {
   },
   PARLCON24: {
     url:"public/map/PARLCON24.geo.json",
-    code_var: "PARLCON24"
+    code_var: "PARLCON24",
+    name_var: "PCON24NM",
+    label: "Parliamentary Constituency"
+  },
+  HEALTH_TRUST: {
+    url: "public/map/HSCT.geo.json",
+    code_var: "TrustCode",
+    name_var: "TrustName",
+    label: "Health and Social Care Trust"
   }
 
 }

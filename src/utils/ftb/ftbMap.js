@@ -1,4 +1,4 @@
-import { map_title, map_updated, map_subtitle, map_card, chart_card } from "../elements.js";
+import { map_title, map_updated, map_subtitle, map_card, chart_card, dp_link } from "../elements.js";
 import { loadShapes } from "../loadShapes.js";
 import { getColour } from "../getColour.js";
 import { titleCase } from "../titleCase.js";
@@ -29,6 +29,10 @@ export async function renderFTBMap(result) {
 
     if (map_subtitle) {
         map_subtitle.style.display = "none";
+    }
+
+    if (dp_link) {
+        dp_link.style.display = "none";
     }
 
     const geographyLabel = result.dimensions[0].variable.label;
@@ -155,16 +159,33 @@ export async function renderFTBMap(result) {
         }),
         "top-right"
     );
+
+    const geographyType = result.dimensions[0].variable.name;
+    
+    if (!GEOG_PROPS[geographyType]?.url) {
+        
+        if (map_card) {
+            map_card.classList.add("d-none");
+        }
+        
+        if (chart_card) {
+            chart_card.classList.remove("col-xl-6");
+            chart_card.classList.add("col-xl-12");
+        }
+        
+        return;
+    }
  
-    const geojsonData = await loadShapes("PARLCON24");
+    const geojsonData = await loadShapes(geographyType);
  
     ftbMap.on("load", () => {
  
         const features = geojsonData.features.map((feature, idx) => {
  
-            const constituency = feature.properties.PCON24NM;
+            const nameVar = GEOG_PROPS[geographyType].name_var;
+            const geographyName = feature.properties[nameVar];
  
-            const value = totals[constituency];
+            const value = totals[geographyName.toLowerCase().trim()];
  
             const colourScale = value == null ? -1 : (value - min) / range;
  
@@ -174,7 +195,7 @@ export async function renderFTBMap(result) {
                 properties: {
                     ...feature.properties,
                     value,
-                    label: constituency,
+                    label: geographyName,
                     fill: value == null
                         ? "#eeeeee"
                         : getColour(colourScale)
