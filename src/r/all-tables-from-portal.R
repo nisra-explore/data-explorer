@@ -210,6 +210,14 @@ for (i in seq_along(data_portal$label)) {
 
 }
 
+census_tables <- list.files("public/data/census-tables", full.names = TRUE)
+
+for (i in 1:length(census_tables)) {
+  code <- sub(".*-", "", census_tables[i]) %>% sub(".json", "", .)
+  
+  table_data <- read_json(census_tables[i])
+}
+
 tables$tables <- tables$tables[order(names(tables$tables))]
 
 write_json(tables,
