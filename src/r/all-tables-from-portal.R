@@ -154,6 +154,7 @@ for (i in seq_along(data_portal$label)) {
   ) next
 
   tables$tables[[matrix]] <- list(
+    type = "dp",
     name = name,
     updated = as.Date(substr(data_portal$updated[i], 1, 10)),
     categories = json_data$dimension,
@@ -189,6 +190,7 @@ for (i in seq_along(data_portal$label)) {
       ) next
 
       tables$tables[[paste0(matrix, "_", j)]] <- list(
+        type = "dp",
         name = name,
         updated = as.Date(substr(data_portal$updated[i], 1, 10)),
         categories = json_data$dimension,
@@ -211,11 +213,66 @@ for (i in seq_along(data_portal$label)) {
 }
 
 census_tables <- list.files("public/data/census-tables", full.names = TRUE)
+census_table_names <- read.csv("public/data/census-table-names.csv")
 
 for (i in 1:length(census_tables)) {
-  code <- sub(".*-", "", census_tables[i]) %>% sub(".json", "", .)
   
-  table_data <- read_json(census_tables[i])
+  json_data <- read_json(census_tables[i])
+  
+  name <- census_table_names |> 
+    filter(path == census_tables[i]) |> 
+    pull(title)
+  
+  code <- census_table_names |> 
+    filter(path == census_tables[i]) |> 
+    pull("code")
+  
+  
+  categories <- list()
+  
+  dimensions <- json_data$table$dimensions
+  
+  for (j in 1:length(dimensions)) {
+    
+    category <- dimensions[[j]]$categories
+    
+    index <- c()
+    label <- list()
+    
+    for (k in 1:length(category)) {
+      index[k] <- dimensions[[j]]$categories[[k]]$code
+      label[[index[k]]] <- dimensions[[j]]$categories[[k]]$label
+    }
+    
+    categories[[dimensions[[j]]$variable$name]] <- list(
+      category = list(index = index,
+                      label = label),
+      label = dimensions[[j]]$variable$label
+    )
+    
+    categories[["TLIST(A1)"]] <- list(
+      category = list(index = "2021",
+                      label = list("2021" = "2021")),
+      label = "Year"
+    )
+  }
+  
+  tables$tables[[code]] <- list(
+    type = "cftb",
+    name = name,
+    updated = "2023-05-31",
+    categories = categories,
+    statistics = list(),
+    time = "TLIST(A1)",
+    time_series = c("2021"),
+    theme = "People and communities",
+    theme_code = "70",
+    subject = "Census",
+    subject_code = "148",
+    product = "Census 2021",
+    product_code = "C2021",
+    rows = length(json_data$table$values)
+  )
 }
 
 tables$tables <- tables$tables[order(names(tables$tables))]
