@@ -120,7 +120,17 @@ export async function createMenus () {
 
         const subject = structure[themes_menu.options[themes_menu.selectedIndex].text].subjects[subjects_menu.options[subjects_menu.selectedIndex].text];
         const products = subject.products;
-        const tables   = products[firstKey(products)].tables;
+
+        const subject_name = subjects_menu.options[subjects_menu.selectedIndex].text;
+
+        const census_product = subject_name === "Census"
+            ? Object.keys(products)
+                .filter(product => /^Census \d{4}$/.test(product))
+                .sort((a, b) => Number(b.match(/(\d{4})$/)[1]) - Number(a.match(/(\d{4})$/)[1]))[0]
+            : undefined;
+
+        const selected_product = subject_name === "Census" ? (census_product || firstKey(products)) : firstKey(products);
+        const tables = products[selected_product].tables;
 
         const selected_geo = tables[firstKey(tables)][0];
         

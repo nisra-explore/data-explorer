@@ -8,7 +8,7 @@ import { themes_menu, map_container, stats_menu,
          map_card, chart_updated, nav_product, nav_subject, nav_theme,
          table_title, map_updated, map_title, headline_stat_label,
          additional_tables, table_updated, stat_info_text, headline_year,
-         headline_stat, chart_card } from "./elements.js";     
+         headline_stat, chart_card, headline_fig } from "./elements.js";     
 import { downloadButton } from "./download-button.js";
 import { buildCharts } from "./buildCharts.js";
 import { buildTables } from "./buildTables.js";
@@ -63,11 +63,16 @@ export async function plotMap (tables, geog_type) {
 
     const niHeadline = headline_year.closest("p");
 
-    if (niHeadline) {
-        niHeadline.classList.toggle("d-none", !plot_ni);
+    if (plot_ni) {
+        headline_fig.classList.remove("d-none");
+        headline_stat.classList.remove("d-none");
+        niHeadline.classList.remove("d-none");
+    } else {
+        headline_stat.classList.add("d-none");
+        headline_fig.classList.add("d-none");
+        niHeadline.classList.add("d-none");
     }
 
-    headline_stat.classList.toggle("d-none", !plot_ni);
 
         headline_stat_label.innerHTML = `
             ${stat_label}
@@ -90,6 +95,7 @@ export async function plotMap (tables, geog_type) {
     if (!plot_ni) {
         
         map_card.classList.remove("col-xl-6")
+        chart_card.classList.add("d-none");
 
         if (geog_type == "COB_BASIC") {
             const spacer = document.createElement("div");
