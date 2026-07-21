@@ -212,12 +212,12 @@ for (i in seq_along(data_portal$label)) {
 
 }
 
-census_tables <- list.files("public/data/census-tables", full.names = TRUE)
+census_tables <- list.files("public/data/census-tables")
 census_table_names <- read.csv("public/data/census-table-names.csv")
 
 for (i in 1:length(census_tables)) {
 
-  json_data <- read_json(census_tables[i])
+  json_data <- read_json(paste0("public/data/census-tables/", census_tables[i]))
 
   name <- census_table_names |>
     filter(path == census_tables[i]) |>
@@ -226,6 +226,10 @@ for (i in 1:length(census_tables)) {
   code <- census_table_names |>
     filter(path == census_tables[i]) |>
     pull("code")
+  
+  url <- census_table_names |>
+    filter(path == census_tables[i]) |>
+    pull("url")
 
   categories <- list()
 
@@ -285,7 +289,8 @@ for (i in 1:length(census_tables)) {
     product = "Census 2021",
     product_code = "C2021",
     rows = length(json_data$table$values),
-    path = census_tables[i]
+    path = paste0("public/data/census-tables/", census_tables[i]),
+    url = url
   )
 }
 
