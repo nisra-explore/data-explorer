@@ -8,7 +8,7 @@ import { themes_menu, map_container, stats_menu,
          map_card, chart_updated, nav_product, nav_subject, nav_theme,
          table_title, map_updated, map_title, headline_stat_label,
          additional_tables, table_updated, stat_info_text, headline_year,
-         headline_stat, chart_card, headline_fig } from "./elements.js";     
+         headline_stat, chart_card, headline_fig, products_menu } from "./elements.js";     
 import { downloadButton } from "./download-button.js";
 import { buildCharts } from "./buildCharts.js";
 import { buildTables } from "./buildTables.js";
@@ -105,7 +105,10 @@ export async function plotMap (tables, geog_type) {
         `;
         } else {
             stat_info_text.innerHTML = `
-                <div>Source: Census 2021</div>`;
+                <div>Access data at: <a href="${tables[matrix].url}" target="_blank">${tables[matrix].name}</a></div>
+                <div>Last updated: <strong>${tables[matrix].updated}</strong></div>
+                <div><a href="mailto:census@nisra.gov.uk">Email for more information</a></div>   
+        `;
         }
 
         const chartData = await buildCharts(tables, matrix, statistic, geog_type, result, plot_ni, time_var, subtitle_text, other_headline, other_selections, id_vars, stat_label, unit);
@@ -556,8 +559,17 @@ export async function plotMap (tables, geog_type) {
             table_updated.innerHTML = updated_text;
             map_updated.innerHTML = updated_text;
 
-            dataPortalPreview(tables, matrix, data, result, stat_label, geog_type, year, unit, time_series);      
-        } 
+            dataPortalPreview(tables, matrix, data, result, stat_label, geog_type, year, unit, time_series);  
+
+        } else {
+            
+            const updated_text = `Last updated: <strong>${tables[matrix].updated}</strong>. See this full dataset on <a href = "${tables[matrix].url}" target = "_blank">NISRA Flexible Table Builder.</a>`;
+            
+            chart_updated.innerHTML = updated_text;
+            table_updated.innerHTML = updated_text;
+            map_updated.innerHTML = updated_text;
+    
+        }
 
         downloadButton(matrix);
 }
