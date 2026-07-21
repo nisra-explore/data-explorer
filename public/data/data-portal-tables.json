@@ -56422,7 +56422,8 @@
       "subject_code": 148,
       "product": "Census 2021",
       "product_code": "C2021",
-      "rows": 366
+      "rows": 366,
+      "path": "public/data/census-tables/ni-census21-people-settlement15+compulsory_school_age_agg3+health_condition_autism-f86b9d3a.json"
     },
     "FTBPASSPORT": {
       "type": "ftb",
@@ -56497,7 +56498,8 @@
       "subject_code": 148,
       "product": "Census 2021",
       "product_code": "C2021",
-      "rows": 128
+      "rows": 128,
+      "path": "public/data/census-tables/ni-census21-people-religion_belong_to_or_brought_up_in_dvo+nat_id_basic+passports_held_agg4-c997cb64.json"
     },
     "FTBRENEWERG": {
       "type": "ftb",
@@ -56572,7 +56574,8 @@
       "subject_code": 148,
       "product": "Census 2021",
       "product_code": "C2021",
-      "rows": 72
+      "rows": 72,
+      "path": "public/data/census-tables/ni-census21-household-parlcon24+accommodation_type_agg2+hh_renewable_energy_ind-81b8c67a.json"
     },
     "FTBSEXORIENT": {
       "type": "ftb",
@@ -56644,7 +56647,8 @@
       "subject_code": 148,
       "product": "Census 2021",
       "product_code": "C2021",
-      "rows": 120
+      "rows": 120,
+      "path": "public/data/census-tables/ni-census21-people-health_trust+adult_lifestage_agg6+sexual_orientation_dvo_agg4-b2fd87c3.json"
     },
     "FTEFOC": {
       "type": "dp",
