@@ -27,6 +27,7 @@ export function addOtherMenus (tables, matrix, geog_type, time_var, search) {
     other_vars = Object.keys(tables[matrix].categories)
         .filter(x => !normal_vars.includes(x));
 
+
     if (["none", "NI"].includes(geog_type)) {
         map_card.classList.add("d-none");
         chart_card.classList.remove("col-xl-6");

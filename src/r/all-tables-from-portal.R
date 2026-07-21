@@ -96,7 +96,7 @@ for (i in seq_along(themes)) {
 
     for (k in seq_along(products)) {
 
-      data_portal_structure <- data_portal_structure %>%
+      data_portal_structure <- data_portal_structure |>
         bind_rows(
           data.frame(
             theme = themes[i],
@@ -144,7 +144,7 @@ for (i in seq_along(data_portal$label)) {
   if (name == "Life Expectancy at age 65") name <- "Life Expectancy at Age 65"
   if (name == "Births registered") name <- "Births Registered"
 
-  theme <- data_portal_structure %>%
+  theme <- data_portal_structure |>
     filter(Product_code == product_code)
 
   if (
@@ -216,62 +216,76 @@ census_tables <- list.files("public/data/census-tables", full.names = TRUE)
 census_table_names <- read.csv("public/data/census-table-names.csv")
 
 for (i in 1:length(census_tables)) {
-  
+
   json_data <- read_json(census_tables[i])
-  
-  name <- census_table_names |> 
-    filter(path == census_tables[i]) |> 
+
+  name <- census_table_names |>
+    filter(path == census_tables[i]) |>
     pull(title)
-  
-  code <- census_table_names |> 
-    filter(path == census_tables[i]) |> 
+
+  code <- census_table_names |>
+    filter(path == census_tables[i]) |>
     pull("code")
-  
-  
+
   categories <- list()
-  
+
   dimensions <- json_data$table$dimensions
-  
+
   for (j in 1:length(dimensions)) {
-    
+
     category <- dimensions[[j]]$categories
-    
+
     index <- c()
     label <- list()
-    
+
     for (k in 1:length(category)) {
       index[k] <- dimensions[[j]]$categories[[k]]$code
       label[[index[k]]] <- dimensions[[j]]$categories[[k]]$label
     }
-    
-    categories[[dimensions[[j]]$variable$name]] <- list(
+
+    cat_name_raw <- dimensions[[j]]$variable$name
+
+    cat_name <-
+      if (j == 2) {
+        "STATISTIC"
+      } else if (cat_name_raw == "HEALTH_TRUST") {
+        "HSCT"
+      } else if (cat_name_raw == "PARLCON24") {
+        "AA2024"
+      } else {
+        cat_name_raw
+      }
+
+    categories[[cat_name]] <- list(
       category = list(index = index,
                       label = label),
       label = dimensions[[j]]$variable$label
     )
-    
-    categories[["TLIST(A1)"]] <- list(
-      category = list(index = "2021",
-                      label = list("2021" = "2021")),
-      label = "Year"
-    )
+
   }
-  
+
+  categories[["TLIST(A1)"]] <- list(
+    category = list(index = "2021",
+                    label = list("2021" = "2021")),
+    label = "Year"
+  )
+
   tables$tables[[code]] <- list(
-    type = "cftb",
+    type = "ftb",
     name = name,
     updated = "2023-05-31",
     categories = categories,
-    statistics = list(),
+    statistics = categories$STATISTIC$category$label,
     time = "TLIST(A1)",
     time_series = c("2021"),
     theme = "People and communities",
-    theme_code = "70",
+    theme_code = 70,
     subject = "Census",
-    subject_code = "148",
+    subject_code = 148,
     product = "Census 2021",
     product_code = "C2021",
-    rows = length(json_data$table$values)
+    rows = length(json_data$table$values),
+    path = census_tables[i]
   )
 }
 

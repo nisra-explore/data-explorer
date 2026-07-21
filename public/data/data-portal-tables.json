@@ -2986,122 +2986,6 @@
       "product_code": "AFISH",
       "rows": 656
     },
-    "AUTISM": {
-      "type": "cftb",
-      "name": "Autism",
-      "updated": "2023-05-31",
-      "categories": {
-        "SETTLEMENT15": {
-          "category": {
-            "index": ["N11000001", "N11000003", "N11000010", "N11000022", "N11000028", "N11000030", "N11000040", "N11000041", "N11000051", "N11000089", "N11000093", "N11000098", "N11000099", "N11000100", "N11000103", "N11000109", "N11000131", "N11000135", "N11000151", "N11000153", "N11000157", "N11000159", "N11000162", "N11000173", "N11000183", "N11000184", "N11000193", "N11000218", "N11000235", "N11000243", "N11000244", "N11000250", "N11000263", "N11000276", "N11000284", "N11000288", "N11000290", "N11000315", "N11000346", "N11000358", "N11000389", "N11000403", "N11000410", "N11000438", "N11000447", "N11000449", "N11000477", "N11000488", "N11000510", "N11000527", "N11000537", "N11000540", "N11000544", "N11000546", "N11000559", "N11000564", "N11000570", "N11000603", "N11000619", "N11000638", "N11999999"],
-            "label": {
-              "N11000001": "ANTRIM",
-              "N11000003": "CRUMLIN",
-              "N11000010": "RANDALSTOWN",
-              "N11000022": "BALLYGOWAN",
-              "N11000028": "COMBER",
-              "N11000030": "DONAGHADEE",
-              "N11000040": "NEWTOWNARDS",
-              "N11000041": "PORTAFERRY",
-              "N11000051": "ARMAGH",
-              "N11000089": "RICHHILL",
-              "N11000093": "TANDRAGEE",
-              "N11000098": "AHOGHILL",
-              "N11000099": "BALLYMENA",
-              "N11000100": "BROUGHSHANE",
-              "N11000103": "CULLYBACKEY",
-              "N11000109": "BALLYMONEY",
-              "N11000131": "BANBRIDGE",
-              "N11000135": "DROMORE (ARMAGH CITY, BANBRIDGE and CRAIGAVON LGD)",
-              "N11000151": "BELFAST CITY",
-              "N11000153": "CARRICKFERGUS",
-              "N11000157": "WHITEHEAD",
-              "N11000159": "CARRYDUFF",
-              "N11000162": "METROPOLITAN CASTLEREAGH",
-              "N11000173": "COLERAINE",
-              "N11000183": "PORTRUSH",
-              "N11000184": "PORTSTEWART",
-              "N11000193": "COOKSTOWN",
-              "N11000218": "CRAIGAVON URBAN AREA including AGHACOMMON",
-              "N11000235": "WARINGSTOWN",
-              "N11000243": "DERRY CITY",
-              "N11000244": "EGLINTON",
-              "N11000250": "NEWBUILDINGS",
-              "N11000263": "BALLYNAHINCH",
-              "N11000276": "DOWNPATRICK",
-              "N11000284": "KILLYLEAGH",
-              "N11000288": "NEWCASTLE",
-              "N11000290": "SAINTFIELD",
-              "N11000315": "DUNGANNON",
-              "N11000346": "ENNISKILLEN",
-              "N11000358": "LISNASKEA",
-              "N11000389": "LARNE",
-              "N11000403": "DUNGIVEN",
-              "N11000410": "LIMAVADY",
-              "N11000438": "LISBURN CITY",
-              "N11000447": "METROPOLITAN LISBURN",
-              "N11000449": "MOIRA",
-              "N11000477": "MAGHERA (MID ULSTER LGD)",
-              "N11000488": "BALLYCASTLE",
-              "N11000510": "BESSBROOK",
-              "N11000527": "KILKEEL",
-              "N11000537": "NEWRY",
-              "N11000540": "ROSTREVOR",
-              "N11000544": "WARRENPOINT/BURREN",
-              "N11000546": "BALLYCLARE",
-              "N11000559": "METROPOLITAN NEWTOWNABBEY",
-              "N11000564": "BANGOR",
-              "N11000570": "HOLYWOOD",
-              "N11000603": "OMAGH TOWN",
-              "N11000619": "CASTLEDERG",
-              "N11000638": "STRABANE",
-              "N11999999": "ELSEWHERE in NORTHERN IRELAND"
-            }
-          },
-          "label": "Settlement 2015"
-        },
-        "TLIST(A1)": {
-          "category": {
-            "index": "2021",
-            "label": {
-              "2021": "2021"
-            }
-          },
-          "label": "Year"
-        },
-        "COMPULSORY_SCHOOL_AGE_AGG3": {
-          "category": {
-            "index": ["0", "1", "2"],
-            "label": {
-              "0": "Below compulsory school age",
-              "1": "Compulsory school age",
-              "2": "Above compulsory school age"
-            }
-          },
-          "label": "Compulsory School Age - 3 Categories"
-        },
-        "HEALTH_CONDITION_AUTISM": {
-          "category": {
-            "index": ["1", "2"],
-            "label": {
-              "1": "Has Autism or Asperger syndrome",
-              "2": "Does not have Autism or Asperger syndrome"
-            }
-          },
-          "label": "Health Condition (Autism or Asperger Syndrome)"
-        }
-      },
-      "statistics": [],
-      "time": "TLIST(A1)",
-      "time_series": "2021",
-      "theme": "People and communities",
-      "theme_code": "70",
-      "subject": "Census",
-      "subject_code": "148",
-      "product": "Census 2021",
-      "product_code": "C2021",
-      "rows": 366
-    },
     "BCREFHSCT": {
       "type": "dp",
       "name": "Breast cancer referrals",
@@ -56419,6 +56303,348 @@
       "product": "Ophthalmic",
       "product_code": "PCOPH",
       "rows": 432
+    },
+    "FTBAUTISM": {
+      "type": "ftb",
+      "name": "Autism - School age",
+      "updated": "2023-05-31",
+      "categories": {
+        "SETTLEMENT15": {
+          "category": {
+            "index": ["N11000001", "N11000003", "N11000010", "N11000022", "N11000028", "N11000030", "N11000040", "N11000041", "N11000051", "N11000089", "N11000093", "N11000098", "N11000099", "N11000100", "N11000103", "N11000109", "N11000131", "N11000135", "N11000151", "N11000153", "N11000157", "N11000159", "N11000162", "N11000173", "N11000183", "N11000184", "N11000193", "N11000218", "N11000235", "N11000243", "N11000244", "N11000250", "N11000263", "N11000276", "N11000284", "N11000288", "N11000290", "N11000315", "N11000346", "N11000358", "N11000389", "N11000403", "N11000410", "N11000438", "N11000447", "N11000449", "N11000477", "N11000488", "N11000510", "N11000527", "N11000537", "N11000540", "N11000544", "N11000546", "N11000559", "N11000564", "N11000570", "N11000603", "N11000619", "N11000638", "N11999999"],
+            "label": {
+              "N11000001": "ANTRIM",
+              "N11000003": "CRUMLIN",
+              "N11000010": "RANDALSTOWN",
+              "N11000022": "BALLYGOWAN",
+              "N11000028": "COMBER",
+              "N11000030": "DONAGHADEE",
+              "N11000040": "NEWTOWNARDS",
+              "N11000041": "PORTAFERRY",
+              "N11000051": "ARMAGH",
+              "N11000089": "RICHHILL",
+              "N11000093": "TANDRAGEE",
+              "N11000098": "AHOGHILL",
+              "N11000099": "BALLYMENA",
+              "N11000100": "BROUGHSHANE",
+              "N11000103": "CULLYBACKEY",
+              "N11000109": "BALLYMONEY",
+              "N11000131": "BANBRIDGE",
+              "N11000135": "DROMORE (ARMAGH CITY, BANBRIDGE and CRAIGAVON LGD)",
+              "N11000151": "BELFAST CITY",
+              "N11000153": "CARRICKFERGUS",
+              "N11000157": "WHITEHEAD",
+              "N11000159": "CARRYDUFF",
+              "N11000162": "METROPOLITAN CASTLEREAGH",
+              "N11000173": "COLERAINE",
+              "N11000183": "PORTRUSH",
+              "N11000184": "PORTSTEWART",
+              "N11000193": "COOKSTOWN",
+              "N11000218": "CRAIGAVON URBAN AREA including AGHACOMMON",
+              "N11000235": "WARINGSTOWN",
+              "N11000243": "DERRY CITY",
+              "N11000244": "EGLINTON",
+              "N11000250": "NEWBUILDINGS",
+              "N11000263": "BALLYNAHINCH",
+              "N11000276": "DOWNPATRICK",
+              "N11000284": "KILLYLEAGH",
+              "N11000288": "NEWCASTLE",
+              "N11000290": "SAINTFIELD",
+              "N11000315": "DUNGANNON",
+              "N11000346": "ENNISKILLEN",
+              "N11000358": "LISNASKEA",
+              "N11000389": "LARNE",
+              "N11000403": "DUNGIVEN",
+              "N11000410": "LIMAVADY",
+              "N11000438": "LISBURN CITY",
+              "N11000447": "METROPOLITAN LISBURN",
+              "N11000449": "MOIRA",
+              "N11000477": "MAGHERA (MID ULSTER LGD)",
+              "N11000488": "BALLYCASTLE",
+              "N11000510": "BESSBROOK",
+              "N11000527": "KILKEEL",
+              "N11000537": "NEWRY",
+              "N11000540": "ROSTREVOR",
+              "N11000544": "WARRENPOINT/BURREN",
+              "N11000546": "BALLYCLARE",
+              "N11000559": "METROPOLITAN NEWTOWNABBEY",
+              "N11000564": "BANGOR",
+              "N11000570": "HOLYWOOD",
+              "N11000603": "OMAGH TOWN",
+              "N11000619": "CASTLEDERG",
+              "N11000638": "STRABANE",
+              "N11999999": "ELSEWHERE in NORTHERN IRELAND"
+            }
+          },
+          "label": "Settlement 2015"
+        },
+        "STATISTIC": {
+          "category": {
+            "index": ["0", "1", "2"],
+            "label": {
+              "0": "Below compulsory school age",
+              "1": "Compulsory school age",
+              "2": "Above compulsory school age"
+            }
+          },
+          "label": "Compulsory School Age - 3 Categories"
+        },
+        "HEALTH_CONDITION_AUTISM": {
+          "category": {
+            "index": ["1", "2"],
+            "label": {
+              "1": "Has Autism or Asperger syndrome",
+              "2": "Does not have Autism or Asperger syndrome"
+            }
+          },
+          "label": "Health Condition (Autism or Asperger Syndrome)"
+        },
+        "TLIST(A1)": {
+          "category": {
+            "index": "2021",
+            "label": {
+              "2021": "2021"
+            }
+          },
+          "label": "Year"
+        }
+      },
+      "statistics": {
+        "0": "Below compulsory school age",
+        "1": "Compulsory school age",
+        "2": "Above compulsory school age"
+      },
+      "time": "TLIST(A1)",
+      "time_series": "2021",
+      "theme": "People and communities",
+      "theme_code": 70,
+      "subject": "Census",
+      "subject_code": 148,
+      "product": "Census 2021",
+      "product_code": "C2021",
+      "rows": 366
+    },
+    "FTBPASSPORT": {
+      "type": "ftb",
+      "name": "Passports held - Religion",
+      "updated": "2023-05-31",
+      "categories": {
+        "RELIGION_BELONG_TO_OR_BROUGHT_UP_IN_DVO": {
+          "category": {
+            "index": ["1", "2", "3", "4"],
+            "label": {
+              "1": "Catholic",
+              "2": "Protestant and Other Christian (including Christian related)",
+              "3": "Other religions",
+              "4": "None"
+            }
+          },
+          "label": "Religion or Religion Brought Up In"
+        },
+        "STATISTIC": {
+          "category": {
+            "index": ["1", "2", "3", "4", "5", "6", "7", "8"],
+            "label": {
+              "1": "British only",
+              "2": "Irish only",
+              "3": "Northern Irish only",
+              "4": "British and Irish only",
+              "5": "British and Northern Irish only",
+              "6": "Irish and Northern Irish only",
+              "7": "British, Irish and Northern Irish only",
+              "8": "Other"
+            }
+          },
+          "label": "National Identity - 8 Categories"
+        },
+        "PASSPORTS_HELD_AGG4": {
+          "category": {
+            "index": ["1", "2", "3", "4"],
+            "label": {
+              "1": "United Kingdom only",
+              "2": "Ireland only",
+              "3": "Other",
+              "4": "No passport"
+            }
+          },
+          "label": "Passports Held - 4 Categories"
+        },
+        "TLIST(A1)": {
+          "category": {
+            "index": "2021",
+            "label": {
+              "2021": "2021"
+            }
+          },
+          "label": "Year"
+        }
+      },
+      "statistics": {
+        "1": "British only",
+        "2": "Irish only",
+        "3": "Northern Irish only",
+        "4": "British and Irish only",
+        "5": "British and Northern Irish only",
+        "6": "Irish and Northern Irish only",
+        "7": "British, Irish and Northern Irish only",
+        "8": "Other"
+      },
+      "time": "TLIST(A1)",
+      "time_series": "2021",
+      "theme": "People and communities",
+      "theme_code": 70,
+      "subject": "Census",
+      "subject_code": 148,
+      "product": "Census 2021",
+      "product_code": "C2021",
+      "rows": 128
+    },
+    "FTBRENEWERG": {
+      "type": "ftb",
+      "name": "Renewable energy - Households",
+      "updated": "2023-05-31",
+      "categories": {
+        "AA2024": {
+          "category": {
+            "index": ["N05000001", "N05000002", "N05000003", "N05000004", "N05000005", "N05000006", "N05000007", "N05000008", "N05000009", "N05000010", "N05000011", "N05000012", "N05000013", "N05000014", "N05000015", "N05000016", "N05000017", "N05000018"],
+            "label": {
+              "N05000001": "Belfast East",
+              "N05000002": "Belfast North",
+              "N05000003": "Belfast South and Mid Down",
+              "N05000004": "Belfast West",
+              "N05000005": "East Antrim",
+              "N05000006": "East Londonderry",
+              "N05000007": "Fermanagh and South Tyrone",
+              "N05000008": "Foyle",
+              "N05000009": "Lagan Valley",
+              "N05000010": "Mid Ulster",
+              "N05000011": "Newry and Armagh",
+              "N05000012": "North Antrim",
+              "N05000013": "North Down",
+              "N05000014": "South Antrim",
+              "N05000015": "South Down",
+              "N05000016": "Strangford",
+              "N05000017": "Upper Bann",
+              "N05000018": "West Tyrone"
+            }
+          },
+          "label": "Parliamentary Constituency 2024"
+        },
+        "STATISTIC": {
+          "category": {
+            "index": ["1", "2"],
+            "label": {
+              "1": "Whole house or bungalow",
+              "2": "Flat, maisonette or apartment, a caravan or other mobile or temporary structure"
+            }
+          },
+          "label": "Accommodation Type - 2 Categories"
+        },
+        "HH_RENEWABLE_ENERGY_IND": {
+          "category": {
+            "index": ["0", "1"],
+            "label": {
+              "0": "Household does not have renewable energy systems",
+              "1": "Household has renewable energy systems"
+            }
+          },
+          "label": "Renewable Energy Systems"
+        },
+        "TLIST(A1)": {
+          "category": {
+            "index": "2021",
+            "label": {
+              "2021": "2021"
+            }
+          },
+          "label": "Year"
+        }
+      },
+      "statistics": {
+        "1": "Whole house or bungalow",
+        "2": "Flat, maisonette or apartment, a caravan or other mobile or temporary structure"
+      },
+      "time": "TLIST(A1)",
+      "time_series": "2021",
+      "theme": "People and communities",
+      "theme_code": 70,
+      "subject": "Census",
+      "subject_code": 148,
+      "product": "Census 2021",
+      "product_code": "C2021",
+      "rows": 72
+    },
+    "FTBSEXORIENT": {
+      "type": "ftb",
+      "name": "Sexual orientation - Adult life stage",
+      "updated": "2023-05-31",
+      "categories": {
+        "HSCT": {
+          "category": {
+            "index": ["BHSCT", "NHSCT", "SEHSCT", "SHSCT", "WHSCT"],
+            "label": {
+              "BHSCT": "Belfast",
+              "NHSCT": "Northern",
+              "SEHSCT": "South eastern",
+              "SHSCT": "Southern",
+              "WHSCT": "Western"
+            }
+          },
+          "label": "Health and Social Care Trust"
+        },
+        "STATISTIC": {
+          "category": {
+            "index": ["1", "2", "3", "4", "5", "-8"],
+            "label": {
+              "1": "Age 16-34 years: No dependent children in household",
+              "2": "Age 16-34 years: Dependent children in household",
+              "3": "Age 35-54 years: No dependent children in household",
+              "4": "Age 35-54 years: Dependent children in household",
+              "5": "Age 55 + years",
+              "-8": "No code required"
+            }
+          },
+          "label": "Adult Lifestage - 6 Categories"
+        },
+        "SEXUAL_ORIENTATION_DVO_AGG4": {
+          "category": {
+            "index": ["1", "2", "3", "-8"],
+            "label": {
+              "1": "Straight or heterosexual",
+              "2": "Gay, lesbian, bisexual, other sexual orientation",
+              "3": "Prefer not to say/Not stated",
+              "-8": "No code required"
+            }
+          },
+          "label": "Sexual Orientation"
+        },
+        "TLIST(A1)": {
+          "category": {
+            "index": "2021",
+            "label": {
+              "2021": "2021"
+            }
+          },
+          "label": "Year"
+        }
+      },
+      "statistics": {
+        "1": "Age 16-34 years: No dependent children in household",
+        "2": "Age 16-34 years: Dependent children in household",
+        "3": "Age 35-54 years: No dependent children in household",
+        "4": "Age 35-54 years: Dependent children in household",
+        "5": "Age 55 + years",
+        "-8": "No code required"
+      },
+      "time": "TLIST(A1)",
+      "time_series": "2021",
+      "theme": "People and communities",
+      "theme_code": 70,
+      "subject": "Census",
+      "subject_code": 148,
+      "product": "Census 2021",
+      "product_code": "C2021",
+      "rows": 120
     },
     "FTEFOC": {
       "type": "dp",
@@ -150052,72 +150278,6 @@
       "product_code": "HP",
       "rows": 600
     },
-    "PASSPORT": {
-      "type": "cftb",
-      "name": "Passports held",
-      "updated": "2023-05-31",
-      "categories": {
-        "RELIGION_BELONG_TO_OR_BROUGHT_UP_IN_DVO": {
-          "category": {
-            "index": ["1", "2", "3", "4"],
-            "label": {
-              "1": "Catholic",
-              "2": "Protestant and Other Christian (including Christian related)",
-              "3": "Other religions",
-              "4": "None"
-            }
-          },
-          "label": "Religion or Religion Brought Up In"
-        },
-        "TLIST(A1)": {
-          "category": {
-            "index": "2021",
-            "label": {
-              "2021": "2021"
-            }
-          },
-          "label": "Year"
-        },
-        "NAT_ID_BASIC": {
-          "category": {
-            "index": ["1", "2", "3", "4", "5", "6", "7", "8"],
-            "label": {
-              "1": "British only",
-              "2": "Irish only",
-              "3": "Northern Irish only",
-              "4": "British and Irish only",
-              "5": "British and Northern Irish only",
-              "6": "Irish and Northern Irish only",
-              "7": "British, Irish and Northern Irish only",
-              "8": "Other"
-            }
-          },
-          "label": "National Identity - 8 Categories"
-        },
-        "PASSPORTS_HELD_AGG4": {
-          "category": {
-            "index": ["1", "2", "3", "4"],
-            "label": {
-              "1": "United Kingdom only",
-              "2": "Ireland only",
-              "3": "Other",
-              "4": "No passport"
-            }
-          },
-          "label": "Passports Held - 4 Categories"
-        }
-      },
-      "statistics": [],
-      "time": "TLIST(A1)",
-      "time_series": "2021",
-      "theme": "People and communities",
-      "theme_code": "70",
-      "subject": "Census",
-      "subject_code": "148",
-      "product": "Census 2021",
-      "product_code": "C2021",
-      "rows": 128
-    },
     "PATLGD": {
       "type": "dp",
       "name": "Planning applications - application type",
@@ -160004,78 +160164,6 @@
       "product_code": "PCMED",
       "rows": 1183
     },
-    "RENEWERG": {
-      "type": "cftb",
-      "name": "Renewable energy",
-      "updated": "2023-05-31",
-      "categories": {
-        "PARLCON24": {
-          "category": {
-            "index": ["N05000001", "N05000002", "N05000003", "N05000004", "N05000005", "N05000006", "N05000007", "N05000008", "N05000009", "N05000010", "N05000011", "N05000012", "N05000013", "N05000014", "N05000015", "N05000016", "N05000017", "N05000018"],
-            "label": {
-              "N05000001": "Belfast East",
-              "N05000002": "Belfast North",
-              "N05000003": "Belfast South and Mid Down",
-              "N05000004": "Belfast West",
-              "N05000005": "East Antrim",
-              "N05000006": "East Londonderry",
-              "N05000007": "Fermanagh and South Tyrone",
-              "N05000008": "Foyle",
-              "N05000009": "Lagan Valley",
-              "N05000010": "Mid Ulster",
-              "N05000011": "Newry and Armagh",
-              "N05000012": "North Antrim",
-              "N05000013": "North Down",
-              "N05000014": "South Antrim",
-              "N05000015": "South Down",
-              "N05000016": "Strangford",
-              "N05000017": "Upper Bann",
-              "N05000018": "West Tyrone"
-            }
-          },
-          "label": "Parliamentary Constituency 2024"
-        },
-        "TLIST(A1)": {
-          "category": {
-            "index": "2021",
-            "label": {
-              "2021": "2021"
-            }
-          },
-          "label": "Year"
-        },
-        "ACCOMMODATION_TYPE_AGG2": {
-          "category": {
-            "index": ["1", "2"],
-            "label": {
-              "1": "Whole house or bungalow",
-              "2": "Flat, maisonette or apartment, a caravan or other mobile or temporary structure"
-            }
-          },
-          "label": "Accommodation Type - 2 Categories"
-        },
-        "HH_RENEWABLE_ENERGY_IND": {
-          "category": {
-            "index": ["0", "1"],
-            "label": {
-              "0": "Household does not have renewable energy systems",
-              "1": "Household has renewable energy systems"
-            }
-          },
-          "label": "Renewable Energy Systems"
-        }
-      },
-      "statistics": [],
-      "time": "TLIST(A1)",
-      "time_series": "2021",
-      "theme": "People and communities",
-      "theme_code": "70",
-      "subject": "Census",
-      "subject_code": "148",
-      "product": "Census 2021",
-      "product_code": "C2021",
-      "rows": 72
-    },
     "RESACCHSCT": {
       "type": "dp",
       "name": "Residential Accommodation",
@@ -168989,71 +169077,6 @@
       "product": "Self-efficacy",
       "product_code": "IWSE",
       "rows": 825
-    },
-    "SEXORIENT           ": {
-      "type": "cftb",
-      "name": "Sexual orientation",
-      "updated": "2023-05-31",
-      "categories": {
-        "HEALTH_TRUST": {
-          "category": {
-            "index": ["BHSCT", "NHSCT", "SEHSCT", "SHSCT", "WHSCT"],
-            "label": {
-              "BHSCT": "Belfast",
-              "NHSCT": "Northern",
-              "SEHSCT": "South eastern",
-              "SHSCT": "Southern",
-              "WHSCT": "Western"
-            }
-          },
-          "label": "Health and Social Care Trust"
-        },
-        "TLIST(A1)": {
-          "category": {
-            "index": "2021",
-            "label": {
-              "2021": "2021"
-            }
-          },
-          "label": "Year"
-        },
-        "ADULT_LIFESTAGE_AGG6": {
-          "category": {
-            "index": ["1", "2", "3", "4", "5", "-8"],
-            "label": {
-              "1": "Age 16-34 years: No dependent children in household",
-              "2": "Age 16-34 years: Dependent children in household",
-              "3": "Age 35-54 years: No dependent children in household",
-              "4": "Age 35-54 years: Dependent children in household",
-              "5": "Age 55 + years",
-              "-8": "No code required"
-            }
-          },
-          "label": "Adult Lifestage - 6 Categories"
-        },
-        "SEXUAL_ORIENTATION_DVO_AGG4": {
-          "category": {
-            "index": ["1", "2", "3", "-8"],
-            "label": {
-              "1": "Straight or heterosexual",
-              "2": "Gay, lesbian, bisexual, other sexual orientation",
-              "3": "Prefer not to say/Not stated",
-              "-8": "No code required"
-            }
-          },
-          "label": "Sexual Orientation"
-        }
-      },
-      "statistics": [],
-      "time": "TLIST(A1)",
-      "time_series": "2021",
-      "theme": "People and communities",
-      "theme_code": "70",
-      "subject": "Census",
-      "subject_code": "148",
-      "product": "Census 2021",
-      "product_code": "C2021",
-      "rows": 120
     },
     "SGAAA": {
       "type": "dp",

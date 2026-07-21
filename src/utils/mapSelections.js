@@ -35,6 +35,8 @@ export function mapSelections (categories, tables) {
         geog_type = "UR2015";
     } else if (categories.includes("SETTLEMENT")) {
         geog_type = "SETTLEMENT";
+    } else if (categories.includes("SETTLEMENT15")) {
+        geog_type = "SETTLEMENT15";
     } else if (categories.includes("NUTS3")) {
         geog_type = "NUTS3";
     } else if (categories.includes("ELB")) {

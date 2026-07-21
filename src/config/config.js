@@ -93,10 +93,11 @@ export const GEOG_PROPS= {
     code_var: "COB_BASIC",
     label: "Country of Birth"
   },
-  EQUALGROUPS: {
-    label: "Equality Groups"
+  SETTLEMENT15: {
+    url:"public/map/SETTLEMENT15.geo.json",
+    code_var: "Code",
+    label: "Settlement 2015"
   }
-
 }
 
   // Colour palette for charts
