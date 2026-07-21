@@ -56310,7 +56310,7 @@
     "FTBAUTISM": {
       "type": "ftb",
       "name": "Autism - School age",
-      "updated": "2023-05-31",
+      "updated": "31/05/2023",
       "categories": {
         "SETTLEMENT15": {
           "category": {
@@ -56432,7 +56432,7 @@
     "FTBPASSPORT": {
       "type": "ftb",
       "name": "Passports held - Religion",
-      "updated": "2023-05-31",
+      "updated": "31/05/2023",
       "categories": {
         "RELIGION_BELONG_TO_OR_BROUGHT_UP_IN_DVO": {
           "category": {
@@ -56509,7 +56509,7 @@
     "FTBRENEWERG": {
       "type": "ftb",
       "name": "Renewable energy - Households",
-      "updated": "2023-05-31",
+      "updated": "31/05/2023",
       "categories": {
         "AA2024": {
           "category": {
@@ -56586,7 +56586,7 @@
     "FTBSEXORIENT": {
       "type": "ftb",
       "name": "Sexual orientation - Adult life stage",
-      "updated": "2023-05-31",
+      "updated": "31/05/2023",
       "categories": {
         "HSCT": {
           "category": {

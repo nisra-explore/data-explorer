@@ -277,7 +277,7 @@ for (i in 1:length(census_tables)) {
   tables$tables[[code]] <- list(
     type = "ftb",
     name = name,
-    updated = "2023-05-31",
+    updated = "31/05/2023",
     categories = categories,
     statistics = categories$STATISTIC$category$label,
     time = "TLIST(A1)",
