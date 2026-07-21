@@ -5,6 +5,13 @@ import { ni_result } from "./buildCharts.js";
 
 export async function buildTables(tables, matrix, statistic, geog_type, year, time_var, other_vars, other_selections, id_vars, unit) {
 
+    const isDP = tables[matrix]?.type === "dp";
+
+    if (!isDP) {
+        console.log("FTB dataset detected", tables[matrix]);
+        return;
+    }
+
     // Build a table for each additional variable and place behind a tab
     if (other_vars.length > 0) {
 

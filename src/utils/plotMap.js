@@ -23,6 +23,7 @@ export async function plotMap (tables, geog_type) {
     const search = getSearch();
 
     const matrix = geo_menu.value.replace(/_[0-9]+/, "");
+    const isDP = tables[matrix]?.type === "dp";
     const statistic = stats_menu.value;
 
     const time_var = tables[matrix].time;
@@ -43,23 +44,38 @@ export async function plotMap (tables, geog_type) {
             '},"extension":{"pivot":null,"codes":false,"language":{"code":"en"},"format":{"type":"JSON-stat","version":"2.0"},"matrix":"' +
             matrix + '"},"version":"2.0"}}');
 
-    const response = await fetch(api_url);
-    const {result} = await response.json();
-
+    let result;
     
+    if (isDP) {
+        const response = await fetch(api_url);
+        const json = await response.json();
+        result = json.result;
+    } else {
+        const response = await fetch(tables[matrix].path);
+        result = await response.json();
+    }
 
-    const stat_label = Object.values(result.dimension.STATISTIC.category.label)[0];
-    const unit = result.dimension.STATISTIC.category.unit[statistic].label;
+    let stat_label;
+    let unit;
+
+    if (isDP) {
+        stat_label = Object.values(result.dimension.STATISTIC.category.label)[0];
+        unit = result.dimension.STATISTIC.category.unit[statistic].label;
+    } else {
+        stat_label = tables[matrix].statistics[statistic];
+        unit = "Number";
+    }
 
     let plot_ni = false;
-
-    if (geog_type == "none") {
-        plot_ni = true;
-    } else {
-        if (result.dimension[geog_type].category.index.includes("N92000002") || themes_menu.value == "67") {
+    if (isDP) {
+        if (geog_type == "none") {
             plot_ni = true;
+        } else {
+            if (result.dimension[geog_type].category.index.includes("N92000002") || themes_menu.value == "67") {
+                plot_ni = true;
+            }
         }
-    }    
+    }
 
     const niHeadline = headline_year.closest("p");
 
@@ -81,11 +97,16 @@ export async function plotMap (tables, geog_type) {
                 aria-controls="stat-info">
         `;
 
+        if (isDP) {
         stat_info_text.innerHTML = `
             <div>Access data at: <a href="https://data.nisra.gov.uk/table/${matrix}" target="_blank">${result.label}</a></div>
             <div>Last updated: <strong>${result.updated.substr(8, 2)}/${result.updated.substr(5, 2)}/${result.updated.substr(0, 4)}</strong></div>
             <div><a href="mailto:${result.extension.contact.email}">Email for more information</a></div>
         `;
+        } else {
+            stat_info_text.innerHTML = `
+                <div>Source: Census 2021</div>`;
+        }
 
         const chartData = await buildCharts(tables, matrix, statistic, geog_type, result, plot_ni, time_var, subtitle_text, other_headline, other_selections, id_vars, stat_label, unit);
         await buildTables(tables, matrix, statistic, geog_type, year, time_var, other_vars, other_selections, id_vars, unit);
@@ -114,6 +135,7 @@ export async function plotMap (tables, geog_type) {
 
         let u_position;
 
+        if (isDP) {
         if (result.dimension[geog_type].category.index.includes("0")) {
             u_position = result.dimension[geog_type].category.index.indexOf("0")
             result.value.splice(u_position, 1);
@@ -133,10 +155,62 @@ export async function plotMap (tables, geog_type) {
             );
 
         data = cleaned;
+        } else {
+            
+            const geographyCount = result.table.dimensions[0].categories.length;
 
-        // Useful for legend (keep as-is even for COB quintiles)
-        let range_min = Math.floor(Math.min(...data.filter(v => v != null)));
-        let range_max = Math.ceil(Math.max(...data.filter(v => v != null)));
+            const statisticCount = result.table.dimensions[1].categories.length;
+
+            const filterCount = result.table.dimensions[2].categories.length;
+
+            const selectedStatistic = Number(stats_menu.value);
+
+            data = [];
+
+            for (let geographyIndex = 0;
+                geographyIndex < geographyCount;
+                geographyIndex++) {
+
+                let total = 0;
+
+                for (let filterIndex = 0;
+                    filterIndex < filterCount;
+                    filterIndex++) {
+
+                    const valueIndex =
+                        (
+                            geographyIndex *
+                            statisticCount *
+                            filterCount
+                        ) +
+                        (
+                            selectedStatistic *
+                            filterCount
+                        ) +
+                        filterIndex;
+
+                    total +=
+                        result.table.values[valueIndex] || 0;
+                }
+
+                data.push(total);
+            }
+            
+        }
+        
+        let scaleData = data.filter(v => v != null);
+        
+        if (!isDP) {
+            const elsewhereIndex = tables[matrix].categories[geog_type].category.index.indexOf("N11999999");
+            
+            if (elsewhereIndex >= 0) {
+                scaleData = data.filter((_, i) => i !== elsewhereIndex);
+            }
+        }
+
+        let range_min = Math.floor(Math.min(...scaleData));
+
+        let range_max = Math.ceil(Math.max(...scaleData));
 
         let colours = [];
 
@@ -249,7 +323,16 @@ export async function plotMap (tables, geog_type) {
         
         map_div.classList.add("map");
 
-        let map_title_text = `${stat_label} by ${result.dimension[geog_type].label} (${year})`;
+       let geographyLabel;
+       
+       if (isDP) {
+        geographyLabel = result.dimension[geog_type].label;
+    } else {
+        geographyLabel = tables[matrix].categories[geog_type].label;
+    }
+    
+    let map_title_text = `${stat_label} by ${geographyLabel} (${year})`;
+
         map_title.textContent = map_title_text;
 
         
@@ -304,16 +387,22 @@ export async function plotMap (tables, geog_type) {
             // data (array of values), colours (0..1 or bins), getColour(), GEOG_PROPS, titleCase()
 
             const features = geojsonData.features.map((f, idx) => {
-                // Match your Leaflet logic to find this feature’s index in the data array
                 const codeProp = GEOG_PROPS[geog_type].code_var;
                 const code = String(f.properties[codeProp]).replace(/\s+/g, "");
-                const geogIndex = result.dimension[geog_type].category.index.indexOf(code);
+                let geogIndex;
+                let label;
+
+                if (isDP) {
+                    geogIndex = result.dimension[geog_type].category.index.indexOf(code);
+                    label = titleCase(result.dimension[geog_type].category.label[code] || code);
+                
+                } else {
+                    geogIndex = tables[matrix].categories[geog_type].category.index.indexOf(code);
+                    label = titleCase(tables[matrix].categories[geog_type].category.label[code] || code);
+                }
 
                 const rawValue = geogIndex >= 0 ? data[geogIndex] : null;
-                const label =
-                titleCase(result.dimension[geog_type].category.label[code] || code);
 
-                // Convert your normalized/binned "colours[geogIndex]" to an actual hex
                 const fillHex =
                 rawValue == null
                     ? "#eeeeee"                   // fallback for “no data”
@@ -332,7 +421,7 @@ export async function plotMap (tables, geog_type) {
                     nisra_fill: fillHex,
                     nisra_hasValue: rawValue !== null && rawValue !== undefined
                 }
-                };
+            };
             });
 
             const styledGeojson = { ...geojsonData, features };
@@ -458,14 +547,17 @@ export async function plotMap (tables, geog_type) {
         nav_theme.textContent = tables[geo_menu.value].theme;        
         nav_subject.textContent = tables[geo_menu.value].subject;    
         nav_product.textContent = tables[geo_menu.value].product;
-        
-        const updated_text = `Last updated: <strong>${result.updated.substr(8, 2)}/${result.updated.substr(5, 2)}/${result.updated.substr(0, 4)}</strong>. See this full dataset on <a href = "https://data.nisra.gov.uk/table/${matrix}" target = "_blank">NISRA Data Portal.</a>`;
-        
-        chart_updated.innerHTML = updated_text;
-        table_updated.innerHTML = updated_text;
-        map_updated.innerHTML = updated_text;
 
-        dataPortalPreview(tables, matrix, data, result, stat_label, geog_type, year, unit, time_series);       
+        if (isDP) {
+        
+            const updated_text = `Last updated: <strong>${result.updated.substr(8, 2)}/${result.updated.substr(5, 2)}/${result.updated.substr(0, 4)}</strong>. See this full dataset on <a href = "https://data.nisra.gov.uk/table/${matrix}" target = "_blank">NISRA Data Portal.</a>`;
+            
+            chart_updated.innerHTML = updated_text;
+            table_updated.innerHTML = updated_text;
+            map_updated.innerHTML = updated_text;
+
+            dataPortalPreview(tables, matrix, data, result, stat_label, geog_type, year, unit, time_series);      
+        } 
 
         downloadButton(matrix);
 }
