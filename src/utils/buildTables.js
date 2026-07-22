@@ -9,6 +9,8 @@ export async function buildTables(tables, matrix, statistic, geog_type, year, ti
 
      if (!isDP) {
         data_preview.classList.add("d-none");
+    } else {
+        data_preview.classList.remove("d-none");
     }
 
     // Build a table for each additional variable and place behind a tab
@@ -68,18 +70,25 @@ export async function buildTables(tables, matrix, statistic, geog_type, year, ti
                 result = await response.json();
             }
 
-            const dimensions = result.table.dimensions;
-            const breakdown_dim = dimensions.find(d => d.variable.name === other_vars[0]);
-            const statistic_dim = dimensions.find(d => d.count === Object.keys(tables[matrix].statistics).length);
-            const geography_dim = dimensions.find(d => d.variable.name !== breakdown_dim.variable.name && d.variable.name !== statistic_dim.variable.name);
+            let geography_count;
+            let statistic_count;
+            let breakdown_count;
+            let statistic_index;
 
-            const geography_count = geography_dim.count;
-            const statistic_count = statistic_dim.count;
-            const breakdown_count = breakdown_dim.count;
+            if (!isDP) {
+                const dimensions = result.table.dimensions;
+                const breakdown_dim = dimensions.find(d => d.variable.name === other_vars[0]);
+                const statistic_dim = dimensions.find(d => d.count === Object.keys(tables[matrix].statistics).length);
+                const geography_dim = dimensions.find(d => d.variable.name !== breakdown_dim.variable.name && d.variable.name !== statistic_dim.variable.name);
 
-            const selected_code = stats_menu.value;
+                geography_count = geography_dim.count;
+                statistic_count = statistic_dim.count;
+                breakdown_count = breakdown_dim.count;
 
-            const statistic_index = statistic_dim.categories.findIndex(c => c.code === selected_code);
+                const selected_code = stats_menu.value;
+
+                statistic_index = statistic_dim.categories.findIndex(c => c.code === selected_code);
+            }
             
             let table_div = document.createElement("div");
             table_div.classList.add("table-responsive");
