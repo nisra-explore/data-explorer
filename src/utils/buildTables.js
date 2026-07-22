@@ -3,6 +3,8 @@ import { additional_tables, data_preview, table_tabs, table_tabs_content, tables
 
 import { ni_result } from "./buildCharts.js";
 
+export let headline_total = null;
+
 export async function buildTables(tables, matrix, statistic, geog_type, year, time_var, other_vars, other_selections, id_vars, unit) {
 
     const isDP = tables[matrix]?.type === "dp";
@@ -74,10 +76,11 @@ export async function buildTables(tables, matrix, statistic, geog_type, year, ti
             let statistic_count;
             let breakdown_count;
             let statistic_index;
+            let breakdown_dim;
 
             if (!isDP) {
                 const dimensions = result.table.dimensions;
-                const breakdown_dim = dimensions.find(d => d.variable.name === other_vars[0]);
+                breakdown_dim = dimensions.find(d => d.variable.name === other_vars[0]);
                 const statistic_dim = dimensions.find(d => d.count === Object.keys(tables[matrix].statistics).length);
                 const geography_dim = dimensions.find(d => d.variable.name !== breakdown_dim.variable.name && d.variable.name !== statistic_dim.variable.name);
 
@@ -148,6 +151,12 @@ export async function buildTables(tables, matrix, statistic, geog_type, year, ti
                         breakdown_totals[breakdown] += values[value_index] || 0;
                     }
                 }
+
+                const selectedBreakdownCode = document.getElementById(other_vars[0]).value;
+
+                const breakdown_index = breakdown_dim.categories.findIndex(c => c.code === selectedBreakdownCode);
+
+                headline_total = breakdown_totals[breakdown_index];
             }
 
             if (isDP) {

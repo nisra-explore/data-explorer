@@ -8,10 +8,10 @@ import { themes_menu, map_container, stats_menu,
          map_card, chart_updated, nav_product, nav_subject, nav_theme,
          table_title, map_updated, map_title, headline_stat_label,
          additional_tables, table_updated, stat_info_text, headline_year,
-         headline_stat, chart_card, headline_fig, products_menu } from "./elements.js";     
+         headline_stat, chart_card, headline_fig, headline_value, products_menu } from "./elements.js";     
 import { downloadButton } from "./download-button.js";
 import { buildCharts } from "./buildCharts.js";
-import { buildTables } from "./buildTables.js";
+import { buildTables, headline_total } from "./buildTables.js";
 import { addOtherMenus, id_vars, other_selections, other_headline,
          other_vars, subtitle_text } from "./addOtherMenus.js";
 import { dataPortalPreview } from "./dataPortalPreview.js";
@@ -83,19 +83,35 @@ export async function plotMap (tables, geog_type) {
         headline_fig.classList.remove("d-none");
         headline_stat.classList.remove("d-none");
         niHeadline.classList.remove("d-none");
+    } else if (!isDP) {
+        headline_fig.classList.remove("d-none");
+        headline_stat.classList.remove("d-none");
+        niHeadline.classList.remove("d-none");
+        headline_year.textContent = year;
+        headline_stat.innerHTML = other_headline;
     } else {
         headline_stat.classList.add("d-none");
         headline_fig.classList.add("d-none");
         niHeadline.classList.add("d-none");
     }
 
-
+        if (isDP) {
         headline_stat_label.innerHTML = `
             ${stat_label}
             <img class="i-button" src="assets/img/icon/i-button.svg" alt="Information button"
                 data-bs-toggle="collapse" data-bs-target="#stat-info" aria-expanded="false"
                 aria-controls="stat-info">
         `;
+        } else {
+            table_title.textContent = tables[matrix].name;
+
+            headline_stat_label.innerHTML = `
+            ${table_title.textContent}
+            <img class="i-button" src="assets/img/icon/i-button.svg" alt="Information button"
+                data-bs-toggle="collapse" data-bs-target="#stat-info" aria-expanded="false"
+                aria-controls="stat-info">
+        `;
+        }
 
         if (isDP) {
         stat_info_text.innerHTML = `
@@ -113,6 +129,11 @@ export async function plotMap (tables, geog_type) {
 
         const chartData = await buildCharts(tables, matrix, statistic, geog_type, result, plot_ni, time_var, subtitle_text, other_headline, other_selections, id_vars, stat_label, unit);
         await buildTables(tables, matrix, statistic, geog_type, year, time_var, other_vars, other_selections, id_vars, unit);
+
+        if (!isDP) {
+            headline_fig.innerHTML = `<span class = "headline-value" style="font-size: 2.5rem; font-weight: 500;">${headline_total.toLocaleString("en-GB")}</span>`;
+        }
+
         const data_series = chartData?.data_series ?? [];
         const time_series = chartData?.time_series ?? [];
 

@@ -9,6 +9,8 @@ export let ni_result;
 
 export async function buildCharts(tables, matrix, statistic, geog_type, result, plot_ni, time_var, subtitle_text, other_headline, other_selections, id_vars, stat_label, unit) {
 
+    const isDP = tables[matrix]?.type === "dp";
+
     let headline_value = "Not available";
     let data_series = null;
     let time_series = [];
@@ -181,9 +183,10 @@ export async function buildCharts(tables, matrix, statistic, geog_type, result, 
         if (unit.toLowerCase() == "number") {
             unit_fixed = "";
         }
-        headline_fig.innerHTML = `<span class = "headline-value" style="font-size: 2.5rem; font-weight: 500;">${headline_value}</span> ${unit_fixed}`;
 
-
+        if (isDP) {
+            headline_fig.innerHTML = `<span class = "headline-value" style="font-size: 2.5rem; font-weight: 500;">${headline_value}</span> ${unit_fixed}`;
+        }
     }
 
     return {

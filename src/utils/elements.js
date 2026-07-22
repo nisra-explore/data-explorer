@@ -23,6 +23,7 @@ export const chart_title = document.getElementById("chart-title");
 export const chart_subtitle = document.getElementById("chart-subtitle");
 export const headline_fig = document.getElementById("headline-fig");
 export const headline_stat = document.getElementById("headline-stat");
+export const headline_value = document.getElementById("headline-value");
 export const dp_link = document.getElementById("dp-link");
 export const chart_updated = document.getElementById("chart-updated");
 export const nav_product = document.getElementById("nav-product");
