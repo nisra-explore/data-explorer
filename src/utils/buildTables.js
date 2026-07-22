@@ -1,4 +1,4 @@
-import { additional_tables, table_tabs, table_tabs_content, tables_title,
+import { additional_tables, data_preview, table_tabs, table_tabs_content, tables_title,
          stats_menu, chart_title } from "./elements.js";
 
 import { ni_result } from "./buildCharts.js";
@@ -7,9 +7,8 @@ export async function buildTables(tables, matrix, statistic, geog_type, year, ti
 
     const isDP = tables[matrix]?.type === "dp";
 
-    if (!isDP) {
-        console.log("FTB dataset detected", tables[matrix]);
-        return;
+     if (!isDP) {
+        data_preview.classList.add("d-none");
     }
 
     // Build a table for each additional variable and place behind a tab
@@ -57,8 +56,30 @@ export async function buildTables(tables, matrix, statistic, geog_type, year, ti
                     '},"extension":{"pivot":null,"codes":false,"language":{"code":"en"},"format":{"type":"JSON-stat","version":"2.0"},"matrix":"' +
                     matrix + '"},"version":"2.0"}}');
 
-            const response = await fetch(table_url);
-            const { result } = await response.json();
+
+            let result;
+
+            if (isDP) {
+                const response = await fetch(table_url);
+                const json = await response.json();
+                result = json.result;
+            } else {
+                const response = await fetch(tables[matrix].path);
+                result = await response.json();
+            }
+
+            const dimensions = result.table.dimensions;
+            const breakdown_dim = dimensions.find(d => d.variable.name === other_vars[0]);
+            const statistic_dim = dimensions.find(d => d.count === Object.keys(tables[matrix].statistics).length);
+            const geography_dim = dimensions.find(d => d.variable.name !== breakdown_dim.variable.name && d.variable.name !== statistic_dim.variable.name);
+
+            const geography_count = geography_dim.count;
+            const statistic_count = statistic_dim.count;
+            const breakdown_count = breakdown_dim.count;
+
+            const selected_code = stats_menu.value;
+
+            const statistic_index = statistic_dim.categories.findIndex(c => c.code === selected_code);
             
             let table_div = document.createElement("div");
             table_div.classList.add("table-responsive");
@@ -76,13 +97,25 @@ export async function buildTables(tables, matrix, statistic, geog_type, year, ti
             tr.appendChild(var_header);
 
             let stat_header = document.createElement("th");
-            stat_header.textContent = result.dimension.STATISTIC.category.label[statistic];
+            
+            if (isDP) {
+                stat_header.textContent = result.dimension.STATISTIC.category.label[statistic];
+            } else {
+                stat_header.textContent = tables[matrix].statistics?.[stats_menu.value] || "Value";
+            }
+
             stat_header.style = "text-align: right;"
             tr.appendChild(stat_header);
 
             table.appendChild(tr);
 
-            let values = result.value;
+            let values;
+
+            if (isDP) {
+                values = result.value;
+            } else {
+                values = result.table.values;
+            }
             
             const hasData = values.some(v => v != null);
             
@@ -91,31 +124,78 @@ export async function buildTables(tables, matrix, statistic, geog_type, year, ti
                 return;
             }
 
-            for (let j = 0; j < values.length; j ++) {
-                let tr = document.createElement("tr");
+            let breakdown_totals = null;
 
-                let td_0 = document.createElement("td");
-                td_0.textContent = Object.values(result.dimension[other_vars[i]].category.label)[j];
-                tr.appendChild(td_0);
+            if (!isDP) {
 
-                let td_1 = document.createElement("td");
-                if (values[j] == null) {
-                    td_1.textContent = "..";
-                } else {
-                    let decimals = result.dimension.STATISTIC.category.unit[stats_menu.value].decimals;
-                    td_1.textContent = values[j].toLocaleString("en-GB", {
-                        minimumFractionDigits: decimals,
-                        maximumFractionDigits: decimals
-                    });
+                breakdown_totals = new Array(breakdown_count).fill(0);
+
+                for (let geography = 0; geography < geography_count; geography++) {
+
+                    for (let breakdown = 0; breakdown < breakdown_count; breakdown++) {
+
+                        const value_index = (geography * statistic_count * breakdown_count) + (statistic_index * breakdown_count) + breakdown;
+
+                        breakdown_totals[breakdown] += values[value_index] || 0;
+                    }
                 }
-                td_1.style = "text-align: right;"
-                if (["all", "ni", "n92000002"].includes(Object.keys(result.dimension[other_vars[i]].category.label)[j].toLowerCase())) {
-                    td_0.style = "font-weight: bold;"
-                    td_1.style = "text-align: right; font-weight: bold;"
-                }
-                tr.appendChild(td_1);
+            }
 
-                table.appendChild(tr);
+            if (isDP) {
+
+                for (let j = 0; j < values.length; j++) {
+
+                    let tr = document.createElement("tr");
+
+                    let td_0 = document.createElement("td");
+                    td_0.textContent = Object.values(result.dimension[other_vars[i]].category.label)[j];
+
+                    tr.appendChild(td_0);
+
+                    let td_1 = document.createElement("td");
+
+                    if (values[j] == null) {
+                        td_1.textContent = "..";
+                    } else {
+
+                        const decimals = result.dimension.STATISTIC.category.unit[stats_menu.value].decimals;
+
+                        td_1.textContent = values[j].toLocaleString("en-GB", {
+                            minimumFractionDigits: decimals,
+                            maximumFractionDigits: decimals
+                        });
+                    }
+
+                    td_1.style = "text-align: right;";
+
+                    if (["all", "ni", "n92000002"].includes(Object.keys(result.dimension[other_vars[i]].category.label)[j].toLowerCase())) {
+                        td_0.style = "font-weight: bold;";
+                        td_1.style = "text-align: right; font-weight: bold;";
+                    }
+
+                    tr.appendChild(td_1);
+                    table.appendChild(tr);
+                }
+
+            } else {
+
+                const dim = result.table.dimensions.find(d => d.variable.name === other_vars[i]);
+
+                for (let j = 0; j < breakdown_count; j++) {
+
+                    let tr = document.createElement("tr");
+
+                    let td_0 = document.createElement("td");
+                    td_0.textContent = dim.categories[j].label;
+                    tr.appendChild(td_0);
+
+                    let td_1 = document.createElement("td");
+                    td_1.textContent = breakdown_totals[j].toLocaleString("en-GB");
+                    td_1.style = "text-align: right;";
+                    tr.appendChild(td_1);
+
+                    table.appendChild(tr);
+                }
             }
 
             table_div.appendChild(table);
