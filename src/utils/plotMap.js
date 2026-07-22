@@ -166,7 +166,13 @@ export async function plotMap (tables, geog_type) {
 
             const filterCount = result.table.dimensions[2].categories.length;
 
-            const selectedStatistic = Number(stats_menu.value);
+            const statisticDim = result.table.dimensions[1];
+
+            const selectedStatistic = statisticDim.categories.findIndex(c => c.code === stats_menu.value);
+
+            const selectedCode = document.getElementById(other_vars[0]).value;
+            
+            const selectedBreakdown = result.table.dimensions[2].categories.findIndex(c => c.code === selectedCode);
 
             data = [];
 
@@ -174,31 +180,10 @@ export async function plotMap (tables, geog_type) {
                 geographyIndex < geographyCount;
                 geographyIndex++) {
 
-                let total = 0;
+                const valueIndex = (geographyIndex * statisticCount * filterCount) + (selectedStatistic * filterCount) + selectedBreakdown;
 
-                for (let filterIndex = 0;
-                    filterIndex < filterCount;
-                    filterIndex++) {
-
-                    const valueIndex =
-                        (
-                            geographyIndex *
-                            statisticCount *
-                            filterCount
-                        ) +
-                        (
-                            selectedStatistic *
-                            filterCount
-                        ) +
-                        filterIndex;
-
-                    total +=
-                        result.table.values[valueIndex] || 0;
-                }
-
-                data.push(total);
+                data.push( result.table.values[valueIndex] || 0);
             }
-            
         }
         
         let scaleData = data.filter(v => v != null);
