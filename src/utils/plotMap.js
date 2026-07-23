@@ -131,9 +131,12 @@ export async function plotMap (tables, geog_type) {
         await buildTables(tables, matrix, statistic, geog_type, year, time_var, other_vars, other_selections, id_vars, unit);
 
         if (!isDP) {
-            headline_fig.innerHTML = `<span class = "headline-value" style="font-size: 2.5rem; font-weight: 500;">${headline_total.toLocaleString("en-GB")}</span>`;
+            headline_fig.innerHTML = `<span class = "headline-value" style="font-size: 2.5rem; font-weight: 500;">${headline_total.toLocaleString("en-GB")}
+            
+            </span>`;
         }
 
+        // ${headline_total.toLocaleString("en-GB")}
         const data_series = chartData?.data_series ?? [];
         const time_series = chartData?.time_series ?? [];
 
@@ -180,32 +183,51 @@ export async function plotMap (tables, geog_type) {
 
         data = cleaned;
         } else {
-            
-            const geographyCount = result.table.dimensions[0].categories.length;
 
-            const statisticCount = result.table.dimensions[1].categories.length;
+        const dimensions = result.table.dimensions;
 
-            const filterCount = result.table.dimensions[2].categories.length;
+        const geography_dim = dimensions[0];
 
-            const statisticDim = result.table.dimensions[1];
+        const statistic_dim = dimensions.find(d => d.count === Object.keys(tables[matrix].statistics).length);
 
-            const selectedStatistic = statisticDim.categories.findIndex(c => c.code === stats_menu.value);
+        const breakdown_dim = dimensions.find(d => d.variable.name !== geography_dim.variable.name && d.variable.name !== statistic_dim.variable.name);
 
-            const selectedCode = document.getElementById(other_vars[0]).value;
-            
-            const selectedBreakdown = result.table.dimensions[2].categories.findIndex(c => c.code === selectedCode);
+        const geography_count = geography_dim.count;
+        const statistic_count = statistic_dim.count;
 
-            data = [];
+        const selected_statistic = statistic_dim.categories.findIndex(c => c.code === stats_menu.value);
 
-            for (let geographyIndex = 0;
-                geographyIndex < geographyCount;
-                geographyIndex++) {
+        data = [];
 
-                const valueIndex = (geographyIndex * statisticCount * filterCount) + (selectedStatistic * filterCount) + selectedBreakdown;
+        if (breakdown_dim) {
 
-                data.push( result.table.values[valueIndex] || 0);
+            const breakdown_count = breakdown_dim.count;
+
+            const selected_code = document.getElementById(other_vars[0]).value;
+
+            const selected_breakdown = breakdown_dim.categories.findIndex(c => c.code === selected_code);
+
+            for (let geography_index = 0;
+                geography_index < geography_count;
+                geography_index++) {
+
+                const value_index = (geography_index * statistic_count * breakdown_count) + (selected_statistic * breakdown_count) + selected_breakdown;
+
+                data.push(result.table.values[value_index] || 0);
+            }
+
+        } else {
+
+            for (let geography_index = 0;
+                geography_index < geography_count;
+                geography_index++) {
+
+                const value_index = (geography_index * statistic_count) + selected_statistic;
+
+                data.push(result.table.values[value_index] || 0);
             }
         }
+    }
         
         let scaleData = data.filter(v => v != null);
         
