@@ -56709,6 +56709,47 @@
       "path": "public/data/census-tables/ni-census21-people-settlement15+unemployment_history_agg4-a764936d.json",
       "url": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=SETTLEMENT15&v=UNEMPLOYMENT_HISTORY_AGG4"
     },
+    "FTBHOUS": {
+      "type": "ftb",
+      "name": "Households",
+      "updated": "31/05/2023",
+      "categories": {
+        "HSCT": {
+          "category": {
+            "index": ["BHSCT", "NHSCT", "SEHSCT", "SHSCT", "WHSCT"],
+            "label": {
+              "BHSCT": "Belfast",
+              "NHSCT": "Northern",
+              "SEHSCT": "South eastern",
+              "SHSCT": "Southern",
+              "WHSCT": "Western"
+            }
+          },
+          "label": "Health and Social Care Trust"
+        },
+        "TLIST(A1)": {
+          "category": {
+            "index": "2021",
+            "label": {
+              "2021": "2021"
+            }
+          },
+          "label": "Year"
+        }
+      },
+      "statistics": {},
+      "time": "TLIST(A1)",
+      "time_series": "2021",
+      "theme": "People and communities",
+      "theme_code": 70,
+      "subject": "Census",
+      "subject_code": 148,
+      "product": "Census 2021",
+      "product_code": "C2021",
+      "rows": 5,
+      "path": "public/data/census-tables/ni-census21-household-health_trust-014f1396.json",
+      "url": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=HEALTH_TRUST"
+    },
     "FTBPASSPORT": {
       "type": "ftb",
       "name": "Passports held - Religion",

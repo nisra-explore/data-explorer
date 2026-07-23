@@ -8,7 +8,8 @@ import { themes_menu, map_container, stats_menu,
          map_card, chart_updated, nav_product, nav_subject, nav_theme,
          table_title, map_updated, map_title, headline_stat_label,
          additional_tables, table_updated, stat_info_text, headline_year,
-         headline_stat, chart_card, headline_fig, headline_value, products_menu } from "./elements.js";     
+         headline_stat, chart_card, headline_fig, headline_value, products_menu,
+         statistic_dropdown } from "./elements.js";     
 import { downloadButton } from "./download-button.js";
 import { buildCharts } from "./buildCharts.js";
 import { buildTables, headline_total } from "./buildTables.js";
@@ -62,9 +63,13 @@ export async function plotMap (tables, geog_type) {
         stat_label = Object.values(result.dimension.STATISTIC.category.label)[0];
         unit = result.dimension.STATISTIC.category.unit[statistic].label;
     } else {
-        stat_label = tables[matrix].statistics[statistic];
-        unit = "Number";
+        if (tables[matrix].statistics?.[statistic]) {
+            stat_label = tables[matrix].statistics[statistic];
+        } else {
+        stat_label = tables[matrix].name;
     }
+    unit = "Number";
+}
 
     let plot_ni = false;
     if (isDP) {
@@ -184,20 +189,80 @@ export async function plotMap (tables, geog_type) {
         data = cleaned;
         } else {
 
-        const dimensions = result.table.dimensions;
+            const dimensions = result.table.dimensions;
 
-        const geography_dim = dimensions[0];
+            data = [];
 
-        const statistic_dim = dimensions.find(d => d.count === Object.keys(tables[matrix].statistics).length);
+            let geography_count;
+            let statistic_count;
+            let selected_statistic;
+            let breakdown_dim;
 
-        const breakdown_dim = dimensions.find(d => d.variable.name !== geography_dim.variable.name && d.variable.name !== statistic_dim.variable.name);
+            if (dimensions.length === 1) {
 
-        const geography_count = geography_dim.count;
-        const statistic_count = statistic_dim.count;
+                data = [...result.table.values];
 
-        const selected_statistic = statistic_dim.categories.findIndex(c => c.code === stats_menu.value);
+                statistic_dropdown.classList.add("d-none");
 
-        data = [];
+            } else if (dimensions.length === 2) {
+
+                statistic_dropdown.classList.remove("d-none");
+
+                const geography_dim = dimensions[0];
+                const statistic_dim = dimensions[1];
+
+                const geography_count = geography_dim.count;
+                const statistic_count = statistic_dim.count;
+
+                const selected_statistic = statistic_dim.categories.findIndex(c => c.code === stats_menu.value);
+
+                for (let geography_index = 0;
+                    geography_index < geography_count;
+                    geography_index++) {
+
+                    const value_index = (geography_index * statistic_count) + selected_statistic;
+
+                    data.push(result.table.values[value_index] || 0);
+                }
+
+            } else if (dimensions.length === 3) {
+
+                statistic_dropdown.classList.remove("d-none");
+
+                const geography_dim = dimensions[0];
+
+                const statistic_dim = dimensions.find(d => d.count === Object.keys(tables[matrix].statistics).length);
+
+                const breakdown_dim = dimensions.find(d => d.variable.name !== geography_dim.variable.name && d.variable.name !== statistic_dim.variable.name);
+
+                const geography_count = geography_dim.count;
+                const statistic_count = statistic_dim.count;
+                const breakdown_count = breakdown_dim.count;
+
+                const selected_statistic = statistic_dim.categories.findIndex(c => c.code === stats_menu.value);
+
+                const selected_code = document.getElementById(other_vars[0]).value;
+
+                const selected_breakdown = breakdown_dim.categories.findIndex(c => c.code === selected_code);
+
+                for (let geography_index = 0;
+                    geography_index < geography_count;
+                    geography_index++) {
+
+                    const value_index = (geography_index * statistic_count * breakdown_count) + (selected_statistic * breakdown_count) + selected_breakdown;
+
+                    data.push(result.table.values[value_index] || 0);
+                }
+
+            } else {
+
+                console.error(
+                    `Unsupported FTB dimension structure (${dimensions.length} dimensions)`
+                );
+
+                return;
+            }
+       
 
         if (breakdown_dim) {
 

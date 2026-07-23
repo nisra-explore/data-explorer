@@ -21,7 +21,11 @@ export async function buildTables(tables, matrix, statistic, geog_type, year, ti
         additional_tables.classList.remove("d-none");
 
          // Add new tables
-         tables_title.textContent = `${tables[matrix].statistics[stats_menu.value]} in Northern Ireland (${year}) by:`;
+         if (!isDP && other_vars.length === 0) {
+            tables_title.textContent = `${tables[matrix].name} in Northern Ireland (${year}) by:`;
+        } else {
+            tables_title.textContent = `${tables[matrix].statistics[stats_menu.value]} in Northern Ireland (${year}) by:`;
+        }
 
         const table_count = other_vars.length > 0 ? other_vars.length : 1;
         
@@ -89,17 +93,39 @@ export async function buildTables(tables, matrix, statistic, geog_type, year, ti
 
             if (!isDP) {
                 const dimensions = result.table.dimensions;
-                const geography_dim = dimensions[0];
-                statistic_dim = dimensions.find(d => d.count === Object.keys(tables[matrix].statistics).length);
-                breakdown_dim = dimensions.find(d => d.variable.name !== geography_dim.variable.name && d.variable.name !== statistic_dim.variable.name);
+                const dimension_count = dimensions.length;
 
-                geography_count = geography_dim.count;
-                statistic_count = statistic_dim.count;
-                breakdown_count = breakdown_dim ? breakdown_dim.count : 0;
+                if (dimension_count === 1) {
 
-                const selected_code = stats_menu.value;
+                    const geography_dim = dimensions[0];
 
-                statistic_index = statistic_dim.categories.findIndex(c => c.code === stats_menu.value)
+                    geography_count = geography_dim.count;
+
+                } else if (dimension_count === 2) {
+
+                    const geography_dim = dimensions[0];
+
+                    statistic_dim = dimensions[1];
+
+                    geography_count = geography_dim.count;
+                    statistic_count = statistic_dim.count;
+
+                    statistic_index = statistic_dim.categories.findIndex(c => c.code === stats_menu.value);
+                    
+                } else {
+
+                    const geography_dim = dimensions[0];
+
+                    statistic_dim = dimensions.find(d => d.count === Object.keys(tables[matrix].statistics).length);
+
+                    breakdown_dim = dimensions.find(d => d.variable.name !== geography_dim.variable.name && d.variable.name !== statistic_dim.variable.name);
+
+                    geography_count = geography_dim.count;
+                    statistic_count = statistic_dim.count;
+                    breakdown_count = breakdown_dim.count;
+
+                    statistic_index = statistic_dim.categories.findIndex(c => c.code === stats_menu.value);
+                }
             }
             
             let table_div = document.createElement("div");
@@ -173,6 +199,10 @@ export async function buildTables(tables, matrix, statistic, geog_type, year, ti
 
                 headline_total = breakdown_totals[breakdown_index];
 
+            } else if (!isDP && !statistic_dim) {
+                
+                headline_total = values.reduce((sum, value) => sum + (value || 0), 0);
+
             } else if (!isDP) {
 
                 headline_total = 0;
@@ -241,8 +271,7 @@ export async function buildTables(tables, matrix, statistic, geog_type, year, ti
                     table.appendChild(tr);
                 }
 
-            } else {
-                
+            } else if (statistic_dim) {
                 let tr = document.createElement("tr");
 
                 let td_0 = document.createElement("td");
@@ -257,8 +286,28 @@ export async function buildTables(tables, matrix, statistic, geog_type, year, ti
                 tr.appendChild(td_1);
 
                 table.appendChild(tr);
-            }
+            } else {
 
+                const dim = result.table.dimensions[0];
+
+                for (let j = 0; j < dim.count; j++) {
+
+                    let tr = document.createElement("tr");
+
+                    let td_0 = document.createElement("td");
+                    td_0.textContent = dim.categories[j].label;
+
+                    tr.appendChild(td_0);
+
+                    let td_1 = document.createElement("td");
+                    td_1.textContent = values[j].toLocaleString("en-GB");
+                    td_1.style = "text-align: right;";
+
+                    tr.appendChild(td_1);
+
+                    table.appendChild(tr);
+                }
+            }
             table_div.appendChild(table);
             div.appendChild(table_div);
             table_tabs_content.appendChild(div);

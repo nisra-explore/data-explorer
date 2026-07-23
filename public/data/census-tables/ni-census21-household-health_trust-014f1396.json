@@ -1,0 +1,65 @@
+{
+    "name": "HOUSEHOLD",
+    "label": "Households",
+    "table": {
+        "dimensions": [
+            {
+                "count": 5,
+                "variable": {
+                    "name": "HEALTH_TRUST",
+                    "label": "Health and Social Care Trust"
+                },
+                "categories": [
+                    {
+                        "code": "BHSCT",
+                        "label": "Belfast"
+                    },
+                    {
+                        "code": "NHSCT",
+                        "label": "Northern"
+                    },
+                    {
+                        "code": "SEHSCT",
+                        "label": "South eastern"
+                    },
+                    {
+                        "code": "SHSCT",
+                        "label": "Southern"
+                    },
+                    {
+                        "code": "WHSCT",
+                        "label": "Western"
+                    }
+                ]
+            }
+        ],
+        "rules": {
+            "variable": {
+                "name": "HEALTH_TRUST",
+                "label": "Health and Social Care Trust"
+            },
+            "blocked": {
+                "count": 0,
+                "categories": []
+            }
+        },
+        "obsType": {
+            "name": "COUNT",
+            "label": "Count",
+            "decimalPlaces": 0,
+            "format": {
+                "multiplier": 1,
+                "prefix": "",
+                "suffix": "",
+                "fillTrailingZeros": false
+            }
+        },
+        "values": [
+            157359,
+            193265,
+            151111,
+            147204,
+            119871
+        ]
+    }
+}
