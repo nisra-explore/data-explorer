@@ -255,7 +255,7 @@ export async function buildTables(tables, matrix, statistic, geog_type, year, ti
                 
                 const dim = result.table.dimensions.find(d => d.variable.name === other_vars[i]);
 
-                for (let j = 0; j < breakdown_count; j++) {
+                for (let j = 0; j < dim.categories.length; j++) {
 
                     let tr = document.createElement("tr");
 

@@ -136,12 +136,9 @@ export async function plotMap (tables, geog_type) {
         await buildTables(tables, matrix, statistic, geog_type, year, time_var, other_vars, other_selections, id_vars, unit);
 
         if (!isDP) {
-            headline_fig.innerHTML = `<span class = "headline-value" style="font-size: 2.5rem; font-weight: 500;">${headline_total.toLocaleString("en-GB")}
-            
-            </span>`;
+            headline_fig.innerHTML = `<span class = "headline-value" style="font-size: 2.5rem; font-weight: 500;">${headline_total.toLocaleString("en-GB")}</span>`;
         }
 
-        // ${headline_total.toLocaleString("en-GB")}
         const data_series = chartData?.data_series ?? [];
         const time_series = chartData?.time_series ?? [];
 
@@ -198,12 +195,15 @@ export async function plotMap (tables, geog_type) {
             let selected_statistic;
             let breakdown_dim;
 
+            // Check how many dimensions FTB dataset contains
+            // 1 dimension (geography only)
             if (dimensions.length === 1) {
 
                 data = [...result.table.values];
 
                 statistic_dropdown.classList.add("d-none");
 
+            // 2 dimensions
             } else if (dimensions.length === 2) {
 
                 statistic_dropdown.classList.remove("d-none");
@@ -225,40 +225,68 @@ export async function plotMap (tables, geog_type) {
                     data.push(result.table.values[value_index] || 0);
                 }
 
-            } else if (dimensions.length === 3) {
+            // 3 or more dimensions
+            } else if (dimensions.length >= 3) {
 
                 statistic_dropdown.classList.remove("d-none");
 
                 const geography_dim = dimensions[0];
 
+                // Get statistic dimension
                 const statistic_dim = dimensions.find(d => d.count === Object.keys(tables[matrix].statistics).length);
 
-                const breakdown_dim = dimensions.find(d => d.variable.name !== geography_dim.variable.name && d.variable.name !== statistic_dim.variable.name);
+                // Get remaining filter dimensions
+                const breakdown_dims = dimensions.filter(d => d.variable.name !== geography_dim.variable.name && d.variable.name !== statistic_dim.variable.name);
 
                 const geography_count = geography_dim.count;
                 const statistic_count = statistic_dim.count;
-                const breakdown_count = breakdown_dim.count;
 
                 const selected_statistic = statistic_dim.categories.findIndex(c => c.code === stats_menu.value);
 
-                const selected_code = document.getElementById(other_vars[0]).value;
+                // 3 dimensions
+                if (breakdown_dims.length === 1) {
 
-                const selected_breakdown = breakdown_dim.categories.findIndex(c => c.code === selected_code);
+                    const breakdown_dim = breakdown_dims[0];
 
-                for (let geography_index = 0;
-                    geography_index < geography_count;
-                    geography_index++) {
+                    const breakdown_count = breakdown_dim.count;
 
-                    const value_index = (geography_index * statistic_count * breakdown_count) + (selected_statistic * breakdown_count) + selected_breakdown;
+                    const selected_breakdown = breakdown_dim.categories.findIndex(c => c.code === document.getElementById(breakdown_dim.variable.name).value);
 
-                    data.push(result.table.values[value_index] || 0);
+                    for (let geography_index = 0;
+                        geography_index < geography_count;
+                        geography_index++) {
+                            
+                            const value_index = (geography_index * statistic_count * breakdown_count) + (selected_statistic * breakdown_count) + selected_breakdown;
+                            
+                            data.push(result.table.values[value_index] || 0);
+                    }
+
+                // 4 dimensions
+                } else if (breakdown_dims.length === 2) {
+
+                    const dim_1 = breakdown_dims[0];
+                    const dim_2 = breakdown_dims[1];
+
+                    const count_1 = dim_1.count;
+                    const count_2 = dim_2.count;
+
+                    const selected_1 = dim_1.categories.findIndex(c => c.code === document.getElementById(dim_1.variable.name).value);
+
+                    const selected_2 = dim_2.categories.findIndex(c => c.code === document.getElementById(dim_2.variable.name).value);
+
+                    for (let geography_index = 0;
+                        geography_index < geography_count;
+                        geography_index++) {
+
+                        const value_index = (geography_index * statistic_count * count_1 * count_2) + (selected_statistic * count_1 * count_2) + (selected_1 * count_2) + selected_2;
+
+                        data.push(result.table.values[value_index] || 0);
+                    }
                 }
 
             } else {
 
-                console.error(
-                    `Unsupported FTB dimension structure (${dimensions.length} dimensions)`
-                );
+                console.error(`Unsupported FTB dimension structure (${dimensions.length} dimensions)`);
 
                 return;
             }

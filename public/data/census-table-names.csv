@@ -5,3 +5,4 @@ path,title,code,url
 "ni-census21-people-settlement15+compulsory_school_age_agg3+health_condition_autism-f86b9d3a.json","Autism - School age",FTBAUTISM,https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=SETTLEMENT15&v=COMPULSORY_SCHOOL_AGE_AGG3&v=HEALTH_CONDITION_AUTISM
 "ni-census21-people-settlement15+unemployment_history_agg4-a764936d.json","Employment History",FTBEMPHIS,https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=SETTLEMENT15&v=UNEMPLOYMENT_HISTORY_AGG4
 "ni-census21-household-health_trust-014f1396.json","Households",FTBHOUS,https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=HEALTH_TRUST
+"ni-census21-people-parlcon24+in_full_time_education+age_band_broad+ur_sex-24c55f59.json","Full-time student - Age and sex",FTBSTUDAGESEX,https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=PARLCON24&v=IN_FULL_TIME_EDUCATION&v=AGE_BAND_BROAD&v=UR_SEX

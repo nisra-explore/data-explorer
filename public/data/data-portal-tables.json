@@ -56978,6 +56978,97 @@
       "path": "public/data/census-tables/ni-census21-people-health_trust+adult_lifestage_agg6+sexual_orientation_dvo_agg4-b2fd87c3.json",
       "url": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=HEALTH_TRUST&v=ADULT_LIFESTAGE_AGG6&v=SEXUAL_ORIENTATION_DVO_AGG4"
     },
+    "FTBSTUDAGESEX": {
+      "type": "ftb",
+      "name": "Full-time student - Age and sex",
+      "updated": "31/05/2023",
+      "categories": {
+        "AA2024": {
+          "category": {
+            "index": ["N05000001", "N05000002", "N05000003", "N05000004", "N05000005", "N05000006", "N05000007", "N05000008", "N05000009", "N05000010", "N05000011", "N05000012", "N05000013", "N05000014", "N05000015", "N05000016", "N05000017", "N05000018"],
+            "label": {
+              "N05000001": "Belfast East",
+              "N05000002": "Belfast North",
+              "N05000003": "Belfast South and Mid Down",
+              "N05000004": "Belfast West",
+              "N05000005": "East Antrim",
+              "N05000006": "East Londonderry",
+              "N05000007": "Fermanagh and South Tyrone",
+              "N05000008": "Foyle",
+              "N05000009": "Lagan Valley",
+              "N05000010": "Mid Ulster",
+              "N05000011": "Newry and Armagh",
+              "N05000012": "North Antrim",
+              "N05000013": "North Down",
+              "N05000014": "South Antrim",
+              "N05000015": "South Down",
+              "N05000016": "Strangford",
+              "N05000017": "Upper Bann",
+              "N05000018": "West Tyrone"
+            }
+          },
+          "label": "Parliamentary Constituency 2024"
+        },
+        "STATISTIC": {
+          "category": {
+            "index": ["1", "2", "-8"],
+            "label": {
+              "1": "Full-time student or schoolchild",
+              "2": "Not a full-time student or schoolchild",
+              "-8": "No code required"
+            }
+          },
+          "label": "Full Time Student"
+        },
+        "AGE_BAND_BROAD": {
+          "category": {
+            "index": ["1", "2", "3", "4"],
+            "label": {
+              "1": "0-15 years",
+              "2": "16-39 years",
+              "3": "40-64 years",
+              "4": "65+ years"
+            }
+          },
+          "label": "Age - 4 Categories"
+        },
+        "UR_SEX": {
+          "category": {
+            "index": ["1", "2"],
+            "label": {
+              "1": "Female",
+              "2": "Male"
+            }
+          },
+          "label": "Sex"
+        },
+        "TLIST(A1)": {
+          "category": {
+            "index": "2021",
+            "label": {
+              "2021": "2021"
+            }
+          },
+          "label": "Year"
+        }
+      },
+      "statistics": {
+        "1": "Full-time student or schoolchild",
+        "2": "Not a full-time student or schoolchild",
+        "-8": "No code required"
+      },
+      "time": "TLIST(A1)",
+      "time_series": "2021",
+      "theme": "People and communities",
+      "theme_code": 70,
+      "subject": "Census",
+      "subject_code": 148,
+      "product": "Census 2021",
+      "product_code": "C2021",
+      "rows": 432,
+      "path": "public/data/census-tables/ni-census21-people-parlcon24+in_full_time_education+age_band_broad+ur_sex-24c55f59.json",
+      "url": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=PARLCON24&v=IN_FULL_TIME_EDUCATION&v=AGE_BAND_BROAD&v=UR_SEX"
+    },
     "FTEFOC": {
       "type": "dp",
       "name": "First Time Entrants: First offences and convictions",
