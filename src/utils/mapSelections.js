@@ -43,6 +43,8 @@ export function mapSelections (categories, tables) {
         geog_type = "ELB";
     } else if (categories.includes("COB_BASIC")) {
         geog_type = "COB_BASIC";
+    } else if (categories.includes("COUNTY_NI")) {
+        geog_type = "COUNTY_NI";
     } else if (categories.includes("NI")) {
         geog_type = "NI"
     } else {

@@ -97,6 +97,11 @@ export const GEOG_PROPS= {
     url:"public/map/SETTLEMENT15.geo.json",
     code_var: "Code",
     label: "Settlement 2015"
+  },
+  COUNTY_NI: {
+    url:"public/map/Counties.geo.json",
+    code_var: "COUNTY_ID",
+    label: "County"
   }
 }
 

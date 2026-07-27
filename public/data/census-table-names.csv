@@ -6,3 +6,5 @@ path,title,code,url
 "ni-census21-people-settlement15+unemployment_history_agg4-a764936d.json","Employment History",FTBEMPHIS,https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=SETTLEMENT15&v=UNEMPLOYMENT_HISTORY_AGG4
 "ni-census21-household-health_trust-014f1396.json","Households",FTBHOUS,https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=HEALTH_TRUST
 "ni-census21-people-parlcon24+in_full_time_education+age_band_broad+ur_sex-24c55f59.json","Full-time student - Age and sex",FTBSTUDAGESEX,https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=PARLCON24&v=IN_FULL_TIME_EDUCATION&v=AGE_BAND_BROAD&v=UR_SEX
+"ni-census21-household-county_ni+accommodation_type+hh_central_heating-8446612f.json","Accomodation Type",FTBACCOM,https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=COUNTY_NI&v=ACCOMMODATION_TYPE&v=HH_CENTRAL_HEATING
+"ni-census21-household-parlcon24+hh_tenure-79bed69c.json","Tenor - Households",FTBHOUSTEN,https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=PARLCON24&v=HH_TENURE
