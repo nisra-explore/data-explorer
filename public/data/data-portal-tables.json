@@ -50216,7 +50216,7 @@
     },
     "FEACHMAA": {
       "name": "Achievements in further education colleges",
-      "updated": "2026-04-20",
+      "updated": "2026-09-10",
       "categories": {
         "STATISTIC": {
           "category": {
@@ -50301,7 +50301,7 @@
     },
     "FEACHMDEA": {
       "name": "Achievements in further education colleges",
-      "updated": "2026-04-20",
+      "updated": "2026-09-10",
       "categories": {
         "STATISTIC": {
           "category": {
@@ -50448,7 +50448,7 @@
     },
     "FEACHMHSCT": {
       "name": "Achievements in further education colleges",
-      "updated": "2026-04-20",
+      "updated": "2026-09-10",
       "categories": {
         "STATISTIC": {
           "category": {
@@ -50520,7 +50520,7 @@
     },
     "FEACHMLGD": {
       "name": "Achievements in further education colleges",
-      "updated": "2026-04-20",
+      "updated": "2026-09-10",
       "categories": {
         "STATISTIC": {
           "category": {
@@ -50775,7 +50775,7 @@
     },
     "FEENROLAA": {
       "name": "Regulated enrolments at further education colleges",
-      "updated": "2026-04-20",
+      "updated": "2026-09-10",
       "categories": {
         "STATISTIC": {
           "category": {
@@ -50860,7 +50860,7 @@
     },
     "FEENROLDEA": {
       "name": "Regulated enrolments at further education colleges",
-      "updated": "2026-04-20",
+      "updated": "2026-09-10",
       "categories": {
         "STATISTIC": {
           "category": {
@@ -51007,7 +51007,7 @@
     },
     "FEENROLHSCT": {
       "name": "Regulated enrolments at further education colleges",
-      "updated": "2026-04-20",
+      "updated": "2026-09-10",
       "categories": {
         "STATISTIC": {
           "category": {
@@ -51079,7 +51079,7 @@
     },
     "FEENROLLGD": {
       "name": "Regulated enrolments at further education colleges",
-      "updated": "2026-04-20",
+      "updated": "2026-09-10",
       "categories": {
         "STATISTIC": {
           "category": {
@@ -182199,7 +182199,7 @@
     },
     "YPBASALCOHOLHSCT": {
       "name": "Young persons behaviour - Alcohol",
-      "updated": "2026-03-24",
+      "updated": "2026-09-10",
       "categories": {
         "STATISTIC": {
           "category": {
@@ -182429,7 +182429,7 @@
     },
     "YPBASNUTRITIONHSCT": {
       "name": "Young persons behaviour - Fruit and vegetable consumption",
-      "updated": "2026-03-24",
+      "updated": "2026-09-10",
       "categories": {
         "STATISTIC": {
           "category": {
@@ -182610,7 +182610,7 @@
     },
     "YPBASSMOKINGHSCT": {
       "name": "Young persons behaviour - Smoking",
-      "updated": "2026-03-24",
+      "updated": "2026-09-10",
       "categories": {
         "STATISTIC": {
           "category": {
