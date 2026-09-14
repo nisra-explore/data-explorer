@@ -1,5 +1,5 @@
 {
-  "table_count": 1172,
+  "table_count": 1183,
   "tables": {
     "ABI01": {
       "name": "Annual Business Inquiry: results by industry sector",
@@ -172526,6 +172526,810 @@
       "product": "Trips",
       "product_code": "TTRIP",
       "rows": 432
+    },
+    "TOURISM10A": {
+      "name": "Accommodation stock",
+      "updated": "2026-09-14",
+      "categories": {
+        "STATISTIC": {
+          "category": {
+            "index": ["ESTABLISHMENTS", "ROOMS", "BEDS"],
+            "label": {
+              "ESTABLISHMENTS": "Establishments",
+              "ROOMS": "Rooms",
+              "BEDS": "Beds"
+            },
+            "unit": {
+              "ESTABLISHMENTS": {
+                "decimals": 0,
+                "label": "Number",
+                "position": "end"
+              },
+              "ROOMS": {
+                "decimals": 0,
+                "label": "Number",
+                "position": "end"
+              },
+              "BEDS": {
+                "decimals": 0,
+                "label": "Number",
+                "position": "end"
+              }
+            }
+          },
+          "label": "Statistic"
+        },
+        "TLIST(A1)": {
+          "category": {
+            "index": ["2013", "2014", "2015", "2016", "2017", "2018", "2019", "2020", "2021", "2022", "2023", "2024", "2025"],
+            "label": {
+              "2013": "2013",
+              "2014": "2014",
+              "2015": "2015",
+              "2016": "2016",
+              "2017": "2017",
+              "2018": "2018",
+              "2019": "2019",
+              "2020": "2020",
+              "2021": "2021",
+              "2022": "2022",
+              "2023": "2023",
+              "2024": "2024",
+              "2025": "2025"
+            }
+          },
+          "label": "Year"
+        },
+        "ACCOMMODATION": {
+          "category": {
+            "index": ["HTL", "ASS", "GH", "BB", "GA"],
+            "label": {
+              "HTL": "Hotels",
+              "ASS": "All small service",
+              "GH": "Guesthouses",
+              "BB": "B&Bs",
+              "GA": "Guest accommodation"
+            }
+          },
+          "label": "Accommodation type"
+        }
+      },
+      "statistics": {
+        "ESTABLISHMENTS": "Establishments",
+        "ROOMS": "Rooms",
+        "BEDS": "Beds"
+      },
+      "time": "TLIST(A1)",
+      "time_series": ["2013", "2014", "2015", "2016", "2017", "2018", "2019", "2020", "2021", "2022", "2023", "2024", "2025"],
+      "theme": "Business, economy and trade",
+      "theme_code": 68,
+      "subject": "Tourism",
+      "subject_code": 127,
+      "product": "Accommodation",
+      "product_code": "TACC",
+      "rows": 195
+    },
+    "TOURISM10B": {
+      "name": "Self-catering accommodation stock",
+      "updated": "2026-09-14",
+      "categories": {
+        "STATISTIC": {
+          "category": {
+            "index": ["SC_ESTABLISHMENTS", "SC_UNITS"],
+            "label": {
+              "SC_ESTABLISHMENTS": "Self-catering establishments",
+              "SC_UNITS": "Self-catering units"
+            },
+            "unit": {
+              "SC_ESTABLISHMENTS": {
+                "decimals": 0,
+                "label": "Number",
+                "position": "end"
+              },
+              "SC_UNITS": {
+                "decimals": 0,
+                "label": "Number",
+                "position": "end"
+              }
+            }
+          },
+          "label": "Statistic"
+        },
+        "TLIST(A1)": {
+          "category": {
+            "index": ["2013", "2014", "2015", "2016", "2017", "2018", "2019", "2020", "2021", "2022", "2023", "2024"],
+            "label": {
+              "2013": "2013",
+              "2014": "2014",
+              "2015": "2015",
+              "2016": "2016",
+              "2017": "2017",
+              "2018": "2018",
+              "2019": "2019",
+              "2020": "2020",
+              "2021": "2021",
+              "2022": "2022",
+              "2023": "2023",
+              "2024": "2024"
+            }
+          },
+          "label": "Year"
+        },
+        "NI": {
+          "category": {
+            "index": "N92000002",
+            "label": {
+              "N92000002": "Northern Ireland"
+            }
+          },
+          "label": "Northern Ireland"
+        }
+      },
+      "statistics": {
+        "SC_ESTABLISHMENTS": "Self-catering establishments",
+        "SC_UNITS": "Self-catering units"
+      },
+      "time": "TLIST(A1)",
+      "time_series": ["2013", "2014", "2015", "2016", "2017", "2018", "2019", "2020", "2021", "2022", "2023", "2024"],
+      "theme": "Business, economy and trade",
+      "theme_code": 68,
+      "subject": "Tourism",
+      "subject_code": 127,
+      "product": "Accommodation",
+      "product_code": "TACC",
+      "rows": 24
+    },
+    "TOURISM11": {
+      "name": "VAT and/or PAYE tourism businesses",
+      "updated": "2026-09-14",
+      "categories": {
+        "STATISTIC": {
+          "category": {
+            "index": "VATPAYE_TB",
+            "label": {
+              "VATPAYE_TB": "VAT and/or PAYE tourism businesses"
+            },
+            "unit": {
+              "VATPAYE_TB": {
+                "decimals": 0,
+                "label": "Number",
+                "position": "end"
+              }
+            }
+          },
+          "label": "Statistic"
+        },
+        "TLIST(A1)": {
+          "category": {
+            "index": ["2015", "2016", "2017", "2018", "2019", "2020", "2021", "2022", "2023", "2024", "2025"],
+            "label": {
+              "2015": "2015",
+              "2016": "2016",
+              "2017": "2017",
+              "2018": "2018",
+              "2019": "2019",
+              "2020": "2020",
+              "2021": "2021",
+              "2022": "2022",
+              "2023": "2023",
+              "2024": "2024",
+              "2025": "2025"
+            }
+          },
+          "label": "Year"
+        },
+        "LGD2014": {
+          "category": {
+            "index": ["N09000001", "N09000002", "N09000003", "N09000004", "N09000005", "N09000006", "N09000007", "N09000008", "N09000009", "N09000010", "N09000011", "N92000002"],
+            "label": {
+              "N09000001": "Antrim and Newtownabbey",
+              "N09000002": "Armagh City, Banbridge and Craigavon",
+              "N09000003": "Belfast",
+              "N09000004": "Causeway Coast and Glens",
+              "N09000005": "Derry City and Strabane",
+              "N09000006": "Fermanagh and Omagh",
+              "N09000007": "Lisburn and Castlereagh",
+              "N09000008": "Mid and East Antrim",
+              "N09000009": "Mid Ulster",
+              "N09000010": "Newry, Mourne and Down",
+              "N09000011": "Ards and North Down",
+              "N92000002": "Northern Ireland"
+            }
+          },
+          "label": "Local Government District",
+          "link": {
+            "enclosure": [
+              {
+                "type": "application/geo+json",
+                "href": "https://ws-data.nisra.gov.uk/public/api.static/PxStat.Data.GeoMap_API.Read/450c0bbfce9cc5595a6142e35c589ba5"
+              }
+            ]
+          }
+        }
+      },
+      "statistics": {
+        "VATPAYE_TB": "VAT and/or PAYE tourism businesses"
+      },
+      "time": "TLIST(A1)",
+      "time_series": ["2015", "2016", "2017", "2018", "2019", "2020", "2021", "2022", "2023", "2024", "2025"],
+      "theme": "Business, economy and trade",
+      "theme_code": 68,
+      "subject": "Tourism",
+      "subject_code": 127,
+      "product": "Jobs",
+      "product_code": "TJOBS",
+      "rows": 132
+    },
+    "TOURISM12": {
+      "name": "Employee jobs in tourism related industries",
+      "updated": "2026-09-14",
+      "categories": {
+        "STATISTIC": {
+          "category": {
+            "index": "EMPJOBS_TRI",
+            "label": {
+              "EMPJOBS_TRI": "Employee jobs in tourism related industries"
+            },
+            "unit": {
+              "EMPJOBS_TRI": {
+                "decimals": 0,
+                "label": "Number",
+                "position": "end"
+              }
+            }
+          },
+          "label": "Statistic"
+        },
+        "TLIST(A1)": {
+          "category": {
+            "index": ["2021", "2022"],
+            "label": {
+              "2021": "2021",
+              "2022": "2022"
+            }
+          },
+          "label": "Year"
+        },
+        "LGD2014": {
+          "category": {
+            "index": ["N09000001", "N09000002", "N09000003", "N09000004", "N09000005", "N09000006", "N09000007", "N09000008", "N09000009", "N09000010", "N09000011", "N92000002"],
+            "label": {
+              "N09000001": "Antrim and Newtownabbey",
+              "N09000002": "Armagh City, Banbridge and Craigavon",
+              "N09000003": "Belfast",
+              "N09000004": "Causeway Coast and Glens",
+              "N09000005": "Derry City and Strabane",
+              "N09000006": "Fermanagh and Omagh",
+              "N09000007": "Lisburn and Castlereagh",
+              "N09000008": "Mid and East Antrim",
+              "N09000009": "Mid Ulster",
+              "N09000010": "Newry, Mourne and Down",
+              "N09000011": "Ards and North Down",
+              "N92000002": "Northern Ireland"
+            }
+          },
+          "label": "Local Government District",
+          "link": {
+            "enclosure": [
+              {
+                "type": "application/geo+json",
+                "href": "https://ws-data.nisra.gov.uk/public/api.static/PxStat.Data.GeoMap_API.Read/450c0bbfce9cc5595a6142e35c589ba5"
+              }
+            ]
+          }
+        }
+      },
+      "statistics": {
+        "EMPJOBS_TRI": "Employee jobs in tourism related industries"
+      },
+      "time": "TLIST(A1)",
+      "time_series": ["2021", "2022"],
+      "theme": "Business, economy and trade",
+      "theme_code": 68,
+      "subject": "Tourism",
+      "subject_code": 127,
+      "product": "Jobs",
+      "product_code": "TJOBS",
+      "rows": 24
+    },
+    "TOURISM13": {
+      "name": "Overnight trips, nights and associated expenditure",
+      "updated": "2026-09-14",
+      "categories": {
+        "STATISTIC": {
+          "category": {
+            "index": ["TRIPS", "NIGHTS", "EXPENDITURE"],
+            "label": {
+              "TRIPS": "Overnight trips",
+              "NIGHTS": "Nights stayed",
+              "EXPENDITURE": "Associated expenditure"
+            },
+            "unit": {
+              "TRIPS": {
+                "decimals": 0,
+                "label": "Number",
+                "position": "end"
+              },
+              "NIGHTS": {
+                "decimals": 0,
+                "label": "Number",
+                "position": "end"
+              },
+              "EXPENDITURE": {
+                "decimals": 0,
+                "label": "Pounds Sterling (£)",
+                "position": "end"
+              }
+            }
+          },
+          "label": "Statistic"
+        },
+        "TLIST(A1)": {
+          "category": {
+            "index": ["2023", "2024", "2025"],
+            "label": {
+              "2023": "2023",
+              "2024": "2024",
+              "2025": "2025"
+            }
+          },
+          "label": "Year"
+        },
+        "LGD2014": {
+          "category": {
+            "index": ["N09000001", "N09000002", "N09000003", "N09000004", "N09000005", "N09000006", "N09000007", "N09000008", "N09000009", "N09000010", "N09000011", "N92000002"],
+            "label": {
+              "N09000001": "Antrim and Newtownabbey",
+              "N09000002": "Armagh City, Banbridge and Craigavon",
+              "N09000003": "Belfast",
+              "N09000004": "Causeway Coast and Glens",
+              "N09000005": "Derry City and Strabane",
+              "N09000006": "Fermanagh and Omagh",
+              "N09000007": "Lisburn and Castlereagh",
+              "N09000008": "Mid and East Antrim",
+              "N09000009": "Mid Ulster",
+              "N09000010": "Newry, Mourne and Down",
+              "N09000011": "Ards and North Down",
+              "N92000002": "Northern Ireland"
+            }
+          },
+          "label": "Local Government District",
+          "link": {
+            "enclosure": [
+              {
+                "type": "application/geo+json",
+                "href": "https://ws-data.nisra.gov.uk/public/api.static/PxStat.Data.GeoMap_API.Read/450c0bbfce9cc5595a6142e35c589ba5"
+              }
+            ]
+          }
+        }
+      },
+      "statistics": {
+        "TRIPS": "Overnight trips",
+        "NIGHTS": "Nights stayed",
+        "EXPENDITURE": "Associated expenditure"
+      },
+      "time": "TLIST(A1)",
+      "time_series": ["2023", "2024", "2025"],
+      "theme": "Business, economy and trade",
+      "theme_code": 68,
+      "subject": "Tourism",
+      "subject_code": 127,
+      "product": "Trips",
+      "product_code": "TTRIP",
+      "rows": 108
+    },
+    "TOURISM2": {
+      "name": "Overnight trips, nights and associated expenditure",
+      "updated": "2026-09-14",
+      "categories": {
+        "STATISTIC": {
+          "category": {
+            "index": ["TRIPS", "NIGHTS", "EXPENDITURE"],
+            "label": {
+              "TRIPS": "Overnight trips",
+              "NIGHTS": "Nights stayed",
+              "EXPENDITURE": "Associated expenditure"
+            },
+            "unit": {
+              "TRIPS": {
+                "decimals": 0,
+                "label": "Number",
+                "position": "end"
+              },
+              "NIGHTS": {
+                "decimals": 0,
+                "label": "Number",
+                "position": "end"
+              },
+              "EXPENDITURE": {
+                "decimals": 0,
+                "label": "Pounds Sterling (£)",
+                "position": "end"
+              }
+            }
+          },
+          "label": "Statistic"
+        },
+        "TLIST(A1)": {
+          "category": {
+            "index": ["2023", "2024", "2025"],
+            "label": {
+              "2023": "2023",
+              "2024": "2024",
+              "2025": "2025"
+            }
+          },
+          "label": "Year"
+        },
+        "RFV": {
+          "category": {
+            "index": ["1", "2", "3", "4", "TOTAL"],
+            "label": {
+              "1": "Holiday",
+              "2": "Visiting friends/relatives",
+              "3": "Business",
+              "4": "Other",
+              "TOTAL": "Total"
+            }
+          },
+          "label": "Reason for visit"
+        }
+      },
+      "statistics": {
+        "TRIPS": "Overnight trips",
+        "NIGHTS": "Nights stayed",
+        "EXPENDITURE": "Associated expenditure"
+      },
+      "time": "TLIST(A1)",
+      "time_series": ["2023", "2024", "2025"],
+      "theme": "Business, economy and trade",
+      "theme_code": 68,
+      "subject": "Tourism",
+      "subject_code": 127,
+      "product": "Trips",
+      "product_code": "TTRIP",
+      "rows": 45
+    },
+    "TOURISM20": {
+      "name": "Same day trips and associated expenditure",
+      "updated": "2026-09-14",
+      "categories": {
+        "STATISTIC": {
+          "category": {
+            "index": ["SD_TRIPS", "EXPENDITURE"],
+            "label": {
+              "SD_TRIPS": "Same day trips",
+              "EXPENDITURE": "Associated expenditure"
+            },
+            "unit": {
+              "SD_TRIPS": {
+                "decimals": 0,
+                "label": "Number",
+                "position": "end"
+              },
+              "EXPENDITURE": {
+                "decimals": 0,
+                "label": "Pounds Sterling (£)",
+                "position": "end"
+              }
+            }
+          },
+          "label": "Statistic"
+        },
+        "TLIST(A1)": {
+          "category": {
+            "index": ["2024", "2025"],
+            "label": {
+              "2024": "2024",
+              "2025": "2025"
+            }
+          },
+          "label": "Year"
+        },
+        "MARKET": {
+          "category": {
+            "index": ["NI", "ROI", "GB", "OTHER", "TOTAL"],
+            "label": {
+              "NI": "Northern Ireland",
+              "ROI": "Republic of Ireland",
+              "GB": "Great Britain",
+              "OTHER": "Other",
+              "TOTAL": "Total"
+            }
+          },
+          "label": "Market"
+        }
+      },
+      "statistics": {
+        "SD_TRIPS": "Same day trips",
+        "EXPENDITURE": "Associated expenditure"
+      },
+      "time": "TLIST(A1)",
+      "time_series": ["2024", "2025"],
+      "theme": "Business, economy and trade",
+      "theme_code": 68,
+      "subject": "Tourism",
+      "subject_code": 127,
+      "product": "Trips",
+      "product_code": "TTRIP",
+      "rows": 20
+    },
+    "TOURISM22": {
+      "name": "Overnight trips",
+      "updated": "2026-09-14",
+      "categories": {
+        "STATISTIC": {
+          "category": {
+            "index": ["TRIPS", "PER_TRIPS"],
+            "label": {
+              "TRIPS": "Overnight trips",
+              "PER_TRIPS": "Percentage of overnight trips"
+            },
+            "unit": {
+              "TRIPS": {
+                "decimals": 0,
+                "label": "Number",
+                "position": "end"
+              },
+              "PER_TRIPS": {
+                "decimals": 1,
+                "label": "%",
+                "position": "end"
+              }
+            }
+          },
+          "label": "Statistic"
+        },
+        "TLIST(A1)": {
+          "category": {
+            "index": ["2023", "2024", "2025"],
+            "label": {
+              "2023": "2023",
+              "2024": "2024",
+              "2025": "2025"
+            }
+          },
+          "label": "Year"
+        },
+        "MARKET": {
+          "category": {
+            "index": ["GB", "OUKROI", "TOTAL"],
+            "label": {
+              "GB": "Great Britain",
+              "OUKROI": "Outside United Kingdom and Republic of Ireland",
+              "TOTAL": "Total"
+            }
+          },
+          "label": "Market"
+        },
+        "EXIT_PORT": {
+          "category": {
+            "index": ["NI_PORTS", "ROI_PORTS", "TOTAL"],
+            "label": {
+              "NI_PORTS": "Northern Ireland ports",
+              "ROI_PORTS": "Republic of Ireland ports",
+              "TOTAL": "Total"
+            }
+          },
+          "label": "Exit port"
+        }
+      },
+      "statistics": {
+        "TRIPS": "Overnight trips",
+        "PER_TRIPS": "Percentage of overnight trips"
+      },
+      "time": "TLIST(A1)",
+      "time_series": ["2023", "2024", "2025"],
+      "theme": "Business, economy and trade",
+      "theme_code": 68,
+      "subject": "Tourism",
+      "subject_code": 127,
+      "product": "Trips",
+      "product_code": "TTRIP",
+      "rows": 54
+    },
+    "TOURISM3": {
+      "name": "Overnight trips",
+      "updated": "2026-09-14",
+      "categories": {
+        "STATISTIC": {
+          "category": {
+            "index": "TRIPS",
+            "label": {
+              "TRIPS": "Overnight trips"
+            },
+            "unit": {
+              "TRIPS": {
+                "decimals": 0,
+                "label": "Number",
+                "position": "end"
+              }
+            }
+          },
+          "label": "Statistic"
+        },
+        "TLIST(A1)": {
+          "category": {
+            "index": ["2023", "2024", "2025"],
+            "label": {
+              "2023": "2023",
+              "2024": "2024",
+              "2025": "2025"
+            }
+          },
+          "label": "Year"
+        },
+        "MARKET": {
+          "category": {
+            "index": ["GB", "OUKROI", "TOTAL1", "ROI", "TOTAL2", "NI", "TOTAL"],
+            "label": {
+              "GB": "Great Britain",
+              "OUKROI": "Outside United Kingdom and Republic of Ireland",
+              "TOTAL1": "Total from outside Northern Ireland and Republic of Ireland",
+              "ROI": "Republic of Ireland",
+              "TOTAL2": "Total from outside Northern Ireland",
+              "NI": "Northern Ireland",
+              "TOTAL": "Total"
+            }
+          },
+          "label": "Market"
+        }
+      },
+      "statistics": {
+        "TRIPS": "Overnight trips"
+      },
+      "time": "TLIST(A1)",
+      "time_series": ["2023", "2024", "2025"],
+      "theme": "Business, economy and trade",
+      "theme_code": 68,
+      "subject": "Tourism",
+      "subject_code": 127,
+      "product": "Trips",
+      "product_code": "TTRIP",
+      "rows": 21
+    },
+    "TOURISM9A": {
+      "name": "Accommodation occupancy rates",
+      "updated": "2026-09-14",
+      "categories": {
+        "STATISTIC": {
+          "category": {
+            "index": "OCC_RATE",
+            "label": {
+              "OCC_RATE": "Occupancy rate"
+            },
+            "unit": {
+              "OCC_RATE": {
+                "decimals": 1,
+                "label": "%",
+                "position": "end"
+              }
+            }
+          },
+          "label": "Statistic"
+        },
+        "TLIST(A1)": {
+          "category": {
+            "index": ["2013", "2014", "2015", "2016", "2017", "2018", "2019", "2020", "2021", "2022", "2023", "2024", "2025"],
+            "label": {
+              "2013": "2013",
+              "2014": "2014",
+              "2015": "2015",
+              "2016": "2016",
+              "2017": "2017",
+              "2018": "2018",
+              "2019": "2019",
+              "2020": "2020",
+              "2021": "2021",
+              "2022": "2022",
+              "2023": "2023",
+              "2024": "2024",
+              "2025": "2025"
+            }
+          },
+          "label": "Year"
+        },
+        "ACCOMMODATION": {
+          "category": {
+            "index": ["HTL", "ASS", "GH", "BB", "GA"],
+            "label": {
+              "HTL": "Hotels",
+              "ASS": "All small service",
+              "GH": "Guesthouses",
+              "BB": "B&Bs",
+              "GA": "Guest accommodation"
+            }
+          },
+          "label": "Accommodation type"
+        },
+        "OCCUPANCY": {
+          "category": {
+            "index": ["ROOM", "BED"],
+            "label": {
+              "ROOM": "Room occupancy",
+              "BED": "Bed occupancy"
+            }
+          },
+          "label": "Occupancy type"
+        }
+      },
+      "statistics": {
+        "OCC_RATE": "Occupancy rate"
+      },
+      "time": "TLIST(A1)",
+      "time_series": ["2013", "2014", "2015", "2016", "2017", "2018", "2019", "2020", "2021", "2022", "2023", "2024", "2025"],
+      "theme": "Business, economy and trade",
+      "theme_code": 68,
+      "subject": "Tourism",
+      "subject_code": 127,
+      "product": "Accommodation",
+      "product_code": "TACC",
+      "rows": 130
+    },
+    "TOURISM9B": {
+      "name": "Self-catering accommodation occupancy rates",
+      "updated": "2026-09-14",
+      "categories": {
+        "STATISTIC": {
+          "category": {
+            "index": "SC_OCC_RATE",
+            "label": {
+              "SC_OCC_RATE": "Self-catering occupancy rate"
+            },
+            "unit": {
+              "SC_OCC_RATE": {
+                "decimals": 1,
+                "label": "%",
+                "position": "end"
+              }
+            }
+          },
+          "label": "Statistic"
+        },
+        "TLIST(A1)": {
+          "category": {
+            "index": ["2013", "2014", "2015", "2016", "2017", "2018", "2019", "2020", "2021", "2022", "2023", "2024"],
+            "label": {
+              "2013": "2013",
+              "2014": "2014",
+              "2015": "2015",
+              "2016": "2016",
+              "2017": "2017",
+              "2018": "2018",
+              "2019": "2019",
+              "2020": "2020",
+              "2021": "2021",
+              "2022": "2022",
+              "2023": "2023",
+              "2024": "2024"
+            }
+          },
+          "label": "Year"
+        },
+        "OCCUPANCY": {
+          "category": {
+            "index": ["ANNUAL", "PEAK"],
+            "label": {
+              "ANNUAL": "Annual occupancy",
+              "PEAK": "Peak season occupancy"
+            }
+          },
+          "label": "Occupany type"
+        }
+      },
+      "statistics": {
+        "SC_OCC_RATE": "Self-catering occupancy rate"
+      },
+      "time": "TLIST(A1)",
+      "time_series": ["2013", "2014", "2015", "2016", "2017", "2018", "2019", "2020", "2021", "2022", "2023", "2024"],
+      "theme": "Business, economy and trade",
+      "theme_code": 68,
+      "subject": "Tourism",
+      "subject_code": 127,
+      "product": "Accommodation",
+      "product_code": "TACC",
+      "rows": 24
     },
     "TPERSAFETYEQ": {
       "name": "Personal safety",
