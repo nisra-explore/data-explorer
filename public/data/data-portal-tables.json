@@ -1,5 +1,5 @@
 {
-  "table_count": 1193,
+  "table_count": 1206,
   "tables": {
     "ABI01": {
       "name": "Annual Business Inquiry: results by industry sector",
@@ -796,7 +796,7 @@
     },
     "ALLAPPLGD": {
       "name": "ApprenticeshipsNI and Higher Level Apprenticeships by LGD",
-      "updated": "2026-04-03",
+      "updated": "2026-09-17",
       "categories": {
         "STATISTIC": {
           "category": {
@@ -894,7 +894,7 @@
     },
     "ALLAPPSTEM": {
       "name": "ApprenticeshipsNI and Higher Level Apprenticeships by narrow STEM",
-      "updated": "2026-04-06",
+      "updated": "2026-09-17",
       "categories": {
         "STATISTIC": {
           "category": {
@@ -13025,7 +13025,7 @@
     },
     "BUSFUEL": {
       "name": "Buses by Fuel Type",
-      "updated": "2025-09-10",
+      "updated": "2026-09-17",
       "categories": {
         "STATISTIC": {
           "category": {
@@ -13051,14 +13051,15 @@
         },
         "TLIST(A1)": {
           "category": {
-            "index": ["2019/20", "2020/21", "2021/22", "2022/23", "2023/24", "2024/25"],
+            "index": ["2019/20", "2020/21", "2021/22", "2022/23", "2023/24", "2024/25", "2025/26"],
             "label": {
               "2019/20": "2019/20",
               "2020/21": "2020/21",
               "2021/22": "2021/22",
               "2022/23": "2022/23",
               "2023/24": "2023/24",
-              "2024/25": "2024/25"
+              "2024/25": "2024/25",
+              "2025/26": "2025/26"
             }
           },
           "label": "Financial Year"
@@ -13092,14 +13093,14 @@
         "FUELPCT": "Percentage of buses by fuel type (%)"
       },
       "time": "TLIST(A1)",
-      "time_series": ["2019/20", "2020/21", "2021/22", "2022/23", "2023/24", "2024/25"],
+      "time_series": ["2019/20", "2020/21", "2021/22", "2022/23", "2023/24", "2024/25", "2025/26"],
       "theme": "Transport, environment and climate change",
       "theme_code": 71,
       "subject": "Travel and transport",
       "subject_code": 164,
       "product": "Public transport",
       "product_code": "TTPT",
-      "rows": 144
+      "rows": 168
     },
     "BUSINESSBANDLGD": {
       "name": "Number of businesses: activity, size and location",
@@ -100132,7 +100133,7 @@
     },
     "IOP01": {
       "name": "Index of Production",
-      "updated": "2026-06-18",
+      "updated": "2026-09-17",
       "categories": {
         "STATISTIC": {
           "category": {
@@ -100152,7 +100153,7 @@
         },
         "TLIST(Q1)": {
           "category": {
-            "index": ["2005Q1", "2005Q2", "2005Q3", "2005Q4", "2006Q1", "2006Q2", "2006Q3", "2006Q4", "2007Q1", "2007Q2", "2007Q3", "2007Q4", "2008Q1", "2008Q2", "2008Q3", "2008Q4", "2009Q1", "2009Q2", "2009Q3", "2009Q4", "2010Q1", "2010Q2", "2010Q3", "2010Q4", "2011Q1", "2011Q2", "2011Q3", "2011Q4", "2012Q1", "2012Q2", "2012Q3", "2012Q4", "2013Q1", "2013Q2", "2013Q3", "2013Q4", "2014Q1", "2014Q2", "2014Q3", "2014Q4", "2015Q1", "2015Q2", "2015Q3", "2015Q4", "2016Q1", "2016Q2", "2016Q3", "2016Q4", "2017Q1", "2017Q2", "2017Q3", "2017Q4", "2018Q1", "2018Q2", "2018Q3", "2018Q4", "2019Q1", "2019Q2", "2019Q3", "2019Q4", "2020Q1", "2020Q2", "2020Q3", "2020Q4", "2021Q1", "2021Q2", "2021Q3", "2021Q4", "2022Q1", "2022Q2", "2022Q3", "2022Q4", "2023Q1", "2023Q2", "2023Q3", "2023Q4", "2024Q1", "2024Q2", "2024Q3", "2024Q4", "2025Q1", "2025Q2", "2025Q3", "2025Q4", "2026Q1"],
+            "index": ["2005Q1", "2005Q2", "2005Q3", "2005Q4", "2006Q1", "2006Q2", "2006Q3", "2006Q4", "2007Q1", "2007Q2", "2007Q3", "2007Q4", "2008Q1", "2008Q2", "2008Q3", "2008Q4", "2009Q1", "2009Q2", "2009Q3", "2009Q4", "2010Q1", "2010Q2", "2010Q3", "2010Q4", "2011Q1", "2011Q2", "2011Q3", "2011Q4", "2012Q1", "2012Q2", "2012Q3", "2012Q4", "2013Q1", "2013Q2", "2013Q3", "2013Q4", "2014Q1", "2014Q2", "2014Q3", "2014Q4", "2015Q1", "2015Q2", "2015Q3", "2015Q4", "2016Q1", "2016Q2", "2016Q3", "2016Q4", "2017Q1", "2017Q2", "2017Q3", "2017Q4", "2018Q1", "2018Q2", "2018Q3", "2018Q4", "2019Q1", "2019Q2", "2019Q3", "2019Q4", "2020Q1", "2020Q2", "2020Q3", "2020Q4", "2021Q1", "2021Q2", "2021Q3", "2021Q4", "2022Q1", "2022Q2", "2022Q3", "2022Q4", "2023Q1", "2023Q2", "2023Q3", "2023Q4", "2024Q1", "2024Q2", "2024Q3", "2024Q4", "2025Q1", "2025Q2", "2025Q3", "2025Q4", "2026Q1", "2026Q2"],
             "label": {
               "2005Q1": "2005Q1",
               "2005Q2": "2005Q2",
@@ -100238,7 +100239,8 @@
               "2025Q2": "2025Q2",
               "2025Q3": "2025Q3",
               "2025Q4": "2025Q4",
-              "2026Q1": "2026Q1"
+              "2026Q1": "2026Q1",
+              "2026Q2": "2026Q2"
             }
           },
           "label": "Quarter"
@@ -100261,18 +100263,18 @@
         "IOP01": "Index of Production (2023=100)"
       },
       "time": "TLIST(Q1)",
-      "time_series": ["2005Q1", "2005Q2", "2005Q3", "2005Q4", "2006Q1", "2006Q2", "2006Q3", "2006Q4", "2007Q1", "2007Q2", "2007Q3", "2007Q4", "2008Q1", "2008Q2", "2008Q3", "2008Q4", "2009Q1", "2009Q2", "2009Q3", "2009Q4", "2010Q1", "2010Q2", "2010Q3", "2010Q4", "2011Q1", "2011Q2", "2011Q3", "2011Q4", "2012Q1", "2012Q2", "2012Q3", "2012Q4", "2013Q1", "2013Q2", "2013Q3", "2013Q4", "2014Q1", "2014Q2", "2014Q3", "2014Q4", "2015Q1", "2015Q2", "2015Q3", "2015Q4", "2016Q1", "2016Q2", "2016Q3", "2016Q4", "2017Q1", "2017Q2", "2017Q3", "2017Q4", "2018Q1", "2018Q2", "2018Q3", "2018Q4", "2019Q1", "2019Q2", "2019Q3", "2019Q4", "2020Q1", "2020Q2", "2020Q3", "2020Q4", "2021Q1", "2021Q2", "2021Q3", "2021Q4", "2022Q1", "2022Q2", "2022Q3", "2022Q4", "2023Q1", "2023Q2", "2023Q3", "2023Q4", "2024Q1", "2024Q2", "2024Q3", "2024Q4", "2025Q1", "2025Q2", "2025Q3", "2025Q4", "2026Q1"],
+      "time_series": ["2005Q1", "2005Q2", "2005Q3", "2005Q4", "2006Q1", "2006Q2", "2006Q3", "2006Q4", "2007Q1", "2007Q2", "2007Q3", "2007Q4", "2008Q1", "2008Q2", "2008Q3", "2008Q4", "2009Q1", "2009Q2", "2009Q3", "2009Q4", "2010Q1", "2010Q2", "2010Q3", "2010Q4", "2011Q1", "2011Q2", "2011Q3", "2011Q4", "2012Q1", "2012Q2", "2012Q3", "2012Q4", "2013Q1", "2013Q2", "2013Q3", "2013Q4", "2014Q1", "2014Q2", "2014Q3", "2014Q4", "2015Q1", "2015Q2", "2015Q3", "2015Q4", "2016Q1", "2016Q2", "2016Q3", "2016Q4", "2017Q1", "2017Q2", "2017Q3", "2017Q4", "2018Q1", "2018Q2", "2018Q3", "2018Q4", "2019Q1", "2019Q2", "2019Q3", "2019Q4", "2020Q1", "2020Q2", "2020Q3", "2020Q4", "2021Q1", "2021Q2", "2021Q3", "2021Q4", "2022Q1", "2022Q2", "2022Q3", "2022Q4", "2023Q1", "2023Q2", "2023Q3", "2023Q4", "2024Q1", "2024Q2", "2024Q3", "2024Q4", "2025Q1", "2025Q2", "2025Q3", "2025Q4", "2026Q1", "2026Q2"],
       "theme": "Business, economy and trade",
       "theme_code": 68,
       "subject": "Economic output and accounts",
       "subject_code": 125,
       "product": "Economic output",
       "product_code": "EOAEO",
-      "rows": 425
+      "rows": 430
     },
     "IOS01": {
       "name": "Index of Services",
-      "updated": "2026-06-18",
+      "updated": "2026-09-17",
       "categories": {
         "STATISTIC": {
           "category": {
@@ -100292,7 +100294,7 @@
         },
         "TLIST(Q1)": {
           "category": {
-            "index": ["2005Q1", "2005Q2", "2005Q3", "2005Q4", "2006Q1", "2006Q2", "2006Q3", "2006Q4", "2007Q1", "2007Q2", "2007Q3", "2007Q4", "2008Q1", "2008Q2", "2008Q3", "2008Q4", "2009Q1", "2009Q2", "2009Q3", "2009Q4", "2010Q1", "2010Q2", "2010Q3", "2010Q4", "2011Q1", "2011Q2", "2011Q3", "2011Q4", "2012Q1", "2012Q2", "2012Q3", "2012Q4", "2013Q1", "2013Q2", "2013Q3", "2013Q4", "2014Q1", "2014Q2", "2014Q3", "2014Q4", "2015Q1", "2015Q2", "2015Q3", "2015Q4", "2016Q1", "2016Q2", "2016Q3", "2016Q4", "2017Q1", "2017Q2", "2017Q3", "2017Q4", "2018Q1", "2018Q2", "2018Q3", "2018Q4", "2019Q1", "2019Q2", "2019Q3", "2019Q4", "2020Q1", "2020Q2", "2020Q3", "2020Q4", "2021Q1", "2021Q2", "2021Q3", "2021Q4", "2022Q1", "2022Q2", "2022Q3", "2022Q4", "2023Q1", "2023Q2", "2023Q3", "2023Q4", "2024Q1", "2024Q2", "2024Q3", "2024Q4", "2025Q1", "2025Q2", "2025Q3", "2025Q4", "2026Q1"],
+            "index": ["2005Q1", "2005Q2", "2005Q3", "2005Q4", "2006Q1", "2006Q2", "2006Q3", "2006Q4", "2007Q1", "2007Q2", "2007Q3", "2007Q4", "2008Q1", "2008Q2", "2008Q3", "2008Q4", "2009Q1", "2009Q2", "2009Q3", "2009Q4", "2010Q1", "2010Q2", "2010Q3", "2010Q4", "2011Q1", "2011Q2", "2011Q3", "2011Q4", "2012Q1", "2012Q2", "2012Q3", "2012Q4", "2013Q1", "2013Q2", "2013Q3", "2013Q4", "2014Q1", "2014Q2", "2014Q3", "2014Q4", "2015Q1", "2015Q2", "2015Q3", "2015Q4", "2016Q1", "2016Q2", "2016Q3", "2016Q4", "2017Q1", "2017Q2", "2017Q3", "2017Q4", "2018Q1", "2018Q2", "2018Q3", "2018Q4", "2019Q1", "2019Q2", "2019Q3", "2019Q4", "2020Q1", "2020Q2", "2020Q3", "2020Q4", "2021Q1", "2021Q2", "2021Q3", "2021Q4", "2022Q1", "2022Q2", "2022Q3", "2022Q4", "2023Q1", "2023Q2", "2023Q3", "2023Q4", "2024Q1", "2024Q2", "2024Q3", "2024Q4", "2025Q1", "2025Q2", "2025Q3", "2025Q4", "2026Q1", "2026Q2"],
             "label": {
               "2005Q1": "2005Q1",
               "2005Q2": "2005Q2",
@@ -100378,7 +100380,8 @@
               "2025Q2": "2025Q2",
               "2025Q3": "2025Q3",
               "2025Q4": "2025Q4",
-              "2026Q1": "2026Q1"
+              "2026Q1": "2026Q1",
+              "2026Q2": "2026Q2"
             }
           },
           "label": "Quarter"
@@ -100401,14 +100404,14 @@
         "IOS01": "Index of Services (2023=100)"
       },
       "time": "TLIST(Q1)",
-      "time_series": ["2005Q1", "2005Q2", "2005Q3", "2005Q4", "2006Q1", "2006Q2", "2006Q3", "2006Q4", "2007Q1", "2007Q2", "2007Q3", "2007Q4", "2008Q1", "2008Q2", "2008Q3", "2008Q4", "2009Q1", "2009Q2", "2009Q3", "2009Q4", "2010Q1", "2010Q2", "2010Q3", "2010Q4", "2011Q1", "2011Q2", "2011Q3", "2011Q4", "2012Q1", "2012Q2", "2012Q3", "2012Q4", "2013Q1", "2013Q2", "2013Q3", "2013Q4", "2014Q1", "2014Q2", "2014Q3", "2014Q4", "2015Q1", "2015Q2", "2015Q3", "2015Q4", "2016Q1", "2016Q2", "2016Q3", "2016Q4", "2017Q1", "2017Q2", "2017Q3", "2017Q4", "2018Q1", "2018Q2", "2018Q3", "2018Q4", "2019Q1", "2019Q2", "2019Q3", "2019Q4", "2020Q1", "2020Q2", "2020Q3", "2020Q4", "2021Q1", "2021Q2", "2021Q3", "2021Q4", "2022Q1", "2022Q2", "2022Q3", "2022Q4", "2023Q1", "2023Q2", "2023Q3", "2023Q4", "2024Q1", "2024Q2", "2024Q3", "2024Q4", "2025Q1", "2025Q2", "2025Q3", "2025Q4", "2026Q1"],
+      "time_series": ["2005Q1", "2005Q2", "2005Q3", "2005Q4", "2006Q1", "2006Q2", "2006Q3", "2006Q4", "2007Q1", "2007Q2", "2007Q3", "2007Q4", "2008Q1", "2008Q2", "2008Q3", "2008Q4", "2009Q1", "2009Q2", "2009Q3", "2009Q4", "2010Q1", "2010Q2", "2010Q3", "2010Q4", "2011Q1", "2011Q2", "2011Q3", "2011Q4", "2012Q1", "2012Q2", "2012Q3", "2012Q4", "2013Q1", "2013Q2", "2013Q3", "2013Q4", "2014Q1", "2014Q2", "2014Q3", "2014Q4", "2015Q1", "2015Q2", "2015Q3", "2015Q4", "2016Q1", "2016Q2", "2016Q3", "2016Q4", "2017Q1", "2017Q2", "2017Q3", "2017Q4", "2018Q1", "2018Q2", "2018Q3", "2018Q4", "2019Q1", "2019Q2", "2019Q3", "2019Q4", "2020Q1", "2020Q2", "2020Q3", "2020Q4", "2021Q1", "2021Q2", "2021Q3", "2021Q4", "2022Q1", "2022Q2", "2022Q3", "2022Q4", "2023Q1", "2023Q2", "2023Q3", "2023Q4", "2024Q1", "2024Q2", "2024Q3", "2024Q4", "2025Q1", "2025Q2", "2025Q3", "2025Q4", "2026Q1", "2026Q2"],
       "theme": "Business, economy and trade",
       "theme_code": 68,
       "subject": "Economic output and accounts",
       "subject_code": 125,
       "product": "Economic output",
       "product_code": "EOAEO",
-      "rows": 425
+      "rows": 430
     },
     "IPWT": {
       "name": "Inpatient waiting times",
@@ -160445,7 +160448,7 @@
     },
     "RSI01": {
       "name": "Retail Sales Index",
-      "updated": "2026-06-18",
+      "updated": "2026-09-17",
       "categories": {
         "STATISTIC": {
           "category": {
@@ -160465,7 +160468,7 @@
         },
         "TLIST(Q1)": {
           "category": {
-            "index": ["2014Q1", "2014Q2", "2014Q3", "2014Q4", "2015Q1", "2015Q2", "2015Q3", "2015Q4", "2016Q1", "2016Q2", "2016Q3", "2016Q4", "2017Q1", "2017Q2", "2017Q3", "2017Q4", "2018Q1", "2018Q2", "2018Q3", "2018Q4", "2019Q1", "2019Q2", "2019Q3", "2019Q4", "2020Q1", "2020Q2", "2020Q3", "2020Q4", "2021Q1", "2021Q2", "2021Q3", "2021Q4", "2022Q1", "2022Q2", "2022Q3", "2022Q4", "2023Q1", "2023Q2", "2023Q3", "2023Q4", "2024Q1", "2024Q2", "2024Q3", "2024Q4", "2025Q1", "2025Q2", "2025Q3", "2025Q4", "2026Q1"],
+            "index": ["2014Q1", "2014Q2", "2014Q3", "2014Q4", "2015Q1", "2015Q2", "2015Q3", "2015Q4", "2016Q1", "2016Q2", "2016Q3", "2016Q4", "2017Q1", "2017Q2", "2017Q3", "2017Q4", "2018Q1", "2018Q2", "2018Q3", "2018Q4", "2019Q1", "2019Q2", "2019Q3", "2019Q4", "2020Q1", "2020Q2", "2020Q3", "2020Q4", "2021Q1", "2021Q2", "2021Q3", "2021Q4", "2022Q1", "2022Q2", "2022Q3", "2022Q4", "2023Q1", "2023Q2", "2023Q3", "2023Q4", "2024Q1", "2024Q2", "2024Q3", "2024Q4", "2025Q1", "2025Q2", "2025Q3", "2025Q4", "2026Q1", "2026Q2"],
             "label": {
               "2014Q1": "2014Q1",
               "2014Q2": "2014Q2",
@@ -160515,7 +160518,8 @@
               "2025Q2": "2025Q2",
               "2025Q3": "2025Q3",
               "2025Q4": "2025Q4",
-              "2026Q1": "2026Q1"
+              "2026Q1": "2026Q1",
+              "2026Q2": "2026Q2"
             }
           },
           "label": "Quarter"
@@ -160534,14 +160538,14 @@
         "RSI01": "Retail Sales Index (2023=100)"
       },
       "time": "TLIST(Q1)",
-      "time_series": ["2014Q1", "2014Q2", "2014Q3", "2014Q4", "2015Q1", "2015Q2", "2015Q3", "2015Q4", "2016Q1", "2016Q2", "2016Q3", "2016Q4", "2017Q1", "2017Q2", "2017Q3", "2017Q4", "2018Q1", "2018Q2", "2018Q3", "2018Q4", "2019Q1", "2019Q2", "2019Q3", "2019Q4", "2020Q1", "2020Q2", "2020Q3", "2020Q4", "2021Q1", "2021Q2", "2021Q3", "2021Q4", "2022Q1", "2022Q2", "2022Q3", "2022Q4", "2023Q1", "2023Q2", "2023Q3", "2023Q4", "2024Q1", "2024Q2", "2024Q3", "2024Q4", "2025Q1", "2025Q2", "2025Q3", "2025Q4", "2026Q1"],
+      "time_series": ["2014Q1", "2014Q2", "2014Q3", "2014Q4", "2015Q1", "2015Q2", "2015Q3", "2015Q4", "2016Q1", "2016Q2", "2016Q3", "2016Q4", "2017Q1", "2017Q2", "2017Q3", "2017Q4", "2018Q1", "2018Q2", "2018Q3", "2018Q4", "2019Q1", "2019Q2", "2019Q3", "2019Q4", "2020Q1", "2020Q2", "2020Q3", "2020Q4", "2021Q1", "2021Q2", "2021Q3", "2021Q4", "2022Q1", "2022Q2", "2022Q3", "2022Q4", "2023Q1", "2023Q2", "2023Q3", "2023Q4", "2024Q1", "2024Q2", "2024Q3", "2024Q4", "2025Q1", "2025Q2", "2025Q3", "2025Q4", "2026Q1", "2026Q2"],
       "theme": "Business, economy and trade",
       "theme_code": 68,
       "subject": "Economic output and accounts",
       "subject_code": 125,
       "product": "Economic output",
       "product_code": "EOAEO",
-      "rows": 49
+      "rows": 50
     },
     "RSPAGELGD": {
       "name": "Road safety partnership detections",
@@ -169806,6 +169810,1127 @@
       "product": "Skills for life and work",
       "product_code": "TASFLW",
       "rows": 52
+    },
+    "SMKCES0104": {
+      "name": "Smoking cessation - setting a quit date and 4 week follow-up outcome",
+      "updated": "2026-09-17",
+      "categories": {
+        "STATISTIC": {
+          "category": {
+            "index": ["QUITDATE", "PER_QUITDATE", "QUIT4W", "PER_QUIT4", "NQUIT4", "PER_NQUIT4", "NKL", "PER_NKL"],
+            "label": {
+              "QUITDATE": "People setting a quit date",
+              "PER_QUITDATE": "Percentage of people setting a quit date",
+              "QUIT4W": "People who successfully quit at 4 week follow-up",
+              "PER_QUIT4": "Percentage of people who successfully quit at 4 week follow-up",
+              "NQUIT4": "People who did not quit at 4-week follow up",
+              "PER_NQUIT4": "Percentage of people who did not quit at 4 week follow-up",
+              "NKL": "People not known/lost to follow-up",
+              "PER_NKL": "Percentage of people not known/lost to follow-up"
+            },
+            "unit": {
+              "QUITDATE": {
+                "decimals": 0,
+                "label": "Number",
+                "position": "end"
+              },
+              "PER_QUITDATE": {
+                "decimals": 1,
+                "label": "%",
+                "position": "end"
+              },
+              "QUIT4W": {
+                "decimals": 0,
+                "label": "Number",
+                "position": "end"
+              },
+              "PER_QUIT4": {
+                "decimals": 1,
+                "label": "%",
+                "position": "end"
+              },
+              "NQUIT4": {
+                "decimals": 0,
+                "label": "Number",
+                "position": "end"
+              },
+              "PER_NQUIT4": {
+                "decimals": 1,
+                "label": "%",
+                "position": "end"
+              },
+              "NKL": {
+                "decimals": 0,
+                "label": "Number",
+                "position": "end"
+              },
+              "PER_NKL": {
+                "decimals": 1,
+                "label": "%",
+                "position": "end"
+              }
+            }
+          },
+          "label": "Statistic"
+        },
+        "TLIST(A1)": {
+          "category": {
+            "index": "2024/25",
+            "label": {
+              "2024/25": "2024/25"
+            }
+          },
+          "label": "Financial year"
+        },
+        "GENDER": {
+          "category": {
+            "index": ["1", "2", "ALL"],
+            "label": {
+              "1": "Females",
+              "2": "Males",
+              "ALL": "All persons"
+            }
+          },
+          "label": "Gender"
+        },
+        "AGE": {
+          "category": {
+            "index": ["1", "2", "3", "4", "5", "ALL"],
+            "label": {
+              "1": "Age 11-17",
+              "2": "Age 18-34",
+              "3": "Age 35-44",
+              "4": "Age 45-59",
+              "5": "Age 60+",
+              "ALL": "All ages"
+            }
+          },
+          "label": "Age band"
+        }
+      },
+      "statistics": {
+        "QUITDATE": "People setting a quit date",
+        "PER_QUITDATE": "Percentage of people setting a quit date",
+        "QUIT4W": "People who successfully quit at 4 week follow-up",
+        "PER_QUIT4": "Percentage of people who successfully quit at 4 week follow-up",
+        "NQUIT4": "People who did not quit at 4-week follow up",
+        "PER_NQUIT4": "Percentage of people who did not quit at 4 week follow-up",
+        "NKL": "People not known/lost to follow-up",
+        "PER_NKL": "Percentage of people not known/lost to follow-up"
+      },
+      "time": "TLIST(A1)",
+      "time_series": "2024/25",
+      "theme": "Health and social care",
+      "theme_code": 6,
+      "subject": "Health behaviours",
+      "subject_code": 142,
+      "product": "Smoking",
+      "product_code": "HBSMK",
+      "rows": 144
+    },
+    "SMKCES03": {
+      "name": "Smoking cessation - setting a quit date and 4 week follow-up outcome",
+      "updated": "2026-09-17",
+      "categories": {
+        "STATISTIC": {
+          "category": {
+            "index": ["QUITDATE", "QUIT4W", "PER_QUIT4", "PER_NQUIT4", "PER_NKL"],
+            "label": {
+              "QUITDATE": "People setting a quit date",
+              "QUIT4W": "People who successfully quit at 4 week follow-up",
+              "PER_QUIT4": "Percentage of people who successfully quit at 4 week follow-up",
+              "PER_NQUIT4": "Percentage of people who did not quit at 4 week follow-up",
+              "PER_NKL": "Percentage of people not known/lost to follow-up"
+            },
+            "unit": {
+              "QUITDATE": {
+                "decimals": 0,
+                "label": "Number",
+                "position": "end"
+              },
+              "QUIT4W": {
+                "decimals": 0,
+                "label": "Number",
+                "position": "end"
+              },
+              "PER_QUIT4": {
+                "decimals": 0,
+                "label": "%",
+                "position": "end"
+              },
+              "PER_NQUIT4": {
+                "decimals": 0,
+                "label": "%",
+                "position": "end"
+              },
+              "PER_NKL": {
+                "decimals": 0,
+                "label": "%",
+                "position": "end"
+              }
+            }
+          },
+          "label": "Statistic"
+        },
+        "TLIST(A1)": {
+          "category": {
+            "index": ["2011/12", "2012/13", "2013/14", "2014/15", "2015/16", "2016/17", "2017/18", "2018/19", "2019/20", "2020/21", "2021/22", "2022/23", "2023/24", "2024/25"],
+            "label": {
+              "2011/12": "2011/12",
+              "2012/13": "2012/13",
+              "2013/14": "2013/14",
+              "2014/15": "2014/15",
+              "2015/16": "2015/16",
+              "2016/17": "2016/17",
+              "2017/18": "2017/18",
+              "2018/19": "2018/19",
+              "2019/20": "2019/20",
+              "2020/21": "2020/21",
+              "2021/22": "2021/22",
+              "2022/23": "2022/23",
+              "2023/24": "2023/24",
+              "2024/25": "2024/25"
+            }
+          },
+          "label": "Financial year"
+        },
+        "NI": {
+          "category": {
+            "index": "N92000002",
+            "label": {
+              "N92000002": "Northern Ireland"
+            }
+          },
+          "label": "Northern Ireland"
+        }
+      },
+      "statistics": {
+        "QUITDATE": "People setting a quit date",
+        "QUIT4W": "People who successfully quit at 4 week follow-up",
+        "PER_QUIT4": "Percentage of people who successfully quit at 4 week follow-up",
+        "PER_NQUIT4": "Percentage of people who did not quit at 4 week follow-up",
+        "PER_NKL": "Percentage of people not known/lost to follow-up"
+      },
+      "time": "TLIST(A1)",
+      "time_series": ["2011/12", "2012/13", "2013/14", "2014/15", "2015/16", "2016/17", "2017/18", "2018/19", "2019/20", "2020/21", "2021/22", "2022/23", "2023/24", "2024/25"],
+      "theme": "Health and social care",
+      "theme_code": 6,
+      "subject": "Health behaviours",
+      "subject_code": 142,
+      "product": "Smoking",
+      "product_code": "HBSMK",
+      "rows": 70
+    },
+    "SMKCES05A": {
+      "name": "Smoking cessation - setting a quit date",
+      "updated": "2026-09-17",
+      "categories": {
+        "STATISTIC": {
+          "category": {
+            "index": ["QUITDATE", "PER_QUITDATE"],
+            "label": {
+              "QUITDATE": "People setting a quit date",
+              "PER_QUITDATE": "Percentage of people setting a quit date"
+            },
+            "unit": {
+              "QUITDATE": {
+                "decimals": 0,
+                "label": "Number",
+                "position": "end"
+              },
+              "PER_QUITDATE": {
+                "decimals": 1,
+                "label": "%",
+                "position": "end"
+              }
+            }
+          },
+          "label": "Statistic"
+        },
+        "TLIST(A1)": {
+          "category": {
+            "index": "2024/25",
+            "label": {
+              "2024/25": "2024/25"
+            }
+          },
+          "label": "Financial year"
+        },
+        "HSCT": {
+          "category": {
+            "index": ["BHSCT", "NHSCT", "SEHSCT", "SHSCT", "WHSCT", "N92000002"],
+            "label": {
+              "BHSCT": "Belfast",
+              "NHSCT": "Northern",
+              "SEHSCT": "South Eastern",
+              "SHSCT": "Southern",
+              "WHSCT": "Western",
+              "N92000002": "Northern Ireland"
+            }
+          },
+          "label": "Health and Social Care Trust",
+          "link": {
+            "enclosure": [
+              {
+                "type": "application/geo+json",
+                "href": "https://ws-data.nisra.gov.uk/public/api.static/PxStat.Data.GeoMap_API.Read/c171138ddcb901353718a459d5b2cba3"
+              }
+            ]
+          }
+        },
+        "GENDER": {
+          "category": {
+            "index": ["1", "2"],
+            "label": {
+              "1": "Females",
+              "2": "Males"
+            }
+          },
+          "label": "Gender"
+        }
+      },
+      "statistics": {
+        "QUITDATE": "People setting a quit date",
+        "PER_QUITDATE": "Percentage of people setting a quit date"
+      },
+      "time": "TLIST(A1)",
+      "time_series": "2024/25",
+      "theme": "Health and social care",
+      "theme_code": 6,
+      "subject": "Health behaviours",
+      "subject_code": 142,
+      "product": "Smoking",
+      "product_code": "HBSMK",
+      "rows": 24
+    },
+    "SMKCES05B": {
+      "name": "Smoking cessation - setting a quit date",
+      "updated": "2026-09-17",
+      "categories": {
+        "STATISTIC": {
+          "category": {
+            "index": ["QUITDATE", "PER_QUITDATE"],
+            "label": {
+              "QUITDATE": "People setting a quit date",
+              "PER_QUITDATE": "Percentage of people setting a quit date"
+            },
+            "unit": {
+              "QUITDATE": {
+                "decimals": 0,
+                "label": "Number",
+                "position": "end"
+              },
+              "PER_QUITDATE": {
+                "decimals": 1,
+                "label": "%",
+                "position": "end"
+              }
+            }
+          },
+          "label": "Statistic"
+        },
+        "TLIST(A1)": {
+          "category": {
+            "index": "2024/25",
+            "label": {
+              "2024/25": "2024/25"
+            }
+          },
+          "label": "Financial year"
+        },
+        "HSCT": {
+          "category": {
+            "index": ["BHSCT", "NHSCT", "SEHSCT", "SHSCT", "WHSCT", "N92000002"],
+            "label": {
+              "BHSCT": "Belfast",
+              "NHSCT": "Northern",
+              "SEHSCT": "South Eastern",
+              "SHSCT": "Southern",
+              "WHSCT": "Western",
+              "N92000002": "Northern Ireland"
+            }
+          },
+          "label": "Health and Social Care Trust",
+          "link": {
+            "enclosure": [
+              {
+                "type": "application/geo+json",
+                "href": "https://ws-data.nisra.gov.uk/public/api.static/PxStat.Data.GeoMap_API.Read/c171138ddcb901353718a459d5b2cba3"
+              }
+            ]
+          }
+        },
+        "AGE": {
+          "category": {
+            "index": ["1", "2", "3", "4", "5"],
+            "label": {
+              "1": "Age 11-17",
+              "2": "Age 18-34",
+              "3": "Age 35-44",
+              "4": "Age 45-59",
+              "5": "Age 60+"
+            }
+          },
+          "label": "Age band"
+        }
+      },
+      "statistics": {
+        "QUITDATE": "People setting a quit date",
+        "PER_QUITDATE": "Percentage of people setting a quit date"
+      },
+      "time": "TLIST(A1)",
+      "time_series": "2024/25",
+      "theme": "Health and social care",
+      "theme_code": 6,
+      "subject": "Health behaviours",
+      "subject_code": 142,
+      "product": "Smoking",
+      "product_code": "HBSMK",
+      "rows": 60
+    },
+    "SMKCES06": {
+      "name": "Smoking cessation - setting a quit date",
+      "updated": "2026-09-17",
+      "categories": {
+        "STATISTIC": {
+          "category": {
+            "index": "QUITDATE",
+            "label": {
+              "QUITDATE": "People setting a quit date"
+            },
+            "unit": {
+              "QUITDATE": {
+                "decimals": 0,
+                "label": "Number",
+                "position": "end"
+              }
+            }
+          },
+          "label": "Statistic"
+        },
+        "TLIST(A1)": {
+          "category": {
+            "index": ["2017/18", "2018/19", "2019/20", "2020/21", "2021/22", "2022/23", "2023/24", "2024/25"],
+            "label": {
+              "2017/18": "2017/18",
+              "2018/19": "2018/19",
+              "2019/20": "2019/20",
+              "2020/21": "2020/21",
+              "2021/22": "2021/22",
+              "2022/23": "2022/23",
+              "2023/24": "2023/24",
+              "2024/25": "2024/25"
+            }
+          },
+          "label": "Financial year"
+        },
+        "QDMONTH": {
+          "category": {
+            "index": ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "TOTAL"],
+            "label": {
+              "1": "April",
+              "2": "May",
+              "3": "June",
+              "4": "July",
+              "5": "August",
+              "6": "September",
+              "7": "October",
+              "8": "November",
+              "9": "December",
+              "10": "January",
+              "11": "February",
+              "12": "March",
+              "TOTAL": "Total"
+            }
+          },
+          "label": "Quit date month"
+        }
+      },
+      "statistics": {
+        "QUITDATE": "People setting a quit date"
+      },
+      "time": "TLIST(A1)",
+      "time_series": ["2017/18", "2018/19", "2019/20", "2020/21", "2021/22", "2022/23", "2023/24", "2024/25"],
+      "theme": "Health and social care",
+      "theme_code": 6,
+      "subject": "Health behaviours",
+      "subject_code": 142,
+      "product": "Smoking",
+      "product_code": "HBSMK",
+      "rows": 104
+    },
+    "SMKCES10": {
+      "name": "Smoking cessation - successfully quit at 4 week follow-up",
+      "updated": "2026-09-17",
+      "categories": {
+        "STATISTIC": {
+          "category": {
+            "index": "PER_QUIT4",
+            "label": {
+              "PER_QUIT4": "Percentage of people who successfully quit at 4 week follow-up"
+            },
+            "unit": {
+              "PER_QUIT4": {
+                "decimals": 1,
+                "label": "%",
+                "position": "end"
+              }
+            }
+          },
+          "label": "Statistic"
+        },
+        "TLIST(A1)": {
+          "category": {
+            "index": ["2023/24", "2024/25"],
+            "label": {
+              "2023/24": "2023/24",
+              "2024/25": "2024/25"
+            }
+          },
+          "label": "Financial year"
+        },
+        "PROV_TYPE": {
+          "category": {
+            "index": ["1", "2", "3", "4", "5", "TOTAL"],
+            "label": {
+              "1": "Community clinic",
+              "2": "GP practice",
+              "3": "Hospital",
+              "4": "Pharmacist",
+              "5": "Other",
+              "TOTAL": "Total"
+            }
+          },
+          "label": "Provider type"
+        }
+      },
+      "statistics": {
+        "PER_QUIT4": "Percentage of people who successfully quit at 4 week follow-up"
+      },
+      "time": "TLIST(A1)",
+      "time_series": ["2023/24", "2024/25"],
+      "theme": "Health and social care",
+      "theme_code": 6,
+      "subject": "Health behaviours",
+      "subject_code": 142,
+      "product": "Smoking",
+      "product_code": "HBSMK",
+      "rows": 12
+    },
+    "SMKCES13": {
+      "name": "Smoking cessation - setting a quit date (aged 18 and over)",
+      "updated": "2026-09-17",
+      "categories": {
+        "STATISTIC": {
+          "category": {
+            "index": "PER_QUITDATE_18+",
+            "label": {
+              "PER_QUITDATE_18+": "Percentage of people aged 18+ setting a quit date"
+            },
+            "unit": {
+              "PER_QUITDATE_18+": {
+                "decimals": 1,
+                "label": "%",
+                "position": "end"
+              }
+            }
+          },
+          "label": "Statistic"
+        },
+        "TLIST(A1)": {
+          "category": {
+            "index": ["2023/24", "2024/25"],
+            "label": {
+              "2023/24": "2023/24",
+              "2024/25": "2024/25"
+            }
+          },
+          "label": "Financial year"
+        },
+        "DEP_QUINTILE": {
+          "category": {
+            "index": ["1", "2", "3", "4", "5", "6"],
+            "label": {
+              "1": "Most deprived",
+              "2": "Second",
+              "3": "Third",
+              "4": "Fourth",
+              "5": "Least deprived",
+              "6": "Not known"
+            }
+          },
+          "label": "Deprivation quintile"
+        }
+      },
+      "statistics": {
+        "PER_QUITDATE_18+": "Percentage of people aged 18+ setting a quit date"
+      },
+      "time": "TLIST(A1)",
+      "time_series": ["2023/24", "2024/25"],
+      "theme": "Health and social care",
+      "theme_code": 6,
+      "subject": "Health behaviours",
+      "subject_code": 142,
+      "product": "Smoking",
+      "product_code": "HBSMK",
+      "rows": 12
+    },
+    "SMKCES14": {
+      "name": "Smoking cessation - pregnant women setting a quit date and 4 week follow-up outcome",
+      "updated": "2026-09-17",
+      "categories": {
+        "STATISTIC": {
+          "category": {
+            "index": ["QUITDATE_PREG", "QUIT4W_PREG", "PER_QUIT4_PREG", "NQUIT4_PREG", "PER_NQUIT4_PREG", "NKL_PREG", "PER_NKL_PREG"],
+            "label": {
+              "QUITDATE_PREG": "Pregnant women setting a quit date",
+              "QUIT4W_PREG": "Pregnant women who successfully quit at 4 week follow-up",
+              "PER_QUIT4_PREG": "Percentage of pregnant women who successfully quit at 4 week follow-up",
+              "NQUIT4_PREG": "Pregnant women who did not quit at 4-week follow up",
+              "PER_NQUIT4_PREG": "Percentage of pregnant women who did not quit at 4 week follow-up",
+              "NKL_PREG": "Pregnant women not known/lost to follow-up",
+              "PER_NKL_PREG": "Percentage of pregnant women not known/lost to follow-up"
+            },
+            "unit": {
+              "QUITDATE_PREG": {
+                "decimals": 0,
+                "label": "Number",
+                "position": "end"
+              },
+              "QUIT4W_PREG": {
+                "decimals": 0,
+                "label": "Number",
+                "position": "end"
+              },
+              "PER_QUIT4_PREG": {
+                "decimals": 1,
+                "label": "%",
+                "position": "end"
+              },
+              "NQUIT4_PREG": {
+                "decimals": 0,
+                "label": "Number",
+                "position": "end"
+              },
+              "PER_NQUIT4_PREG": {
+                "decimals": 1,
+                "label": "%",
+                "position": "end"
+              },
+              "NKL_PREG": {
+                "decimals": 0,
+                "label": "Number",
+                "position": "end"
+              },
+              "PER_NKL_PREG": {
+                "decimals": 1,
+                "label": "%",
+                "position": "end"
+              }
+            }
+          },
+          "label": "Statistic"
+        },
+        "TLIST(A1)": {
+          "category": {
+            "index": "2024/25",
+            "label": {
+              "2024/25": "2024/25"
+            }
+          },
+          "label": "Financial year"
+        },
+        "HSCT": {
+          "category": {
+            "index": ["BHSCT", "NHSCT", "SEHSCT", "SHSCT", "WHSCT", "N92000002"],
+            "label": {
+              "BHSCT": "Belfast",
+              "NHSCT": "Northern",
+              "SEHSCT": "South Eastern",
+              "SHSCT": "Southern",
+              "WHSCT": "Western",
+              "N92000002": "Northern Ireland"
+            }
+          },
+          "label": "Health and Social Care Trust",
+          "link": {
+            "enclosure": [
+              {
+                "type": "application/geo+json",
+                "href": "https://ws-data.nisra.gov.uk/public/api.static/PxStat.Data.GeoMap_API.Read/c171138ddcb901353718a459d5b2cba3"
+              }
+            ]
+          }
+        }
+      },
+      "statistics": {
+        "QUITDATE_PREG": "Pregnant women setting a quit date",
+        "QUIT4W_PREG": "Pregnant women who successfully quit at 4 week follow-up",
+        "PER_QUIT4_PREG": "Percentage of pregnant women who successfully quit at 4 week follow-up",
+        "NQUIT4_PREG": "Pregnant women who did not quit at 4-week follow up",
+        "PER_NQUIT4_PREG": "Percentage of pregnant women who did not quit at 4 week follow-up",
+        "NKL_PREG": "Pregnant women not known/lost to follow-up",
+        "PER_NKL_PREG": "Percentage of pregnant women not known/lost to follow-up"
+      },
+      "time": "TLIST(A1)",
+      "time_series": "2024/25",
+      "theme": "Health and social care",
+      "theme_code": 6,
+      "subject": "Health behaviours",
+      "subject_code": 142,
+      "product": "Smoking",
+      "product_code": "HBSMK",
+      "rows": 42
+    },
+    "SMKCES15": {
+      "name": "Smoking cessation - pregnant women setting a quit date",
+      "updated": "2026-09-17",
+      "categories": {
+        "STATISTIC": {
+          "category": {
+            "index": "PER_QUITDATE_PREG",
+            "label": {
+              "PER_QUITDATE_PREG": "Percentage of pregnant women setting a quit date"
+            },
+            "unit": {
+              "PER_QUITDATE_PREG": {
+                "decimals": 1,
+                "label": "%",
+                "position": "end"
+              }
+            }
+          },
+          "label": "Statistic"
+        },
+        "TLIST(A1)": {
+          "category": {
+            "index": ["2023/24", "2024/25"],
+            "label": {
+              "2023/24": "2023/24",
+              "2024/25": "2024/25"
+            }
+          },
+          "label": "Financial year"
+        },
+        "DEP_QUINTILE": {
+          "category": {
+            "index": ["1", "2", "3", "4", "5", "6"],
+            "label": {
+              "1": "Most deprived",
+              "2": "Second",
+              "3": "Third",
+              "4": "Fourth",
+              "5": "Least deprived",
+              "6": "Not known"
+            }
+          },
+          "label": "Deprivation quintile"
+        }
+      },
+      "statistics": {
+        "PER_QUITDATE_PREG": "Percentage of pregnant women setting a quit date"
+      },
+      "time": "TLIST(A1)",
+      "time_series": ["2023/24", "2024/25"],
+      "theme": "Health and social care",
+      "theme_code": 6,
+      "subject": "Health behaviours",
+      "subject_code": 142,
+      "product": "Smoking",
+      "product_code": "HBSMK",
+      "rows": 12
+    },
+    "SMKCES17": {
+      "name": "Smoking cessation - average cigarettes smoked per weekday",
+      "updated": "2026-09-17",
+      "categories": {
+        "STATISTIC": {
+          "category": {
+            "index": ["QUITDATE", "PER_QUITDATE", "PER_QUIT", "PER_NQUIT", "PER_NKL"],
+            "label": {
+              "QUITDATE": "People setting a quit date",
+              "PER_QUITDATE": "Percentage of people setting a quit date",
+              "PER_QUIT": "Percentage of people who had successfully quit",
+              "PER_NQUIT": "Percentage of people who had not quit",
+              "PER_NKL": "Percentage of people not known/lost to follow-up"
+            },
+            "unit": {
+              "QUITDATE": {
+                "decimals": 0,
+                "label": "Number",
+                "position": "end"
+              },
+              "PER_QUITDATE": {
+                "decimals": 1,
+                "label": "%",
+                "position": "end"
+              },
+              "PER_QUIT": {
+                "decimals": 1,
+                "label": "%",
+                "position": "end"
+              },
+              "PER_NQUIT": {
+                "decimals": 1,
+                "label": "%",
+                "position": "end"
+              },
+              "PER_NKL": {
+                "decimals": 1,
+                "label": "%",
+                "position": "end"
+              }
+            }
+          },
+          "label": "Statistic"
+        },
+        "TLIST(A1)": {
+          "category": {
+            "index": "2024/25",
+            "label": {
+              "2024/25": "2024/25"
+            }
+          },
+          "label": "Financial year"
+        },
+        "AVCIGWD": {
+          "category": {
+            "index": ["1", "2", "3", "4", "5", "6", "7"],
+            "label": {
+              "1": "Under 10",
+              "2": "10 to 14",
+              "3": "15 to 19",
+              "4": "20 to 29",
+              "5": "30 to 39",
+              "6": "40 or more",
+              "7": "Unknown"
+            }
+          },
+          "label": "Average cigarettes smoked per weekday"
+        }
+      },
+      "statistics": {
+        "QUITDATE": "People setting a quit date",
+        "PER_QUITDATE": "Percentage of people setting a quit date",
+        "PER_QUIT": "Percentage of people who had successfully quit",
+        "PER_NQUIT": "Percentage of people who had not quit",
+        "PER_NKL": "Percentage of people not known/lost to follow-up"
+      },
+      "time": "TLIST(A1)",
+      "time_series": "2024/25",
+      "theme": "Health and social care",
+      "theme_code": 6,
+      "subject": "Health behaviours",
+      "subject_code": 142,
+      "product": "Smoking",
+      "product_code": "HBSMK",
+      "rows": 35
+    },
+    "SMKCES18": {
+      "name": "Smoking cessation - average cigarettes smoked per weekend",
+      "updated": "2026-09-17",
+      "categories": {
+        "STATISTIC": {
+          "category": {
+            "index": ["QUITDATE", "PER_QUITDATE", "PER_QUIT", "PER_NQUIT", "PER_NKL"],
+            "label": {
+              "QUITDATE": "People setting a quit date",
+              "PER_QUITDATE": "Percentage of people setting a quit date",
+              "PER_QUIT": "Percentage of people who had successfully quit",
+              "PER_NQUIT": "Percentage of people who had not quit",
+              "PER_NKL": "Percentage of people not known/lost to follow-up"
+            },
+            "unit": {
+              "QUITDATE": {
+                "decimals": 0,
+                "label": "Number",
+                "position": "end"
+              },
+              "PER_QUITDATE": {
+                "decimals": 1,
+                "label": "%",
+                "position": "end"
+              },
+              "PER_QUIT": {
+                "decimals": 1,
+                "label": "%",
+                "position": "end"
+              },
+              "PER_NQUIT": {
+                "decimals": 1,
+                "label": "%",
+                "position": "end"
+              },
+              "PER_NKL": {
+                "decimals": 1,
+                "label": "%",
+                "position": "end"
+              }
+            }
+          },
+          "label": "Statistic"
+        },
+        "TLIST(A1)": {
+          "category": {
+            "index": "2024/25",
+            "label": {
+              "2024/25": "2024/25"
+            }
+          },
+          "label": "Financial year"
+        },
+        "AVCIGWE": {
+          "category": {
+            "index": ["1", "2", "3", "4", "5", "6", "7"],
+            "label": {
+              "1": "Under 10",
+              "2": "10 to 14",
+              "3": "15 to 19",
+              "4": "20 to 29",
+              "5": "30 to 39",
+              "6": "40 or more",
+              "7": "Unknown"
+            }
+          },
+          "label": "Average cigarettes smoked per weekend"
+        }
+      },
+      "statistics": {
+        "QUITDATE": "People setting a quit date",
+        "PER_QUITDATE": "Percentage of people setting a quit date",
+        "PER_QUIT": "Percentage of people who had successfully quit",
+        "PER_NQUIT": "Percentage of people who had not quit",
+        "PER_NKL": "Percentage of people not known/lost to follow-up"
+      },
+      "time": "TLIST(A1)",
+      "time_series": "2024/25",
+      "theme": "Health and social care",
+      "theme_code": 6,
+      "subject": "Health behaviours",
+      "subject_code": 142,
+      "product": "Smoking",
+      "product_code": "HBSMK",
+      "rows": 35
+    },
+    "SMKCES23B": {
+      "name": "Smoking cessation - 4 and 52 week follow-ups outcomes",
+      "updated": "2026-09-17",
+      "categories": {
+        "STATISTIC": {
+          "category": {
+            "index": ["QUITDATE", "QUIT4W", "FU52W", "PER_4QUIT52", "PER_4NQUIT52", "PER_4NKL52", "QUIT52W", "PER_QUIT52W"],
+            "label": {
+              "QUITDATE": "People setting a quit date",
+              "QUIT4W": "People who successfully quit at 4 week follow-up",
+              "FU52W": "Followed up at 52 weeks",
+              "PER_4QUIT52": "Percentage of people who quit at 4 weeks still not smoking at 52 weeks",
+              "PER_4NQUIT52": "Percentage of people who quit at 4 weeks that had resumed smoking at 52 weeks",
+              "PER_4NKL52": "Percentage of people who quit at 4 weeks subsequently lost to follow up",
+              "QUIT52W": "People who successfully quit at 52 weeks",
+              "PER_QUIT52W": "Percentage of people who successfully quit at 52 weeks"
+            },
+            "unit": {
+              "QUITDATE": {
+                "decimals": 0,
+                "label": "Number",
+                "position": "end"
+              },
+              "QUIT4W": {
+                "decimals": 0,
+                "label": "Number",
+                "position": "end"
+              },
+              "FU52W": {
+                "decimals": 0,
+                "label": "Number",
+                "position": "end"
+              },
+              "PER_4QUIT52": {
+                "decimals": 1,
+                "label": "%",
+                "position": "end"
+              },
+              "PER_4NQUIT52": {
+                "decimals": 1,
+                "label": "%",
+                "position": "end"
+              },
+              "PER_4NKL52": {
+                "decimals": 1,
+                "label": "%",
+                "position": "end"
+              },
+              "QUIT52W": {
+                "decimals": 0,
+                "label": "Number",
+                "position": "end"
+              },
+              "PER_QUIT52W": {
+                "decimals": 1,
+                "label": "%",
+                "position": "end"
+              }
+            }
+          },
+          "label": "Statistic"
+        },
+        "TLIST(A1)": {
+          "category": {
+            "index": "2023/24",
+            "label": {
+              "2023/24": "2023/24"
+            }
+          },
+          "label": "Financial year"
+        },
+        "HSCT": {
+          "category": {
+            "index": ["BHSCT", "NHSCT", "SEHSCT", "SHSCT", "WHSCT", "N92000002"],
+            "label": {
+              "BHSCT": "Belfast",
+              "NHSCT": "Northern",
+              "SEHSCT": "South Eastern",
+              "SHSCT": "Southern",
+              "WHSCT": "Western",
+              "N92000002": "Northern Ireland"
+            }
+          },
+          "label": "Health and Social Care Trust",
+          "link": {
+            "enclosure": [
+              {
+                "type": "application/geo+json",
+                "href": "https://ws-data.nisra.gov.uk/public/api.static/PxStat.Data.GeoMap_API.Read/c171138ddcb901353718a459d5b2cba3"
+              }
+            ]
+          }
+        }
+      },
+      "statistics": {
+        "QUITDATE": "People setting a quit date",
+        "QUIT4W": "People who successfully quit at 4 week follow-up",
+        "FU52W": "Followed up at 52 weeks",
+        "PER_4QUIT52": "Percentage of people who quit at 4 weeks still not smoking at 52 weeks",
+        "PER_4NQUIT52": "Percentage of people who quit at 4 weeks that had resumed smoking at 52 weeks",
+        "PER_4NKL52": "Percentage of people who quit at 4 weeks subsequently lost to follow up",
+        "QUIT52W": "People who successfully quit at 52 weeks",
+        "PER_QUIT52W": "Percentage of people who successfully quit at 52 weeks"
+      },
+      "time": "TLIST(A1)",
+      "time_series": "2023/24",
+      "theme": "Health and social care",
+      "theme_code": 6,
+      "subject": "Health behaviours",
+      "subject_code": 142,
+      "product": "Smoking",
+      "product_code": "HBSMK",
+      "rows": 48
+    },
+    "SMKCES23C": {
+      "name": "Smoking cessation - 4 and 52 week follow-ups outcomes",
+      "updated": "2026-09-17",
+      "categories": {
+        "STATISTIC": {
+          "category": {
+            "index": ["QUITDATE", "QUIT4W", "FU52W", "PER_4QUIT52", "PER_4NQUIT52", "PER_4NKL52", "QUIT52W", "PER_QUIT52W"],
+            "label": {
+              "QUITDATE": "People setting a quit date",
+              "QUIT4W": "People who successfully quit at 4 week follow-up",
+              "FU52W": "Followed up at 52 weeks",
+              "PER_4QUIT52": "Percentage of people who quit at 4 weeks still not smoking at 52 weeks",
+              "PER_4NQUIT52": "Percentage of people who quit at 4 weeks that had resumed smoking at 52 weeks",
+              "PER_4NKL52": "Percentage of people who quit at 4 weeks subsequently lost to follow up",
+              "QUIT52W": "People who successfully quit at 52 weeks",
+              "PER_QUIT52W": "Percentage of people who successfully quit at 52 weeks"
+            },
+            "unit": {
+              "QUITDATE": {
+                "decimals": 0,
+                "label": "Number",
+                "position": "end"
+              },
+              "QUIT4W": {
+                "decimals": 0,
+                "label": "Number",
+                "position": "end"
+              },
+              "FU52W": {
+                "decimals": 0,
+                "label": "Number",
+                "position": "end"
+              },
+              "PER_4QUIT52": {
+                "decimals": 1,
+                "label": "%",
+                "position": "end"
+              },
+              "PER_4NQUIT52": {
+                "decimals": 1,
+                "label": "%",
+                "position": "end"
+              },
+              "PER_4NKL52": {
+                "decimals": 1,
+                "label": "%",
+                "position": "end"
+              },
+              "QUIT52W": {
+                "decimals": 0,
+                "label": "Number",
+                "position": "end"
+              },
+              "PER_QUIT52W": {
+                "decimals": 1,
+                "label": "%",
+                "position": "end"
+              }
+            }
+          },
+          "label": "Statistic"
+        },
+        "TLIST(A1)": {
+          "category": {
+            "index": "2023/24",
+            "label": {
+              "2023/24": "2023/24"
+            }
+          },
+          "label": "Financial year"
+        },
+        "DEP_QUINTILE": {
+          "category": {
+            "index": ["1", "2", "3", "4", "5", "ALL"],
+            "label": {
+              "1": "Most deprived",
+              "2": "Second",
+              "3": "Third",
+              "4": "Fourth",
+              "5": "Least deprived",
+              "ALL": "All"
+            }
+          },
+          "label": "Deprivation quintile"
+        }
+      },
+      "statistics": {
+        "QUITDATE": "People setting a quit date",
+        "QUIT4W": "People who successfully quit at 4 week follow-up",
+        "FU52W": "Followed up at 52 weeks",
+        "PER_4QUIT52": "Percentage of people who quit at 4 weeks still not smoking at 52 weeks",
+        "PER_4NQUIT52": "Percentage of people who quit at 4 weeks that had resumed smoking at 52 weeks",
+        "PER_4NKL52": "Percentage of people who quit at 4 weeks subsequently lost to follow up",
+        "QUIT52W": "People who successfully quit at 52 weeks",
+        "PER_QUIT52W": "Percentage of people who successfully quit at 52 weeks"
+      },
+      "time": "TLIST(A1)",
+      "time_series": "2023/24",
+      "theme": "Health and social care",
+      "theme_code": 6,
+      "subject": "Health behaviours",
+      "subject_code": 142,
+      "product": "Smoking",
+      "product_code": "HBSMK",
+      "rows": 48
     },
     "SMOKEPREGAA": {
       "name": "Smoking during pregnancy",
