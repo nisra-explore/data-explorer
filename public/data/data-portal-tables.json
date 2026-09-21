@@ -1,5 +1,5 @@
 {
-  "table_count": 1206,
+  "table_count": 1207,
   "tables": {
     "ABI01": {
       "name": "Annual Business Inquiry: results by industry sector",
@@ -98638,6 +98638,264 @@
       "product_code": "PHHS",
       "rows": 336
     },
+    "HISOPACT": {
+      "name": "Historical Outpatient Attendances",
+      "updated": "2026-09-21",
+      "categories": {
+        "STATISTIC": {
+          "category": {
+            "index": ["ALL", "1", "2", "3"],
+            "label": {
+              "ALL": "Total patients seen",
+              "1": "New patients seen",
+              "2": "Review patients seen",
+              "3": "Ward attendances"
+            },
+            "unit": {
+              "ALL": {
+                "decimals": 0,
+                "label": "Number",
+                "position": "end"
+              },
+              "1": {
+                "decimals": 0,
+                "label": "Number",
+                "position": "end"
+              },
+              "2": {
+                "decimals": 0,
+                "label": "Number",
+                "position": "end"
+              },
+              "3": {
+                "decimals": 0,
+                "label": "Number",
+                "position": "end"
+              }
+            }
+          },
+          "label": "Statistic"
+        },
+        "TLIST(A1)": {
+          "category": {
+            "index": ["2008/09", "2009/10", "2010/11", "2011/12", "2012/13", "2013/14", "2014/15", "2015/16", "2016/17", "2017/18", "2018/19", "2019/20", "2020/21", "2021/22", "2022/23"],
+            "label": {
+              "2008/09": "2008/09",
+              "2009/10": "2009/10",
+              "2010/11": "2010/11",
+              "2011/12": "2011/12",
+              "2012/13": "2012/13",
+              "2013/14": "2013/14",
+              "2014/15": "2014/15",
+              "2015/16": "2015/16",
+              "2016/17": "2016/17",
+              "2017/18": "2017/18",
+              "2018/19": "2018/19",
+              "2019/20": "2019/20",
+              "2020/21": "2020/21",
+              "2021/22": "2021/22",
+              "2022/23": "2022/23"
+            }
+          },
+          "label": "Financial year"
+        },
+        "HSCT": {
+          "category": {
+            "index": ["BHSCT", "NHSCT", "SEHSCT", "SHSCT", "WHSCT", "N92000002"],
+            "label": {
+              "BHSCT": "Belfast",
+              "NHSCT": "Northern",
+              "SEHSCT": "South Eastern",
+              "SHSCT": "Southern",
+              "WHSCT": "Western",
+              "N92000002": "Northern Ireland"
+            }
+          },
+          "label": "Health and Social Care Trust",
+          "link": {
+            "enclosure": [
+              {
+                "type": "application/geo+json",
+                "href": "https://ws-data.nisra.gov.uk/public/api.static/PxStat.Data.GeoMap_API.Read/c171138ddcb901353718a459d5b2cba3"
+              }
+            ]
+          }
+        },
+        "APPTYPE": {
+          "category": {
+            "index": ["ALL", "1", "2", "3", "4", "5", "6"],
+            "label": {
+              "ALL": "All Appointment Types",
+              "1": "Face to Face",
+              "2": "Virtual",
+              "3": "Independent Sector",
+              "4": "ICATS",
+              "5": "Ward Attendance",
+              "6": "Day Case Procedure Centre"
+            }
+          },
+          "label": "Appointment Type"
+        },
+        "SPEC": {
+          "category": {
+            "index": ["ALL", "CS1", "CS2", "CS3", "CS4", "CS6", "CS7", "CS8", "CS9", "CS10", "CS11", "CS12", "CS13", "CS14", "CS15", "CS16", "CS17", "CS18", "CS19", "CS20", "CS21", "CS22", "CS23", "CS24", "CS25", "CS26", "CS27", "CS28", "CS29", "CS30", "CS31", "CS32", "CS33", "CS34", "CS35", "CS36", "CS37", "CS38", "CS39", "CS40", "CS41", "CS42", "CS43", "CS44", "CS45", "CS46", "CS47", "CS48", "CS49", "CS50", "CS51", "CS52", "CS53", "CS54", "CS55", "CS56", "CS57", "CS58", "CS59", "CS60", "CS61", "CS62", "CS63", "CS64", "CS65", "CS66", "CS67", "CS68", "CS69", "CS70", "CS71", "CS72", "CS73", "CS74", "CS75", "CS76", "CS77", "CS78", "CS79", "CS80", "CS81", "CS82", "CS83", "CS84", "CS85", "CS86", "CS87", "CS88", "CS89", "CS90", "CS91", "CS92", "CS93", "CS94", "CS95", "CS96", "CS97", "CS98", "CS99", "CS100", "CS101", "CS102", "CS103", "CS104", "CS105", "CS106", "CS107", "CS108", "CS109", "CS110", "CS111", "CS112", "CS113", "CS114", "CS115", "CS116", "CS117", "CS118", "CS119", "CS120", "CS121", "CS122", "CS123", "CS124", "CS125", "CS126", "CS127", "CS128", "CS129", "CS130", "CS131", "CS132", "CS133", "CS134", "CS000"],
+            "label": {
+              "ALL": "All Specialties",
+              "CS1": "Accident & Emergency",
+              "CS2": "Acute Medicine",
+              "CS3": "Addiction Service",
+              "CS4": "Adult Cystic Fibrosis",
+              "CS6": "Allergy",
+              "CS7": "Allied Health Professional",
+              "CS8": "Anaesthetics",
+              "CS9": "Antenatal Clinic",
+              "CS10": "Anticoagulant Service",
+              "CS11": "Audiological Medicine",
+              "CS12": "Blood Transfusion",
+              "CS13": "Breast Surgery",
+              "CS14": "Burns Care",
+              "CS15": "Cardiac Surgery",
+              "CS16": "Cardiology",
+              "CS17": "Chemical Pathology",
+              "CS18": "Child & Adolescent Psychiatry",
+              "CS19": "Clinical Genetics",
+              "CS20": "Clinical Immunology",
+              "CS21": "Clinical Immunology & Allergy",
+              "CS22": "Clinical Neuro-Physiology",
+              "CS23": "Clinical Oncology",
+              "CS24": "Clinical Pharmacology",
+              "CS25": "Clinical Physiology",
+              "CS26": "Clinical Psychology",
+              "CS27": "Colorectal Surgery",
+              "CS28": "Community Paediatric",
+              "CS29": "Community Sexual and Reproductive Health Service",
+              "CS30": "Dental Medicine Specialties",
+              "CS31": "Dermatology",
+              "CS32": "Dermatology - Oncology",
+              "CS33": "Diabetes",
+              "CS34": "Diagnostic Imaging",
+              "CS35": "Endocrinology",
+              "CS36": "ENT",
+              "CS37": "Fetal Medicine",
+              "CS38": "Forensic Psychiatry",
+              "CS39": "Gastroenterology",
+              "CS40": "General Medicine",
+              "CS41": "General Pathology",
+              "CS42": "General Practice (Maternity)",
+              "CS43": "General Practice (Non maternity)",
+              "CS44": "General Surgery",
+              "CS45": "Genito-Urinary Medicine",
+              "CS46": "Geriatric Medicine",
+              "CS47": "GP Other",
+              "CS48": "Gynaecological Oncology",
+              "CS49": "Gynaecology",
+              "CS50": "Haematology",
+              "CS51": "Haematology (Clinical)",
+              "CS52": "Hepatology",
+              "CS53": "Infectious Diseases",
+              "CS54": "Joint Consultant Clinic",
+              "CS55": "Learning Disability",
+              "CS56": "Medical Oncology",
+              "CS57": "Medical Ophthalmology",
+              "CS58": "Mental Illness",
+              "CS59": "Neonatology",
+              "CS60": "Nephrology",
+              "CS61": "Neurology",
+              "CS62": "Neurosurgery",
+              "CS63": "Nuclear Medicine",
+              "CS64": "Obs & Gyn (Gynaecology)",
+              "CS65": "Obs & Gyn (Obstetrics)",
+              "CS66": "Obstetrics",
+              "CS67": "Obstetrics (Ante Natal)",
+              "CS68": "Obstetrics (Post Natal)",
+              "CS69": "Obstetrics and Gynaecology",
+              "CS70": "Occupational Therapy",
+              "CS71": "Old Age Psychiatry",
+              "CS72": "Ophthalmology",
+              "CS73": "Ophthalmology - Glaucoma",
+              "CS74": "Ophthalmology - Macular",
+              "CS75": "Optometry",
+              "CS76": "Oral and Maxillofacial Surgery",
+              "CS77": "Oral Surgery",
+              "CS78": "Orthodontics",
+              "CS79": "Orthopaedic Adult - Foot and Ankle",
+              "CS80": "Orthopaedics",
+              "CS81": "Orthopaedics - Fracture",
+              "CS82": "Paediatric Allergy and Immunology",
+              "CS83": "Paediatric Audio Vestibular Medicine",
+              "CS84": "Paediatric Cardiology",
+              "CS85": "Paediatric Clinical Haematology",
+              "CS86": "Paediatric Cystic Fibrosis",
+              "CS87": "Paediatric Dentistry",
+              "CS88": "Paediatric Dermatology",
+              "CS89": "Paediatric Diabetes",
+              "CS90": "Paediatric Ear Nose and Throat",
+              "CS91": "Paediatric Endocrinology",
+              "CS92": "Paediatric Epilepsy Service",
+              "CS93": "Paediatric Gastroenterology",
+              "CS94": "Paediatric Hepatology",
+              "CS95": "Paediatric Infectious Diseases",
+              "CS96": "Paediatric Inherited Metabolic Medicine",
+              "CS97": "Paediatric Medical Oncology",
+              "CS98": "Paediatric Nephrology",
+              "CS99": "Paediatric Neurodisability",
+              "CS100": "Paediatric Neurology",
+              "CS101": "Paediatric Neurosurgery",
+              "CS102": "Paediatric Ophthalmology",
+              "CS103": "Paediatric Plastic Surgery",
+              "CS104": "Paediatric Respiratory Medicine",
+              "CS105": "Paediatric Rheumatology",
+              "CS106": "Paediatric Surgery",
+              "CS107": "Paediatric Trauma and Orthopaedic",
+              "CS108": "Paediatric Urology",
+              "CS109": "Paediatrics",
+              "CS110": "Pain Management",
+              "CS111": "Palliative Medicine",
+              "CS112": "Physiotherapy",
+              "CS113": "Plastic Surgery",
+              "CS114": "Postnatal Clinic",
+              "CS115": "Preassessment",
+              "CS116": "Psychotherapy",
+              "CS117": "Radiology",
+              "CS118": "Regional Diagnosis Centre",
+              "CS119": "Rehabilitation",
+              "CS120": "Respiratory Medicine",
+              "CS121": "Restorative Dentistry",
+              "CS122": "Rheumatology",
+              "CS123": "Special Care Dentistry",
+              "CS124": "Speech and Language Therapy",
+              "CS125": "Stroke Medicine",
+              "CS126": "T & O Surgery",
+              "CS127": "Thoracic Medicine",
+              "CS128": "Thoracic Surgery",
+              "CS129": "Trauma and Orthopaedics",
+              "CS130": "Urology",
+              "CS131": "Urology - Gynaecology",
+              "CS132": "Vascular Surgery",
+              "CS133": "Well Babies (Obstetrics)",
+              "CS134": "Well Babies (Paediatrics)",
+              "CS000": "No Specialty Provided"
+            }
+          },
+          "label": "Specialty"
+        }
+      },
+      "statistics": {
+        "ALL": "Total patients seen",
+        "1": "New patients seen",
+        "2": "Review patients seen",
+        "3": "Ward attendances"
+      },
+      "time": "TLIST(A1)",
+      "time_series": ["2008/09", "2009/10", "2010/11", "2011/12", "2012/13", "2013/14", "2014/15", "2015/16", "2016/17", "2017/18", "2018/19", "2019/20", "2020/21", "2021/22", "2022/23"],
+      "theme": "Health and social care",
+      "theme_code": 6,
+      "subject": "Hospital activity and waiting lists",
+      "subject_code": 145,
+      "product": "Hospital activity",
+      "product_code": "HAWLHA",
+      "rows": 340200
+    },
     "HLALEVEL": {
       "name": "Higher Level Apprenticeships by level",
       "updated": "2026-09-08",
@@ -148165,15 +148423,16 @@
     },
     "OPACT": {
       "name": "Outpatient Activity: Attendances",
-      "updated": "2026-05-13",
+      "updated": "2026-09-21",
       "categories": {
         "STATISTIC": {
           "category": {
-            "index": ["ALL", "1", "2"],
+            "index": ["ALL", "1", "2", "3"],
             "label": {
               "ALL": "Total patients seen",
               "1": "New patients seen",
-              "2": "Review patients seen"
+              "2": "Review patients seen",
+              "3": "Ward attendances"
             },
             "unit": {
               "ALL": {
@@ -148190,6 +148449,11 @@
                 "decimals": 0,
                 "label": "Number",
                 "position": "end"
+              },
+              "3": {
+                "decimals": 0,
+                "label": "Number",
+                "position": "end"
               }
             }
           },
@@ -148197,38 +148461,25 @@
         },
         "TLIST(A1)": {
           "category": {
-            "index": ["2008/09", "2009/10", "2010/11", "2011/12", "2012/13", "2013/14", "2014/15", "2015/16", "2016/17", "2017/18", "2018/19", "2019/20", "2020/21", "2021/22", "2022/23"],
+            "index": ["2023/24", "2024/25", "2025/26"],
             "label": {
-              "2008/09": "2008/09",
-              "2009/10": "2009/10",
-              "2010/11": "2010/11",
-              "2011/12": "2011/12",
-              "2012/13": "2012/13",
-              "2013/14": "2013/14",
-              "2014/15": "2014/15",
-              "2015/16": "2015/16",
-              "2016/17": "2016/17",
-              "2017/18": "2017/18",
-              "2018/19": "2018/19",
-              "2019/20": "2019/20",
-              "2020/21": "2020/21",
-              "2021/22": "2021/22",
-              "2022/23": "2022/23"
+              "2023/24": "2023/24",
+              "2024/25": "2024/25",
+              "2025/26": "2025/26"
             }
           },
           "label": "Financial year"
         },
         "HSCT": {
           "category": {
-            "index": ["N92000002", "BHSCT", "NHSCT", "SEHSCT", "SHSCT", "WHSCT", "DPC"],
+            "index": ["BHSCT", "NHSCT", "SEHSCT", "SHSCT", "WHSCT", "N92000002"],
             "label": {
-              "N92000002": "Northern Ireland",
               "BHSCT": "Belfast",
               "NHSCT": "Northern",
               "SEHSCT": "South Eastern",
               "SHSCT": "Southern",
               "WHSCT": "Western",
-              "DPC": "Day Case Procedure Centre"
+              "N92000002": "Northern Ireland"
             }
           },
           "label": "Health and Social Care Trust",
@@ -148241,103 +148492,191 @@
             ]
           }
         },
-        "SPEC": {
-          "category": {
-            "index": ["ALL", "180", "190", "310", "170", "320", "822", "711", "311", "313", "401", "800", "450", "330", "302", "120", "301", "300", "100", "360", "430", "620", "502", "823", "303", "350", "990", "700", "370", "460", "710", "361", "400", "150", "371", "501", "510", "520", "715", "130", "140", "143", "142", "421", "171", "420", "191", "315", "160", "713", "810", "314", "141", "410", "110", "340", "172", "101", "540", "550"],
-            "label": {
-              "ALL": "All Specialties",
-              "180": "Accident & Emergency",
-              "190": "Anaesthetics",
-              "310": "Audiological",
-              "170": "Cardiac Surgery",
-              "320": "Cardiology",
-              "822": "Chemical Pathology",
-              "711": "Child & Adolescent Psychiatry",
-              "311": "Clinical Genetics",
-              "313": "Clinical Immunology & Allergy",
-              "401": "Clinical Neuro-Physiology",
-              "800": "Clinical Oncology",
-              "450": "Dental Medicine Specialties",
-              "330": "Dermatology",
-              "302": "Endocrinology",
-              "120": "ENT",
-              "301": "Gastroenterology",
-              "300": "General Medicine",
-              "100": "General Surgery",
-              "360": "Genito-Urinary Medicine",
-              "430": "Geriatric Medicine",
-              "620": "GP Other",
-              "502": "Gynaecology",
-              "823": "Haematology",
-              "303": "Haematology (Clinical)",
-              "350": "Infectious Diseases",
-              "990": "Joint Consultant Clinics",
-              "700": "Learning Disability",
-              "370": "Medical Oncology",
-              "460": "Medical Ophthalmology",
-              "710": "Mental Illness",
-              "361": "Nephrology",
-              "400": "Neurology",
-              "150": "Neurosurgery",
-              "371": "Nuclear Medicine",
-              "501": "Obstetrics",
-              "510": "Obstetrics (Ante Natal)",
-              "520": "Obstetrics (Post Natal)",
-              "715": "Old Age Psychiatry",
-              "130": "Ophthalmology",
-              "140": "Oral Surgery",
-              "143": "Orthodontics",
-              "142": "Paediatric Dentistry",
-              "421": "Paediatric Neurology",
-              "171": "Paediatric Surgery",
-              "420": "Paediatrics",
-              "191": "Pain Management",
-              "315": "Palliative Medicine",
-              "160": "Plastic Surgery",
-              "713": "Psychotherapy",
-              "810": "Radiology",
-              "314": "Rehabilitation",
-              "141": "Restorative Dentistry",
-              "410": "Rheumatology",
-              "110": "T & O Surgery",
-              "340": "Thoracic Medicine",
-              "172": "Thoracic Surgery",
-              "101": "Urology",
-              "540": "Well Babies (Obstetrics)",
-              "550": "Well Babies (Paediatrics)"
-            }
-          },
-          "label": "Specialty"
-        },
         "APPTYPE": {
           "category": {
-            "index": ["ALL", "1", "2", "3", "4", "5"],
+            "index": ["ALL", "1", "2", "3", "4", "5", "6"],
             "label": {
-              "ALL": "All types of appointment",
-              "1": "Face to face",
+              "ALL": "All Appointment Types",
+              "1": "Face to Face",
               "2": "Virtual",
               "3": "Independent Sector",
               "4": "ICATS",
-              "5": "Ward"
+              "5": "Ward Attendance",
+              "6": "Day Case Procedure Centre"
             }
           },
-          "label": "Type of appointment"
+          "label": "Appointment Type"
+        },
+        "SOURCE": {
+          "category": {
+            "index": ["ALL", "1", "2"],
+            "label": {
+              "ALL": "All Sources",
+              "1": "encompass",
+              "2": "pre-encompass"
+            }
+          },
+          "label": "Source"
+        },
+        "SPEC": {
+          "category": {
+            "index": ["ALL", "CS1", "CS2", "CS3", "CS4", "CS6", "CS7", "CS8", "CS9", "CS10", "CS11", "CS12", "CS13", "CS14", "CS15", "CS16", "CS17", "CS18", "CS19", "CS20", "CS21", "CS22", "CS23", "CS24", "CS25", "CS26", "CS27", "CS28", "CS29", "CS30", "CS31", "CS32", "CS33", "CS34", "CS35", "CS36", "CS37", "CS38", "CS39", "CS40", "CS41", "CS42", "CS43", "CS44", "CS45", "CS46", "CS47", "CS48", "CS49", "CS50", "CS51", "CS52", "CS53", "CS54", "CS55", "CS56", "CS57", "CS58", "CS59", "CS60", "CS61", "CS62", "CS63", "CS64", "CS65", "CS66", "CS67", "CS68", "CS69", "CS70", "CS71", "CS72", "CS73", "CS74", "CS75", "CS76", "CS77", "CS78", "CS79", "CS80", "CS81", "CS82", "CS83", "CS84", "CS85", "CS86", "CS87", "CS88", "CS89", "CS90", "CS91", "CS92", "CS93", "CS94", "CS95", "CS96", "CS97", "CS98", "CS99", "CS100", "CS101", "CS102", "CS103", "CS104", "CS105", "CS106", "CS107", "CS108", "CS109", "CS110", "CS111", "CS112", "CS113", "CS114", "CS115", "CS116", "CS117", "CS118", "CS119", "CS120", "CS121", "CS122", "CS123", "CS124", "CS125", "CS126", "CS127", "CS128", "CS129", "CS130", "CS131", "CS132", "CS133", "CS134", "CS000"],
+            "label": {
+              "ALL": "All Specialties",
+              "CS1": "Accident & Emergency",
+              "CS2": "Acute Medicine",
+              "CS3": "Addiction Service",
+              "CS4": "Adult Cystic Fibrosis",
+              "CS6": "Allergy",
+              "CS7": "Allied Health Professional",
+              "CS8": "Anaesthetics",
+              "CS9": "Antenatal Clinic",
+              "CS10": "Anticoagulant Service",
+              "CS11": "Audiological Medicine",
+              "CS12": "Blood Transfusion",
+              "CS13": "Breast Surgery",
+              "CS14": "Burns Care",
+              "CS15": "Cardiac Surgery",
+              "CS16": "Cardiology",
+              "CS17": "Chemical Pathology",
+              "CS18": "Child & Adolescent Psychiatry",
+              "CS19": "Clinical Genetics",
+              "CS20": "Clinical Immunology",
+              "CS21": "Clinical Immunology & Allergy",
+              "CS22": "Clinical Neuro-Physiology",
+              "CS23": "Clinical Oncology",
+              "CS24": "Clinical Pharmacology",
+              "CS25": "Clinical Physiology",
+              "CS26": "Clinical Psychology",
+              "CS27": "Colorectal Surgery",
+              "CS28": "Community Paediatric",
+              "CS29": "Community Sexual and Reproductive Health Service",
+              "CS30": "Dental Medicine Specialties",
+              "CS31": "Dermatology",
+              "CS32": "Dermatology - Oncology",
+              "CS33": "Diabetes",
+              "CS34": "Diagnostic Imaging",
+              "CS35": "Endocrinology",
+              "CS36": "ENT",
+              "CS37": "Fetal Medicine",
+              "CS38": "Forensic Psychiatry",
+              "CS39": "Gastroenterology",
+              "CS40": "General Medicine",
+              "CS41": "General Pathology",
+              "CS42": "General Practice (Maternity)",
+              "CS43": "General Practice (Non maternity)",
+              "CS44": "General Surgery",
+              "CS45": "Genito-Urinary Medicine",
+              "CS46": "Geriatric Medicine",
+              "CS47": "GP Other",
+              "CS48": "Gynaecological Oncology",
+              "CS49": "Gynaecology",
+              "CS50": "Haematology",
+              "CS51": "Haematology (Clinical)",
+              "CS52": "Hepatology",
+              "CS53": "Infectious Diseases",
+              "CS54": "Joint Consultant Clinic",
+              "CS55": "Learning Disability",
+              "CS56": "Medical Oncology",
+              "CS57": "Medical Ophthalmology",
+              "CS58": "Mental Illness",
+              "CS59": "Neonatology",
+              "CS60": "Nephrology",
+              "CS61": "Neurology",
+              "CS62": "Neurosurgery",
+              "CS63": "Nuclear Medicine",
+              "CS64": "Obs & Gyn (Gynaecology)",
+              "CS65": "Obs & Gyn (Obstetrics)",
+              "CS66": "Obstetrics",
+              "CS67": "Obstetrics (Ante Natal)",
+              "CS68": "Obstetrics (Post Natal)",
+              "CS69": "Obstetrics and Gynaecology",
+              "CS70": "Occupational Therapy",
+              "CS71": "Old Age Psychiatry",
+              "CS72": "Ophthalmology",
+              "CS73": "Ophthalmology - Glaucoma",
+              "CS74": "Ophthalmology - Macular",
+              "CS75": "Optometry",
+              "CS76": "Oral and Maxillofacial Surgery",
+              "CS77": "Oral Surgery",
+              "CS78": "Orthodontics",
+              "CS79": "Orthopaedic Adult - Foot and Ankle",
+              "CS80": "Orthopaedics",
+              "CS81": "Orthopaedics - Fracture",
+              "CS82": "Paediatric Allergy and Immunology",
+              "CS83": "Paediatric Audio Vestibular Medicine",
+              "CS84": "Paediatric Cardiology",
+              "CS85": "Paediatric Clinical Haematology",
+              "CS86": "Paediatric Cystic Fibrosis",
+              "CS87": "Paediatric Dentistry",
+              "CS88": "Paediatric Dermatology",
+              "CS89": "Paediatric Diabetes",
+              "CS90": "Paediatric Ear Nose and Throat",
+              "CS91": "Paediatric Endocrinology",
+              "CS92": "Paediatric Epilepsy Service",
+              "CS93": "Paediatric Gastroenterology",
+              "CS94": "Paediatric Hepatology",
+              "CS95": "Paediatric Infectious Diseases",
+              "CS96": "Paediatric Inherited Metabolic Medicine",
+              "CS97": "Paediatric Medical Oncology",
+              "CS98": "Paediatric Nephrology",
+              "CS99": "Paediatric Neurodisability",
+              "CS100": "Paediatric Neurology",
+              "CS101": "Paediatric Neurosurgery",
+              "CS102": "Paediatric Ophthalmology",
+              "CS103": "Paediatric Plastic Surgery",
+              "CS104": "Paediatric Respiratory Medicine",
+              "CS105": "Paediatric Rheumatology",
+              "CS106": "Paediatric Surgery",
+              "CS107": "Paediatric Trauma and Orthopaedic",
+              "CS108": "Paediatric Urology",
+              "CS109": "Paediatrics",
+              "CS110": "Pain Management",
+              "CS111": "Palliative Medicine",
+              "CS112": "Physiotherapy",
+              "CS113": "Plastic Surgery",
+              "CS114": "Postnatal Clinic",
+              "CS115": "Preassessment",
+              "CS116": "Psychotherapy",
+              "CS117": "Radiology",
+              "CS118": "Regional Diagnosis Centre",
+              "CS119": "Rehabilitation",
+              "CS120": "Respiratory Medicine",
+              "CS121": "Restorative Dentistry",
+              "CS122": "Rheumatology",
+              "CS123": "Special Care Dentistry",
+              "CS124": "Speech and Language Therapy",
+              "CS125": "Stroke Medicine",
+              "CS126": "T & O Surgery",
+              "CS127": "Thoracic Medicine",
+              "CS128": "Thoracic Surgery",
+              "CS129": "Trauma and Orthopaedics",
+              "CS130": "Urology",
+              "CS131": "Urology - Gynaecology",
+              "CS132": "Vascular Surgery",
+              "CS133": "Well Babies (Obstetrics)",
+              "CS134": "Well Babies (Paediatrics)",
+              "CS000": "No Specialty Provided"
+            }
+          },
+          "label": "Specialty"
         }
       },
       "statistics": {
         "ALL": "Total patients seen",
         "1": "New patients seen",
-        "2": "Review patients seen"
+        "2": "Review patients seen",
+        "3": "Ward attendances"
       },
       "time": "TLIST(A1)",
-      "time_series": ["2008/09", "2009/10", "2010/11", "2011/12", "2012/13", "2013/14", "2014/15", "2015/16", "2016/17", "2017/18", "2018/19", "2019/20", "2020/21", "2021/22", "2022/23"],
+      "time_series": ["2023/24", "2024/25", "2025/26"],
       "theme": "Health and social care",
       "theme_code": 6,
       "subject": "Hospital activity and waiting lists",
       "subject_code": 145,
       "product": "Hospital activity",
       "product_code": "HAWLHA",
-      "rows": 113400
+      "rows": 204120
     },
     "OPCANC": {
       "name": "Outpatient Activity: Missed appointments and cancellations",
