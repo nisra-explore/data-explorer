@@ -1,5 +1,5 @@
 {
-  "table_count": 1249,
+  "table_count": 1248,
   "tables": {
     "ABI01": {
       "name": "Annual Business Inquiry: results by industry sector",
@@ -49295,7 +49295,7 @@
     },
     "FCDEA": {
       "name": "Farm Census",
-      "updated": "2026-08-21",
+      "updated": "2026-09-23",
       "categories": {
         "STATISTIC": {
           "category": {
@@ -49824,7 +49824,7 @@
     },
     "FCWARD": {
       "name": "Farm Census",
-      "updated": "2026-08-21",
+      "updated": "2026-09-23",
       "categories": {
         "STATISTIC": {
           "category": {
@@ -148971,222 +148971,6 @@
       "product": "Hospital activity",
       "product_code": "HAWLHA",
       "rows": 204120
-    },
-    "OPCANC": {
-      "name": "Outpatient Activity: Missed appointments and cancellations",
-      "updated": "2026-05-13",
-      "categories": {
-        "STATISTIC": {
-          "category": {
-            "index": ["1", "2", "3", "4", "5", "6", "7", "8", "9"],
-            "label": {
-              "1": "New missed appointments (Did not attend)",
-              "2": "Review missed appointments (Did not attend)",
-              "3": "New patient cancellations",
-              "4": "Review patient cancellations",
-              "5": "New hospital cancellations",
-              "6": "Review hospital cancellations",
-              "7": "Total missed appointments",
-              "8": "Total patient cancellations",
-              "9": "Total hospital cancellations"
-            },
-            "unit": {
-              "1": {
-                "decimals": 0,
-                "label": "Number",
-                "position": "end"
-              },
-              "2": {
-                "decimals": 0,
-                "label": "Number",
-                "position": "end"
-              },
-              "3": {
-                "decimals": 0,
-                "label": "Number",
-                "position": "end"
-              },
-              "4": {
-                "decimals": 0,
-                "label": "Number",
-                "position": "end"
-              },
-              "5": {
-                "decimals": 0,
-                "label": "Number",
-                "position": "end"
-              },
-              "6": {
-                "decimals": 0,
-                "label": "Number",
-                "position": "end"
-              },
-              "7": {
-                "decimals": 0,
-                "label": "Number",
-                "position": "end"
-              },
-              "8": {
-                "decimals": 0,
-                "label": "Number",
-                "position": "end"
-              },
-              "9": {
-                "decimals": 0,
-                "label": "Number",
-                "position": "end"
-              }
-            }
-          },
-          "label": "Statistic"
-        },
-        "TLIST(A1)": {
-          "category": {
-            "index": ["2008/09", "2009/10", "2010/11", "2011/12", "2012/13", "2013/14", "2014/15", "2015/16", "2016/17", "2017/18", "2018/19", "2019/20", "2020/21", "2021/22", "2022/23"],
-            "label": {
-              "2008/09": "2008/09",
-              "2009/10": "2009/10",
-              "2010/11": "2010/11",
-              "2011/12": "2011/12",
-              "2012/13": "2012/13",
-              "2013/14": "2013/14",
-              "2014/15": "2014/15",
-              "2015/16": "2015/16",
-              "2016/17": "2016/17",
-              "2017/18": "2017/18",
-              "2018/19": "2018/19",
-              "2019/20": "2019/20",
-              "2020/21": "2020/21",
-              "2021/22": "2021/22",
-              "2022/23": "2022/23"
-            }
-          },
-          "label": "Financial year"
-        },
-        "HSCT": {
-          "category": {
-            "index": ["N92000002", "BHSCT", "NHSCT", "SEHSCT", "SHSCT", "WHSCT", "DPC"],
-            "label": {
-              "N92000002": "Northern Ireland",
-              "BHSCT": "Belfast",
-              "NHSCT": "Northern",
-              "SEHSCT": "South Eastern",
-              "SHSCT": "Southern",
-              "WHSCT": "Western",
-              "DPC": "Day Case Procedure Centre"
-            }
-          },
-          "label": "Health and Social Care Trust",
-          "link": {
-            "enclosure": [
-              {
-                "type": "application/geo+json",
-                "href": "https://ws-data.nisra.gov.uk/public/api.static/PxStat.Data.GeoMap_API.Read/c171138ddcb901353718a459d5b2cba3"
-              }
-            ]
-          }
-        },
-        "SPEC": {
-          "category": {
-            "index": ["ALL", "180", "190", "310", "170", "320", "822", "711", "311", "313", "401", "800", "450", "330", "302", "120", "301", "300", "100", "360", "430", "620", "502", "823", "303", "350", "990", "700", "370", "460", "710", "361", "400", "150", "371", "501", "510", "520", "715", "130", "140", "143", "142", "421", "171", "420", "191", "315", "160", "713", "810", "314", "141", "410", "110", "340", "172", "101", "540", "550"],
-            "label": {
-              "ALL": "All Specialties",
-              "180": "Accident & Emergency",
-              "190": "Anaesthetics",
-              "310": "Audiological",
-              "170": "Cardiac Surgery",
-              "320": "Cardiology",
-              "822": "Chemical Pathology",
-              "711": "Child & Adolescent Psychiatry",
-              "311": "Clinical Genetics",
-              "313": "Clinical Immunology & Allergy",
-              "401": "Clinical Neuro-Physiology",
-              "800": "Clinical Oncology",
-              "450": "Dental Medicine Specialties",
-              "330": "Dermatology",
-              "302": "Endocrinology",
-              "120": "ENT",
-              "301": "Gastroenterology",
-              "300": "General Medicine",
-              "100": "General Surgery",
-              "360": "Genito-Urinary Medicine",
-              "430": "Geriatric Medicine",
-              "620": "GP Other",
-              "502": "Gynaecology",
-              "823": "Haematology",
-              "303": "Haematology (Clinical)",
-              "350": "Infectious Diseases",
-              "990": "Joint Consultant Clinics",
-              "700": "Learning Disability",
-              "370": "Medical Oncology",
-              "460": "Medical Ophthalmology",
-              "710": "Mental Illness",
-              "361": "Nephrology",
-              "400": "Neurology",
-              "150": "Neurosurgery",
-              "371": "Nuclear Medicine",
-              "501": "Obstetrics",
-              "510": "Obstetrics (Ante Natal)",
-              "520": "Obstetrics (Post Natal)",
-              "715": "Old Age Psychiatry",
-              "130": "Ophthalmology",
-              "140": "Oral Surgery",
-              "143": "Orthodontics",
-              "142": "Paediatric Dentistry",
-              "421": "Paediatric Neurology",
-              "171": "Paediatric Surgery",
-              "420": "Paediatrics",
-              "191": "Pain Management",
-              "315": "Palliative Medicine",
-              "160": "Plastic Surgery",
-              "713": "Psychotherapy",
-              "810": "Radiology",
-              "314": "Rehabilitation",
-              "141": "Restorative Dentistry",
-              "410": "Rheumatology",
-              "110": "T & O Surgery",
-              "340": "Thoracic Medicine",
-              "172": "Thoracic Surgery",
-              "101": "Urology",
-              "540": "Well Babies (Obstetrics)",
-              "550": "Well Babies (Paediatrics)"
-            }
-          },
-          "label": "Specialty"
-        },
-        "APPTYPE": {
-          "category": {
-            "index": ["ALL", "1", "2", "3"],
-            "label": {
-              "ALL": "All Types of Appointment",
-              "1": "Face to Face",
-              "2": "Virtual",
-              "3": "ICATS"
-            }
-          },
-          "label": "Type of appointment"
-        }
-      },
-      "statistics": {
-        "1": "New missed appointments (Did not attend)",
-        "2": "Review missed appointments (Did not attend)",
-        "3": "New patient cancellations",
-        "4": "Review patient cancellations",
-        "5": "New hospital cancellations",
-        "6": "Review hospital cancellations",
-        "7": "Total missed appointments",
-        "8": "Total patient cancellations",
-        "9": "Total hospital cancellations"
-      },
-      "time": "TLIST(A1)",
-      "time_series": ["2008/09", "2009/10", "2010/11", "2011/12", "2012/13", "2013/14", "2014/15", "2015/16", "2016/17", "2017/18", "2018/19", "2019/20", "2020/21", "2021/22", "2022/23"],
-      "theme": "Health and social care",
-      "theme_code": 6,
-      "subject": "Hospital activity and waiting lists",
-      "subject_code": 145,
-      "product": "Hospital activity",
-      "product_code": "HAWLHA",
-      "rows": 226800
     },
     "OPHOSPCANCEL": {
       "name": "Outpatient Activity: Hospital Cancellations",
