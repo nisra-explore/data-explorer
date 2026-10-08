@@ -1,5 +1,5 @@
 {
-  "last_run": "2026-10-07T21:49:50.788Z",
+  "last_run": "2026-10-08T09:35:53.753Z",
   "table_count": 1248,
   "tables": {
     "ABI01": {
@@ -112459,7 +112459,7 @@
     },
     "LANDDESEQ": {
       "name": "Main farmers by land designation",
-      "updated": "2026-08-20",
+      "updated": "2026-10-08",
       "categories": {
         "STATISTIC": {
           "category": {
@@ -112515,7 +112515,7 @@
           "category": {
             "index": ["1", "2", "3", "ALL"],
             "label": {
-              "1": "Mainly severly disadvantaged area",
+              "1": "Mainly severely disadvantaged area",
               "2": "Mainly disadvantaged area",
               "3": "Mainly lowland",
               "ALL": "All land designations"
