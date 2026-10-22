@@ -1,5 +1,5 @@
 {
-  "last_run": "2026-10-21T19:56:41.143Z",
+  "last_run": "2026-10-22T14:22:54.357Z",
   "table_count": 1261,
   "tables": {
     "ABI01": {
@@ -56977,7 +56977,7 @@
     },
     "GAPAA24": {
       "name": "Gross Annual Pay",
-      "updated": "2026-05-06",
+      "updated": "2026-10-22",
       "categories": {
         "STATISTIC": {
           "category": {
@@ -57009,10 +57009,11 @@
         },
         "TLIST(A1)": {
           "category": {
-            "index": ["2024", "2025"],
+            "index": ["2024", "2025", "2026"],
             "label": {
               "2024": "2024",
-              "2025": "2025"
+              "2025": "2025",
+              "2026": "2026"
             }
           },
           "label": "Year"
@@ -57081,18 +57082,18 @@
         "Mean": "Mean Wage"
       },
       "time": "TLIST(A1)",
-      "time_series": ["2024", "2025"],
+      "time_series": ["2024", "2025", "2026"],
       "theme": "Work, pay and benefits",
       "theme_code": 72,
       "subject": "Hours and earnings",
       "subject_code": 160,
       "product": "Earnings",
       "product_code": "HEE",
-      "rows": 1026
+      "rows": 1539
     },
     "GAPLGD": {
       "name": "Gross Annual Pay",
-      "updated": "2025-10-29",
+      "updated": "2026-10-22",
       "categories": {
         "STATISTIC": {
           "category": {
@@ -57124,7 +57125,7 @@
         },
         "TLIST(A1)": {
           "category": {
-            "index": ["2014", "2015", "2016", "2017", "2018", "2019", "2020", "2021", "2022", "2023", "2024", "2025"],
+            "index": ["2014", "2015", "2016", "2017", "2018", "2019", "2020", "2021", "2022", "2023", "2024", "2025", "2026"],
             "label": {
               "2014": "2014",
               "2015": "2015",
@@ -57137,7 +57138,8 @@
               "2022": "2022",
               "2023": "2023",
               "2024": "2024",
-              "2025": "2025"
+              "2025": "2025",
+              "2026": "2026"
             }
           },
           "label": "Year"
@@ -57199,14 +57201,14 @@
         "Mean": "Mean Wage"
       },
       "time": "TLIST(A1)",
-      "time_series": ["2014", "2015", "2016", "2017", "2018", "2019", "2020", "2021", "2022", "2023", "2024", "2025"],
+      "time_series": ["2014", "2015", "2016", "2017", "2018", "2019", "2020", "2021", "2022", "2023", "2024", "2025", "2026"],
       "theme": "Work, pay and benefits",
       "theme_code": 72,
       "subject": "Hours and earnings",
       "subject_code": 160,
       "product": "Earnings",
       "product_code": "HEE",
-      "rows": 3888
+      "rows": 4212
     },
     "GCAHSCT": {
       "name": "GUM Clinic attendances",
@@ -58295,7 +58297,7 @@
     },
     "GHWPAA24": {
       "name": "Gross hourly (excluding overtime) and weekly pay",
-      "updated": "2026-05-06",
+      "updated": "2026-10-22",
       "categories": {
         "STATISTIC": {
           "category": {
@@ -58327,10 +58329,11 @@
         },
         "TLIST(A1)": {
           "category": {
-            "index": ["2024", "2025"],
+            "index": ["2024", "2025", "2026"],
             "label": {
               "2024": "2024",
-              "2025": "2025"
+              "2025": "2025",
+              "2026": "2026"
             }
           },
           "label": "Year"
@@ -58409,18 +58412,18 @@
         "Mean": "Mean Wage"
       },
       "time": "TLIST(A1)",
-      "time_series": ["2024", "2025"],
+      "time_series": ["2024", "2025", "2026"],
       "theme": "Work, pay and benefits",
       "theme_code": 72,
       "subject": "Hours and earnings",
       "subject_code": 160,
       "product": "Earnings",
       "product_code": "HEE",
-      "rows": 2052
+      "rows": 3078
     },
     "GHWPLGD": {
       "name": "Gross Hourly (excluding overtime) and Weekly Pay",
-      "updated": "2025-10-29",
+      "updated": "2026-10-22",
       "categories": {
         "STATISTIC": {
           "category": {
@@ -58452,7 +58455,7 @@
         },
         "TLIST(A1)": {
           "category": {
-            "index": ["2014", "2015", "2016", "2017", "2018", "2019", "2020", "2021", "2022", "2023", "2024", "2025"],
+            "index": ["2014", "2015", "2016", "2017", "2018", "2019", "2020", "2021", "2022", "2023", "2024", "2025", "2026"],
             "label": {
               "2014": "2014",
               "2015": "2015",
@@ -58465,7 +58468,8 @@
               "2022": "2022",
               "2023": "2023",
               "2024": "2024",
-              "2025": "2025"
+              "2025": "2025",
+              "2026": "2026"
             }
           },
           "label": "Year"
@@ -58537,14 +58541,14 @@
         "Mean": "Mean Wage"
       },
       "time": "TLIST(A1)",
-      "time_series": ["2014", "2015", "2016", "2017", "2018", "2019", "2020", "2021", "2022", "2023", "2024", "2025"],
+      "time_series": ["2014", "2015", "2016", "2017", "2018", "2019", "2020", "2021", "2022", "2023", "2024", "2025", "2026"],
       "theme": "Work, pay and benefits",
       "theme_code": 72,
       "subject": "Hours and earnings",
       "subject_code": 160,
       "product": "Earnings",
       "product_code": "HEE",
-      "rows": 7776
+      "rows": 8424
     },
     "GOODJOBSEQ": {
       "name": "Good jobs",
@@ -179973,7 +179977,7 @@
     },
     "TWPHWAA24": {
       "name": "Total Weekly Paid Hours Worked",
-      "updated": "2026-05-06",
+      "updated": "2026-10-22",
       "categories": {
         "STATISTIC": {
           "category": {
@@ -180005,10 +180009,11 @@
         },
         "TLIST(A1)": {
           "category": {
-            "index": ["2024", "2025"],
+            "index": ["2024", "2025", "2026"],
             "label": {
               "2024": "2024",
-              "2025": "2025"
+              "2025": "2025",
+              "2026": "2026"
             }
           },
           "label": "Year"
@@ -180077,18 +180082,18 @@
         "3": "Mean Hours Worked"
       },
       "time": "TLIST(A1)",
-      "time_series": ["2024", "2025"],
+      "time_series": ["2024", "2025", "2026"],
       "theme": "Work, pay and benefits",
       "theme_code": 72,
       "subject": "Hours and earnings",
       "subject_code": 160,
       "product": "Hours worked",
       "product_code": "HEHW",
-      "rows": 1026
+      "rows": 1539
     },
     "TWPHWLGD": {
       "name": "Total Weekly Paid Hours Worked",
-      "updated": "2025-10-29",
+      "updated": "2026-10-22",
       "categories": {
         "STATISTIC": {
           "category": {
@@ -180120,7 +180125,7 @@
         },
         "TLIST(A1)": {
           "category": {
-            "index": ["2014", "2015", "2016", "2017", "2018", "2019", "2020", "2021", "2022", "2023", "2024", "2025"],
+            "index": ["2014", "2015", "2016", "2017", "2018", "2019", "2020", "2021", "2022", "2023", "2024", "2025", "2026"],
             "label": {
               "2014": "2014",
               "2015": "2015",
@@ -180133,7 +180138,8 @@
               "2022": "2022",
               "2023": "2023",
               "2024": "2024",
-              "2025": "2025"
+              "2025": "2025",
+              "2026": "2026"
             }
           },
           "label": "Year"
@@ -180195,14 +180201,14 @@
         "3": "Mean Hours Worked"
       },
       "time": "TLIST(A1)",
-      "time_series": ["2014", "2015", "2016", "2017", "2018", "2019", "2020", "2021", "2022", "2023", "2024", "2025"],
+      "time_series": ["2014", "2015", "2016", "2017", "2018", "2019", "2020", "2021", "2022", "2023", "2024", "2025", "2026"],
       "theme": "Work, pay and benefits",
       "theme_code": 72,
       "subject": "Hours and earnings",
       "subject_code": 160,
       "product": "Hours worked",
       "product_code": "HEHW",
-      "rows": 3888
+      "rows": 4212
     },
     "UK01": {
       "name": "Single year of age and sex - United Kingdom",
