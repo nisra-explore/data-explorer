@@ -1,6 +1,6 @@
 {
-  "last_run": "2026-11-18T17:48:49.383Z",
-  "table_count": 1261,
+  "last_run": "2026-11-19T17:59:47.396Z",
+  "table_count": 1263,
   "tables": {
     "ABI01": {
       "name": "Annual Business Inquiry: results by industry sector",
@@ -40746,7 +40746,7 @@
     },
     "DISPREVAA": {
       "name": "Raw disease prevalence",
-      "updated": "2026-05-19",
+      "updated": "2026-11-19",
       "categories": {
         "STATISTIC": {
           "category": {
@@ -40785,42 +40785,34 @@
               "2025/26": "2025/26"
             }
           },
-          "label": "Financial Year"
+          "label": "Financial year"
         },
         "AA": {
           "category": {
             "index": ["N06000001", "N06000002", "N06000003", "N06000004", "N06000005", "N06000006", "N06000007", "N06000008", "N06000009", "N06000010", "N06000011", "N06000012", "N06000013", "N06000014", "N06000015", "N06000016", "N06000017", "N06000018", "N92000002"],
             "label": {
-              "N06000001": "BELFAST EAST",
-              "N06000002": "BELFAST NORTH",
-              "N06000003": "BELFAST SOUTH",
-              "N06000004": "BELFAST WEST",
-              "N06000005": "EAST ANTRIM",
-              "N06000006": "EAST LONDONDERRY",
-              "N06000007": "FERMANAGH AND SOUTH TYRONE",
-              "N06000008": "FOYLE",
-              "N06000009": "LAGAN VALLEY",
-              "N06000010": "MID ULSTER",
-              "N06000011": "NEWRY AND ARMAGH",
-              "N06000012": "NORTH ANTRIM",
-              "N06000013": "NORTH DOWN",
-              "N06000014": "SOUTH ANTRIM",
-              "N06000015": "SOUTH DOWN",
-              "N06000016": "STRANGFORD",
-              "N06000017": "UPPER BANN",
-              "N06000018": "WEST TYRONE",
+              "N06000001": "Belfast East",
+              "N06000002": "Belfast North",
+              "N06000003": "Belfast South",
+              "N06000004": "Belfast West",
+              "N06000005": "East Antrim",
+              "N06000006": "East Londonderry",
+              "N06000007": "Fermanagh and South Tyrone",
+              "N06000008": "Foyle",
+              "N06000009": "Lagan Valley",
+              "N06000010": "Mid Ulster",
+              "N06000011": "Newry and Armagh",
+              "N06000012": "North Antrim",
+              "N06000013": "North Down",
+              "N06000014": "South Antrim",
+              "N06000015": "South Down",
+              "N06000016": "Strangford",
+              "N06000017": "Upper Bann",
+              "N06000018": "West Tyrone",
               "N92000002": "Northern Ireland"
             }
           },
-          "label": "Assembly Area",
-          "link": {
-            "enclosure": [
-              {
-                "type": "application/geo+json",
-                "href": "https://ws-data.nisra.gov.uk/public/api.static/PxStat.Data.GeoMap_API.Read/62725f2dd9a7acd16cc19b96f580d7b4"
-              }
-            ]
-          }
+          "label": "Assembly Area"
         },
         "DIS": {
           "category": {
@@ -40862,9 +40854,119 @@
       "product_code": "HCDDP",
       "rows": 5814
     },
+    "DISPREVAA24": {
+      "name": "Raw disease prevalence",
+      "updated": "2026-11-19",
+      "categories": {
+        "STATISTIC": {
+          "category": {
+            "index": ["Numreg", "Rawprevalence1000"],
+            "label": {
+              "Numreg": "Number of patients on the register",
+              "Rawprevalence1000": "Raw disease prevalence per 1,000 patients"
+            },
+            "unit": {
+              "Numreg": {
+                "decimals": 0,
+                "label": "Number",
+                "position": "end"
+              },
+              "Rawprevalence1000": {
+                "decimals": 2,
+                "label": "Number",
+                "position": "end"
+              }
+            }
+          },
+          "label": "Statistic"
+        },
+        "TLIST(A1)": {
+          "category": {
+            "index": "2025/26",
+            "label": {
+              "2025/26": "2025/26"
+            }
+          },
+          "label": "Financial year"
+        },
+        "AA2024": {
+          "category": {
+            "index": ["N05000001", "N05000002", "N05000003", "N05000004", "N05000005", "N05000006", "N05000007", "N05000008", "N05000009", "N05000010", "N05000011", "N05000012", "N05000013", "N05000014", "N05000015", "N05000016", "N05000017", "N05000018", "N92000002"],
+            "label": {
+              "N05000001": "Belfast East",
+              "N05000002": "Belfast North",
+              "N05000003": "Belfast South and Mid Down",
+              "N05000004": "Belfast West",
+              "N05000005": "East Antrim",
+              "N05000006": "East Londonderry",
+              "N05000007": "Fermanagh and South Tyrone",
+              "N05000008": "Foyle",
+              "N05000009": "Lagan Valley",
+              "N05000010": "Mid Ulster",
+              "N05000011": "Newry and Armagh",
+              "N05000012": "North Antrim",
+              "N05000013": "North Down",
+              "N05000014": "South Antrim",
+              "N05000015": "South Down",
+              "N05000016": "Strangford",
+              "N05000017": "Upper Bann",
+              "N05000018": "West Tyrone",
+              "N92000002": "Northern Ireland"
+            }
+          },
+          "label": "Assembly Area (2024)",
+          "link": {
+            "enclosure": [
+              {
+                "type": "application/geo+json",
+                "href": "https://ws-data.nisra.gov.uk/public/api.static/PxStat.Data.GeoMap_API.Read/1f52886d97fa83e591e53113149373a2"
+              }
+            ]
+          }
+        },
+        "DIS": {
+          "category": {
+            "index": ["AF", "AST", "CAN", "CHD", "COPD", "DEM", "DEP", "DM", "HF1", "HF3", "MH", "OST", "RA", "STIA", "HYP", "CKD", "NDH"],
+            "label": {
+              "AF": "Atrial Fibrillation",
+              "AST": "Asthma",
+              "CAN": "Cancer",
+              "CHD": "Coronary Heart Disease",
+              "COPD": "Chronic Obstructive Pulmonary Disease",
+              "DEM": "Dementia",
+              "DEP": "Depression",
+              "DM": "Diabetes Mellitus",
+              "HF1": "Heart Failure 1",
+              "HF3": "Heart Failure 3",
+              "MH": "Mental Health",
+              "OST": "Osteoporosis",
+              "RA": "Rheumatoid Arthritis",
+              "STIA": "Stroke & TIA",
+              "HYP": "Hypertension",
+              "CKD": "Chronic Kidney Disease",
+              "NDH": "Non-Diabetic Hyperglycaemia"
+            }
+          },
+          "label": "Disease"
+        }
+      },
+      "statistics": {
+        "Numreg": "Number of patients on the register",
+        "Rawprevalence1000": "Raw disease prevalence per 1,000 patients"
+      },
+      "time": "TLIST(A1)",
+      "time_series": "2025/26",
+      "theme": "Health and social care",
+      "theme_code": 6,
+      "subject": "Health conditions and disability",
+      "subject_code": 143,
+      "product": "Disease prevalence",
+      "product_code": "HCDDP",
+      "rows": 646
+    },
     "DISPREVDEA": {
       "name": "Raw disease prevalence",
-      "updated": "2026-05-19",
+      "updated": "2026-11-19",
       "categories": {
         "STATISTIC": {
           "category": {
@@ -40903,93 +41005,93 @@
               "2025/26": "2025/26"
             }
           },
-          "label": "Financial Year"
+          "label": "Financial year"
         },
         "DEA2014": {
           "category": {
             "index": ["N10000106", "N10000101", "N10000102", "N10000103", "N10000107", "N10000105", "N10000104", "N10000206", "N10000207", "N10000202", "N10000201", "N10000203", "N10000205", "N10000204", "N10000302", "N10000308", "N10000306", "N10000310", "N10000304", "N10000309", "N10000301", "N10000303", "N10000307", "N10000305", "N10000402", "N10000403", "N10000404", "N10000407", "N10000401", "N10000405", "N10000406", "N10000505", "N10000504", "N10000506", "N10000501", "N10000502", "N10000507", "N10000503", "N10000603", "N10000604", "N10000605", "N10000602", "N10000606", "N10000601", "N10000607", "N10000705", "N10000701", "N10000707", "N10000703", "N10000702", "N10000704", "N10000706", "N10000801", "N10000802", "N10000803", "N10000807", "N10000804", "N10000806", "N10000805", "N10000907", "N10000902", "N10000906", "N10000904", "N10000903", "N10000905", "N10000901", "N10001003", "N10001007", "N10001005", "N10001004", "N10001006", "N10001001", "N10001002", "N10001103", "N10001105", "N10001102", "N10001101", "N10001104", "N10001106", "N10001107", "N92000002"],
             "label": {
-              "N10000106": "MACEDON",
-              "N10000101": "AIRPORT",
-              "N10000102": "ANTRIM",
-              "N10000103": "BALLYCLARE",
-              "N10000107": "THREE MILE WATER",
-              "N10000105": "GLENGORMLEY URBAN",
-              "N10000104": "DUNSILLY",
-              "N10000206": "LURGAN",
-              "N10000207": "PORTADOWN",
-              "N10000202": "BANBRIDGE",
-              "N10000201": "ARMAGH",
-              "N10000203": "CRAIGAVON",
-              "N10000205": "LAGAN RIVER",
-              "N10000204": "CUSHER",
-              "N10000302": "BLACK MOUNTAIN",
-              "N10000308": "OLDPARK",
-              "N10000306": "COURT",
-              "N10000310": "TITANIC",
-              "N10000304": "CASTLE",
-              "N10000309": "ORMISTON",
-              "N10000301": "BALMORAL",
-              "N10000303": "BOTANIC",
-              "N10000307": "LISNASHARRAGH",
-              "N10000305": "COLLIN",
-              "N10000402": "BANN",
-              "N10000403": "BENBRADAGH",
-              "N10000404": "CAUSEWAY",
-              "N10000407": "THE GLENS",
-              "N10000401": "BALLYMONEY",
-              "N10000405": "COLERAINE",
-              "N10000406": "LIMAVADY",
-              "N10000505": "SPERRIN",
-              "N10000504": "FOYLESIDE",
-              "N10000506": "THE MOOR",
-              "N10000501": "BALLYARNETT",
-              "N10000502": "DERG",
-              "N10000507": "WATERSIDE",
-              "N10000503": "FAUGHAN",
-              "N10000603": "ERNE NORTH",
-              "N10000604": "ERNE WEST",
-              "N10000605": "MID TYRONE",
-              "N10000602": "ERNE EAST",
-              "N10000606": "OMAGH",
-              "N10000601": "ENNISKILLEN",
-              "N10000607": "WEST TYRONE",
-              "N10000705": "KILLULTAGH",
-              "N10000701": "CASTLEREAGH EAST",
-              "N10000707": "LISBURN SOUTH",
-              "N10000703": "DOWNSHIRE EAST",
-              "N10000702": "CASTLEREAGH SOUTH",
-              "N10000704": "DOWNSHIRE WEST",
-              "N10000706": "LISBURN NORTH",
-              "N10000801": "BALLYMENA",
-              "N10000802": "BANNSIDE",
-              "N10000803": "BRAID",
-              "N10000807": "LARNE LOUGH",
-              "N10000804": "CARRICK CASTLE",
-              "N10000806": "KNOCKAGH",
-              "N10000805": "COAST ROAD",
-              "N10000907": "TORRENT",
-              "N10000902": "CLOGHER VALLEY",
-              "N10000906": "MOYOLA",
-              "N10000904": "DUNGANNON",
-              "N10000903": "COOKSTOWN",
-              "N10000905": "MAGHERAFELT",
-              "N10000901": "CARNTOGHER",
-              "N10001003": "NEWRY",
-              "N10001007": "THE MOURNES",
-              "N10001005": "SLIEVE CROOB",
-              "N10001004": "ROWALLANE",
-              "N10001006": "SLIEVE GULLION",
-              "N10001001": "CROTLIEVE",
-              "N10001002": "DOWNPATRICK",
-              "N10001103": "BANGOR EAST AND DONAGHADEE",
-              "N10001105": "COMBER",
-              "N10001102": "BANGOR CENTRAL",
-              "N10001101": "ARDS PENINSULA",
-              "N10001104": "BANGOR WEST",
-              "N10001106": "HOLYWOOD AND CLANDEBOYE",
-              "N10001107": "NEWTOWNARDS",
-              "N92000002": "NI"
+              "N10000106": "Macedon",
+              "N10000101": "Airport",
+              "N10000102": "Antrim",
+              "N10000103": "Ballyclare",
+              "N10000107": "Three Mile Water",
+              "N10000105": "Glengormley Urban",
+              "N10000104": "Dunsilly",
+              "N10000206": "Lurgan",
+              "N10000207": "Portadown",
+              "N10000202": "Banbridge",
+              "N10000201": "Armagh",
+              "N10000203": "Craigavon",
+              "N10000205": "Lagan River",
+              "N10000204": "Cusher",
+              "N10000302": "Black Mountain",
+              "N10000308": "Oldpark",
+              "N10000306": "Court",
+              "N10000310": "Titanic",
+              "N10000304": "Castle",
+              "N10000309": "Ormiston",
+              "N10000301": "Balmoral",
+              "N10000303": "Botanic",
+              "N10000307": "Lisnasharragh",
+              "N10000305": "Collin",
+              "N10000402": "Bann",
+              "N10000403": "Benbradagh",
+              "N10000404": "Causeway",
+              "N10000407": "The Glens",
+              "N10000401": "Ballymoney",
+              "N10000405": "Coleraine",
+              "N10000406": "Limavady",
+              "N10000505": "Sperrin",
+              "N10000504": "Foyleside",
+              "N10000506": "The Moor",
+              "N10000501": "Ballyarnett",
+              "N10000502": "Derg",
+              "N10000507": "Waterside",
+              "N10000503": "Faughan",
+              "N10000603": "Erne North",
+              "N10000604": "Erne West",
+              "N10000605": "Mid Tyrone",
+              "N10000602": "Erne East",
+              "N10000606": "Omagh",
+              "N10000601": "Enniskillen",
+              "N10000607": "West Tyrone",
+              "N10000705": "Killultagh",
+              "N10000701": "Castlereagh East",
+              "N10000707": "Lisburn South",
+              "N10000703": "Downshire East",
+              "N10000702": "Castlereagh South",
+              "N10000704": "Downshire West",
+              "N10000706": "Lisburn North",
+              "N10000801": "Ballymena",
+              "N10000802": "Bannside",
+              "N10000803": "Braid",
+              "N10000807": "Larne Lough",
+              "N10000804": "Carrick Castle",
+              "N10000806": "Knockagh",
+              "N10000805": "Coast Road",
+              "N10000907": "Torrent",
+              "N10000902": "Clogher Valley",
+              "N10000906": "Moyola",
+              "N10000904": "Dungannon",
+              "N10000903": "Cookstown",
+              "N10000905": "Magherafelt",
+              "N10000901": "Carntogher",
+              "N10001003": "Newry",
+              "N10001007": "The Mournes",
+              "N10001005": "Slieve Croob",
+              "N10001004": "Rowallane",
+              "N10001006": "Slieve Gullion",
+              "N10001001": "Crotlieve",
+              "N10001002": "Downpatrick",
+              "N10001103": "Bangor East And Donaghadee",
+              "N10001105": "Comber",
+              "N10001102": "Bangor Central",
+              "N10001101": "Ards Peninsula",
+              "N10001104": "Bangor West",
+              "N10001106": "Holywood And Clandeboye",
+              "N10001107": "Newtownards",
+              "N92000002": "Northern Ireland"
             }
           },
           "label": "District Electoral Area",
@@ -41044,7 +41146,7 @@
     },
     "DISPREVHSCT": {
       "name": "Raw disease prevalence",
-      "updated": "2026-05-19",
+      "updated": "2026-11-19",
       "categories": {
         "STATISTIC": {
           "category": {
@@ -41083,7 +41185,7 @@
               "2025/26": "2025/26"
             }
           },
-          "label": "Financial Year"
+          "label": "Financial year"
         },
         "HSCT": {
           "category": {
@@ -41149,7 +41251,7 @@
     },
     "DISPREVLGD": {
       "name": "Raw disease prevalence",
-      "updated": "2026-05-19",
+      "updated": "2026-11-19",
       "categories": {
         "STATISTIC": {
           "category": {
@@ -41188,7 +41290,7 @@
               "2025/26": "2025/26"
             }
           },
-          "label": "Financial Year"
+          "label": "Financial year"
         },
         "LGD2014": {
           "category": {
@@ -41260,7 +41362,7 @@
     },
     "DISPREVNI": {
       "name": "Raw disease prevalence - Northern Ireland",
-      "updated": "2026-05-19",
+      "updated": "2026-11-19",
       "categories": {
         "STATISTIC": {
           "category": {
@@ -41299,7 +41401,7 @@
               "2025/26": "2025/26"
             }
           },
-          "label": "Financial Year"
+          "label": "Financial year"
         },
         "DIS": {
           "category": {
@@ -51779,7 +51881,7 @@
     },
     "FPSGDSDRAA": {
       "name": "General dental services dental registrations",
-      "updated": "2026-09-07",
+      "updated": "2026-11-19",
       "categories": {
         "STATISTIC": {
           "category": {
@@ -51874,7 +51976,7 @@
     },
     "FPSGDSDRDEA": {
       "name": "General dental services dental registrations",
-      "updated": "2026-09-07",
+      "updated": "2026-11-19",
       "categories": {
         "STATISTIC": {
           "category": {
@@ -52103,7 +52205,7 @@
     },
     "FPSGDSDREW": {
       "name": "General dental services dental registrations",
-      "updated": "2026-09-07",
+      "updated": "2026-11-19",
       "categories": {
         "STATISTIC": {
           "category": {
@@ -52642,7 +52744,7 @@
     },
     "FPSGDSDRHSCT": {
       "name": "General dental services dental registrations",
-      "updated": "2026-09-07",
+      "updated": "2026-11-19",
       "categories": {
         "STATISTIC": {
           "category": {
@@ -52724,7 +52826,7 @@
     },
     "FPSGDSDRLCG": {
       "name": "General dental services dental registrations",
-      "updated": "2026-09-07",
+      "updated": "2026-11-19",
       "categories": {
         "STATISTIC": {
           "category": {
@@ -52806,7 +52908,7 @@
     },
     "FPSGDSDRLGD": {
       "name": "General dental services dental registrations",
-      "updated": "2026-09-07",
+      "updated": "2026-11-19",
       "categories": {
         "STATISTIC": {
           "category": {
@@ -55789,6 +55891,95 @@
       "product": "Ophthalmic",
       "product_code": "PCOPH",
       "rows": 2916
+    },
+    "FPSGOSOTEQ": {
+      "name": "General ophthalmic services ophthalmic treatments",
+      "updated": "2026-11-19",
+      "categories": {
+        "STATISTIC": {
+          "category": {
+            "index": ["GOSOTS", "GOSOTD", "GOSOTV", "GOSOTR"],
+            "label": {
+              "GOSOTS": "Sight Tests",
+              "GOSOTD": "Domiciliary Sight Tests",
+              "GOSOTV": "Vouchers",
+              "GOSOTR": "Repairs & Replacements"
+            },
+            "unit": {
+              "GOSOTS": {
+                "decimals": 0,
+                "label": "Number",
+                "position": "end"
+              },
+              "GOSOTD": {
+                "decimals": 0,
+                "label": "Number",
+                "position": "end"
+              },
+              "GOSOTV": {
+                "decimals": 0,
+                "label": "Number",
+                "position": "end"
+              },
+              "GOSOTR": {
+                "decimals": 0,
+                "label": "Number",
+                "position": "end"
+              }
+            }
+          },
+          "label": "Statistic"
+        },
+        "TLIST(A1)": {
+          "category": {
+            "index": ["2017/18", "2018/19", "2019/20", "2020/21", "2021/22", "2022/23", "2023/24", "2024/25", "2025/26"],
+            "label": {
+              "2017/18": "2017/18",
+              "2018/19": "2018/19",
+              "2019/20": "2019/20",
+              "2020/21": "2020/21",
+              "2021/22": "2021/22",
+              "2022/23": "2022/23",
+              "2023/24": "2023/24",
+              "2024/25": "2024/25",
+              "2025/26": "2025/26"
+            }
+          },
+          "label": "Financial year"
+        },
+        "EQGRP": {
+          "category": {
+            "index": ["EQ101", "EQ102", "EQ103", "EQ104", "EQ105", "EQ106", "EQ251", "EQ252", "N92000002"],
+            "label": {
+              "EQ101": "Age -  0-15",
+              "EQ102": "Age - 16-24",
+              "EQ103": "Age - 25-44",
+              "EQ104": "Age - 45-64",
+              "EQ105": "Age - 65-74",
+              "EQ106": "Age - 75+",
+              "EQ251": "Gender - Female",
+              "EQ252": "Gender - Male",
+              "N92000002": "Northern Ireland"
+            }
+          },
+          "label": "Equality group"
+        }
+      },
+      "statistics": {
+        "GOSOTS": "Sight Tests",
+        "GOSOTD": "Domiciliary Sight Tests",
+        "GOSOTV": "Vouchers",
+        "GOSOTR": "Repairs & Replacements"
+      },
+      "time": "TLIST(A1)",
+      "time_series": ["2017/18", "2018/19", "2019/20", "2020/21", "2021/22", "2022/23", "2023/24", "2024/25", "2025/26"],
+      "theme": "Health and social care",
+      "theme_code": 6,
+      "subject": "Primary care",
+      "subject_code": 146,
+      "product": "Ophthalmic",
+      "product_code": "PCOPH",
+      "rows": 324
     },
     "FPSGOSOTEW": {
       "name": "General Ophthalmic Services Ophthalmic Activity",
@@ -150485,7 +150676,7 @@
     },
     "PADAA": {
       "name": "Planning applications and decisions by Assembly Area",
-      "updated": "2026-10-16",
+      "updated": "2026-11-19",
       "categories": {
         "STATISTIC": {
           "category": {
@@ -150529,7 +150720,7 @@
         },
         "TLIST(A1)": {
           "category": {
-            "index": ["2015/16", "2016/17", "2017/18", "2018/19", "2019/20", "2020/21", "2021/22", "2022/23", "2023/24", "2024/25"],
+            "index": ["2015/16", "2016/17", "2017/18", "2018/19", "2019/20", "2020/21", "2021/22", "2022/23", "2023/24", "2024/25", "2025/26"],
             "label": {
               "2015/16": "2015/16",
               "2016/17": "2016/17",
@@ -150540,7 +150731,8 @@
               "2021/22": "2021/22",
               "2022/23": "2022/23",
               "2023/24": "2023/24",
-              "2024/25": "2024/25"
+              "2024/25": "2024/25",
+              "2025/26": "2025/26"
             }
           },
           "label": "Financial year"
@@ -150581,18 +150773,18 @@
         "5": "Applications Withdrawn"
       },
       "time": "TLIST(A1)",
-      "time_series": ["2015/16", "2016/17", "2017/18", "2018/19", "2019/20", "2020/21", "2021/22", "2022/23", "2023/24", "2024/25"],
+      "time_series": ["2015/16", "2016/17", "2017/18", "2018/19", "2019/20", "2020/21", "2021/22", "2022/23", "2023/24", "2024/25", "2025/26"],
       "theme": "People and communities",
       "theme_code": 70,
       "subject": "Property and housing",
       "subject_code": 165,
       "product": "Planning",
       "product_code": "HP",
-      "rows": 950
+      "rows": 1045
     },
     "PADELGD": {
       "name": "Planning applications, decisions, and enforcement",
-      "updated": "2026-10-16",
+      "updated": "2026-11-19",
       "categories": {
         "STATISTIC": {
           "category": {
@@ -150858,7 +151050,7 @@
         },
         "TLIST(A1)": {
           "category": {
-            "index": ["2015/16", "2016/17", "2017/18", "2018/19", "2019/20", "2020/21", "2021/22", "2022/23", "2023/24", "2024/25"],
+            "index": ["2015/16", "2016/17", "2017/18", "2018/19", "2019/20", "2020/21", "2021/22", "2022/23", "2023/24", "2024/25", "2025/26"],
             "label": {
               "2015/16": "2015/16",
               "2016/17": "2016/17",
@@ -150869,7 +151061,8 @@
               "2021/22": "2021/22",
               "2022/23": "2022/23",
               "2023/24": "2023/24",
-              "2024/25": "2024/25"
+              "2024/25": "2024/25",
+              "2025/26": "2025/26"
             }
           },
           "label": "Financial year"
@@ -150940,14 +151133,14 @@
         "42": "Renewable Energy Planning Applications Withdrawn"
       },
       "time": "TLIST(A1)",
-      "time_series": ["2015/16", "2016/17", "2017/18", "2018/19", "2019/20", "2020/21", "2021/22", "2022/23", "2023/24", "2024/25"],
+      "time_series": ["2015/16", "2016/17", "2017/18", "2018/19", "2019/20", "2020/21", "2021/22", "2022/23", "2023/24", "2024/25", "2025/26"],
       "theme": "People and communities",
       "theme_code": 70,
       "subject": "Property and housing",
       "subject_code": 165,
       "product": "Planning",
       "product_code": "HP",
-      "rows": 5040
+      "rows": 5544
     },
     "PALGD": {
       "name": "Planning applications - application status",
